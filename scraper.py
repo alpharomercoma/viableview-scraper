@@ -3,25 +3,28 @@
 Business Registry Web Scraper
 
 This script scrapes business data from the target website. It handles:
-- reCAPTCHA verification (requires one-time manual interaction)
+- reCAPTCHA verification (automatic via audio challenge - FREE)
 - Pagination through all result pages
 - Extraction of business details including agent information
 - Error handling and logging
 - Output to JSON format
+- Proxy support for IP rotation
 
 Usage:
-    python scraper.py [--query QUERY] [--output OUTPUT] [--headed]
+    python scraper.py [--query QUERY] [--output OUTPUT] [--headed] [--proxy PROXY]
 
 Arguments:
     --query   Search query (default: searches for all businesses with "llc")
     --output  Output file path (default: output.json)
-    --headed  Run browser in headed mode (visible) for captcha solving
+    --headed  Run browser in headed mode (visible) for manual captcha solving
+    --proxy   Proxy server URL (e.g., http://user:pass@host:port or socks5://host:port)
 """
 
 import argparse
 import json
 import logging
 import os
+import random
 import sys
 import time
 from datetime import datetime
@@ -29,6 +32,8 @@ from pathlib import Path
 from typing import Optional
 
 from playwright.sync_api import sync_playwright, Page, Browser, BrowserContext
+from playwright_stealth import Stealth
+from playwright_recaptcha import recaptchav2
 
 # Configure logging
 LOG_FILE = "scraper.log"
@@ -64,14 +69,16 @@ class BusinessScraper:
     all business records matching a search query.
     """
 
-    def __init__(self, headed: bool = False):
+    def __init__(self, headed: bool = False, proxy: Optional[str] = None):
         """
         Initialize the scraper.
 
         Args:
             headed: If True, runs browser in visible mode for captcha solving
+            proxy: Optional proxy URL (e.g., http://user:pass@host:port)
         """
         self.headed = headed
+        self.proxy = proxy
         self.session_token: Optional[str] = None
         self.playwright = None
         self.browser: Optional[Browser] = None
@@ -91,9 +98,17 @@ class BusinessScraper:
         """Start the browser."""
         logger.info("Starting browser...")
         self.playwright = sync_playwright().start()
+
+        # Configure proxy if provided
+        proxy_config = None
+        if self.proxy:
+            logger.info(f"Using proxy: {self.proxy.split('@')[-1] if '@' in self.proxy else self.proxy}")
+            proxy_config = {"server": self.proxy}
+
         self.browser = self.playwright.chromium.launch(
             headless=not self.headed,
-            args=['--disable-blink-features=AutomationControlled']
+            args=['--disable-blink-features=AutomationControlled'],
+            proxy=proxy_config
         )
         self.context = self.browser.new_context(
             viewport={'width': 1920, 'height': 1080},
@@ -101,13 +116,11 @@ class BusinessScraper:
         )
         self.page = self.context.new_page()
 
-        # Remove automation detection flags
-        self.page.add_init_script("""
-            Object.defineProperty(navigator, 'webdriver', {
-                get: () => false,
-            });
-        """)
-        logger.info("Browser started successfully")
+        # Apply stealth mode to avoid bot detection
+        stealth = Stealth()
+        stealth.apply_stealth_sync(self.page)
+
+        logger.info("Browser started successfully (stealth mode enabled)")
 
     def stop(self):
         """Stop the browser and clean up."""
@@ -118,9 +131,34 @@ class BusinessScraper:
             self.playwright.stop()
         logger.info("Browser closed")
 
-    def solve_captcha(self) -> str:
+    def _simulate_human_behavior(self):
+        """Simulate human-like mouse movements and scrolling."""
+        try:
+            # Random mouse movements
+            for _ in range(random.randint(2, 4)):
+                x = random.randint(100, 800)
+                y = random.randint(100, 600)
+                self.page.mouse.move(x, y)
+                time.sleep(random.uniform(0.1, 0.3))
+
+            # Random scroll
+            self.page.mouse.wheel(0, random.randint(50, 150))
+            time.sleep(random.uniform(0.2, 0.5))
+        except Exception:
+            pass  # Ignore errors in human simulation
+
+    def solve_captcha(self, max_retries: int = 3) -> str:
         """
-        Navigate to search page and wait for user to solve captcha.
+        Navigate to search page and solve captcha automatically using audio challenge.
+
+        Uses playwright-recaptcha library which solves reCAPTCHA v2 for FREE by:
+        1. Clicking the audio challenge button
+        2. Downloading the audio file
+        3. Using Google Speech Recognition API to transcribe it
+        4. Entering the transcribed text
+
+        Args:
+            max_retries: Number of retry attempts for rate-limited requests
 
         Returns:
             The reCAPTCHA response token
@@ -130,22 +168,54 @@ class BusinessScraper:
         """
         logger.info("Navigating to search page for captcha...")
         self.page.goto(SEARCH_PAGE, wait_until="networkidle")
-        self.page.wait_for_timeout(2000)
+
+        # Simulate human-like behavior before interacting with CAPTCHA
+        self._simulate_human_behavior()
+        self.page.wait_for_timeout(random.randint(1500, 3000))
 
         # Check if captcha is present
         captcha_wrap = self.page.query_selector('.captcha-wrap')
         if not captcha_wrap:
             logger.warning("No captcha wrapper found on page")
 
+        logger.info("Solving reCAPTCHA using audio challenge (FREE method)...")
+
+        last_error = None
+        for attempt in range(max_retries):
+            if attempt > 0:
+                # Exponential backoff with jitter for retries
+                wait_time = (2 ** attempt) + random.uniform(1, 3)
+                logger.info(f"Retry {attempt + 1}/{max_retries} after {wait_time:.1f}s wait...")
+                time.sleep(wait_time)
+
+                # Reload page for fresh CAPTCHA
+                self.page.reload(wait_until="networkidle")
+                self._simulate_human_behavior()
+                self.page.wait_for_timeout(random.randint(1000, 2000))
+
+            try:
+                # Use playwright-recaptcha to solve the CAPTCHA automatically
+                with recaptchav2.SyncSolver(self.page) as solver:
+                    token = solver.solve_recaptcha()
+                    logger.info("CAPTCHA solved successfully!")
+                    return token
+
+            except Exception as e:
+                last_error = str(e)
+                logger.warning(f"Attempt {attempt + 1} failed: {last_error}")
+
+                if "rate limit" not in last_error.lower():
+                    # If it's not a rate limit error, don't retry
+                    break
+
+        # All automatic attempts failed - fall back to manual in headed mode
         if self.headed:
             logger.info("=" * 50)
-            logger.info("CAPTCHA VERIFICATION REQUIRED")
+            logger.info("AUTO-SOLVE FAILED - MANUAL VERIFICATION REQUIRED")
             logger.info("Please solve the reCAPTCHA in the browser window")
             logger.info("The script will continue automatically after verification")
             logger.info("=" * 50)
 
-            # Wait for the user to solve the captcha
-            # The recaptcha-response textarea will have a value when solved
             max_wait = 300  # 5 minutes max
             start_time = time.time()
 
@@ -154,34 +224,16 @@ class BusinessScraper:
                     "() => document.querySelector('#g-recaptcha-response')?.value || ''"
                 )
                 if token:
-                    logger.info("Captcha solved successfully!")
+                    logger.info("Captcha solved manually!")
                     return token
                 time.sleep(1)
 
             raise ScraperError("Timeout waiting for captcha to be solved")
         else:
-            # In headless mode, we try to click the checkbox
-            # This may not work if Google requires image verification
-            logger.info("Attempting to solve captcha automatically (may require headed mode)...")
-
-            try:
-                recaptcha_frame = self.page.frame_locator('iframe[title="reCAPTCHA"]')
-                checkbox = recaptcha_frame.locator('.recaptcha-checkbox')
-                checkbox.click()
-                self.page.wait_for_timeout(5000)
-
-                token = self.page.evaluate(
-                    "() => document.querySelector('#g-recaptcha-response')?.value || ''"
-                )
-                if token:
-                    logger.info("Captcha solved automatically!")
-                    return token
-            except Exception as e:
-                logger.warning(f"Automatic captcha solving failed: {e}")
-
             raise ScraperError(
-                "Cannot solve captcha in headless mode. "
-                "Please run with --headed flag to solve captcha manually."
+                f"Cannot solve captcha automatically after {max_retries} attempts: {last_error}. "
+                "Options: 1) Wait and retry later, 2) Use --headed flag for manual solving, "
+                "3) Use a proxy to rotate IP address."
             )
 
     def get_session(self, captcha_token: str, query: str) -> str:
@@ -464,6 +516,11 @@ def main():
         action='store_true',
         help="Run browser in headed mode (visible) for captcha solving"
     )
+    parser.add_argument(
+        '--proxy', '-p',
+        default=None,
+        help="Proxy server URL (e.g., http://user:pass@host:port or socks5://host:port)"
+    )
 
     args = parser.parse_args()
 
@@ -472,10 +529,11 @@ def main():
     logger.info(f"Query: {args.query}")
     logger.info(f"Output: {args.output}")
     logger.info(f"Mode: {'Headed' if args.headed else 'Headless'}")
+    logger.info(f"Proxy: {args.proxy if args.proxy else 'None'}")
     logger.info("=" * 60)
 
     try:
-        with BusinessScraper(headed=args.headed) as scraper:
+        with BusinessScraper(headed=args.headed, proxy=args.proxy) as scraper:
             # Step 1: Solve captcha
             captcha_token = scraper.solve_captcha()
 
