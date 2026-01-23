@@ -31,9 +31,22 @@ from datetime import datetime
 from pathlib import Path
 from typing import Optional
 
+# Python 3.13+ compatibility: aifc was removed, use standard-aifc shim
+try:
+    import aifc
+except ModuleNotFoundError:
+    import standard_aifc as aifc
+    sys.modules['aifc'] = aifc
+
 from playwright.sync_api import sync_playwright, Page, Browser, BrowserContext
 from playwright_stealth import Stealth
 from playwright_recaptcha import recaptchav2
+
+# Import proxy scraper
+try:
+    from proxy_scraper import get_free_proxy
+except ImportError:
+    get_free_proxy = None
 
 # Configure logging
 LOG_FILE = "scraper.log"
@@ -521,19 +534,38 @@ def main():
         default=None,
         help="Proxy server URL (e.g., http://user:pass@host:port or socks5://host:port)"
     )
+    parser.add_argument(
+        '--no-auto-proxy',
+        action='store_true',
+        help="Disable automatic proxy fetching (use only if --proxy is provided)"
+    )
 
     args = parser.parse_args()
+
+    # Auto-fetch proxy by default if no proxy provided and auto-proxy is enabled
+    proxy = args.proxy
+    if not proxy and not args.no_auto_proxy and get_free_proxy:
+        logger.info("Auto-fetching proxy from free-proxy-list.net...")
+        try:
+            proxy = get_free_proxy(headed=args.headed, max_attempts=10)
+            if proxy:
+                logger.info(f"Successfully fetched proxy: {proxy}")
+            else:
+                logger.warning("Could not fetch a working proxy, continuing without proxy")
+        except Exception as e:
+            logger.warning(f"Error fetching proxy: {e}, continuing without proxy")
+            proxy = None
 
     logger.info("=" * 60)
     logger.info("Business Registry Scraper Starting")
     logger.info(f"Query: {args.query}")
     logger.info(f"Output: {args.output}")
     logger.info(f"Mode: {'Headed' if args.headed else 'Headless'}")
-    logger.info(f"Proxy: {args.proxy if args.proxy else 'None'}")
+    logger.info(f"Proxy: {proxy if proxy else 'None'}")
     logger.info("=" * 60)
 
     try:
-        with BusinessScraper(headed=args.headed, proxy=args.proxy) as scraper:
+        with BusinessScraper(headed=args.headed, proxy=proxy) as scraper:
             # Step 1: Solve captcha
             captcha_token = scraper.solve_captcha()
 

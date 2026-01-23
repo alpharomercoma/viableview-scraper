@@ -4,17 +4,20 @@ A Python-based web scraper that extracts business data from the State Registry w
 
 ## Features
 
-- **reCAPTCHA handling**: Supports both manual captcha solving (headed mode) and attempts automatic solving
+- **Automatic reCAPTCHA solving (FREE)**: Solves reCAPTCHA v2 automatically using audio challenge and speech recognition
+- **Stealth mode**: Uses playwright-stealth to avoid bot detection
+- **Proxy support**: Rotate IPs to avoid rate limiting
 - **Pagination support**: Automatically iterates through all result pages
 - **Comprehensive data extraction**: Extracts business name, registration ID, status, filing date, and agent details
-- **Error handling**: Robust error handling with retry logic for network issues
+- **Error handling**: Robust error handling with retry logic and exponential backoff
 - **Logging**: Detailed logging to both console and log file (`scraper.log`)
 - **Rate limiting**: Polite delays between requests to avoid overloading the server
 
 ## Requirements
 
-- Python 3.8+
+- Python 3.8+ (including Python 3.13)
 - Playwright
+- FFmpeg and FLAC (for audio processing)
 - Internet connection
 
 ## Installation
@@ -41,21 +44,57 @@ A Python-based web scraper that extracts business data from the State Registry w
    python -m playwright install chromium
    ```
 
+5. Install system dependencies (Linux):
+   ```bash
+   sudo apt-get install -y ffmpeg flac
+   ```
+
+   On macOS:
+   ```bash
+   brew install ffmpeg flac
+   ```
+
 ## Usage
 
-### Basic Usage
+### Basic Usage (Automatic CAPTCHA Solving)
 
-Run the scraper with default settings:
+Run the scraper in headless mode with automatic CAPTCHA solving:
+
+```bash
+python scraper.py
+```
+
+This will:
+1. Launch a headless browser with stealth mode
+2. Automatically solve the reCAPTCHA using audio challenge
+3. Scrape all businesses matching the default query ("llc")
+4. Save results to `output.json`
+
+### Using a Proxy (Recommended)
+
+To avoid rate limiting on the audio challenge, use a proxy:
+
+```bash
+python scraper.py --proxy "http://host:port"
+# Or with authentication:
+python scraper.py --proxy "http://user:pass@host:port"
+# SOCKS5 proxy:
+python scraper.py --proxy "socks5://host:port"
+```
+
+### Manual CAPTCHA Solving (Fallback)
+
+If automatic solving fails, run in headed mode:
 
 ```bash
 python scraper.py --headed
 ```
 
-This will:
-1. Open a browser window
-2. Wait for you to solve the reCAPTCHA
-3. Scrape all businesses matching the default query ("llc")
-4. Save results to `output.json`
+On a headless server (no display), use xvfb:
+
+```bash
+xvfb-run python scraper.py --headed
+```
 
 ### Command Line Options
 
@@ -67,18 +106,19 @@ python scraper.py [OPTIONS]
 |--------|-------|---------|-------------|
 | `--query` | `-q` | `llc` | Search query to find businesses |
 | `--output` | `-o` | `output.json` | Output file path |
-| `--headed` | | False | Run browser in visible mode for captcha solving |
+| `--headed` | | False | Run browser in visible mode for manual captcha solving |
+| `--proxy` | `-p` | None | Proxy server URL (e.g., `http://host:port`) |
 
 ### Examples
 
-Search for businesses containing "tech":
+Search for businesses containing "tech" with a proxy:
 ```bash
-python scraper.py --query "tech" --headed
+python scraper.py --query "tech" --proxy "http://proxy.example.com:8080"
 ```
 
 Save output to a custom file:
 ```bash
-python scraper.py --output my_results.json --headed
+python scraper.py --output my_results.json
 ```
 
 ## Output Format
@@ -111,21 +151,29 @@ The scraper outputs JSON with the following structure:
 | `agent_address` | Registered agent's address |
 | `agent_email` | Registered agent's email |
 
+## How CAPTCHA Solving Works
+
+The scraper uses a **free** method to solve reCAPTCHA v2:
+
+1. Clicks the reCAPTCHA checkbox
+2. Requests the audio challenge
+3. Downloads the audio file
+4. Transcribes it using Google Speech Recognition API (free)
+5. Enters the transcribed text
+6. Submits the response
+
+**Note**: Google may rate-limit audio challenges from the same IP. Use proxy rotation for high-volume scraping.
+
 ## Libraries Used
 
 | Library | Purpose |
 |---------|---------|
-| **Playwright** | Browser automation for handling dynamic content and reCAPTCHA |
-| **argparse** | Command-line argument parsing (standard library) |
-| **logging** | Structured logging to file and console (standard library) |
-| **json** | JSON serialization for output (standard library) |
-
-### Why Playwright?
-
-1. **JavaScript rendering**: The target website is a Next.js application with client-side rendering
-2. **reCAPTCHA support**: Playwright can interact with reCAPTCHA widgets
-3. **Modern web support**: Handles modern JavaScript frameworks effectively
-4. **Session management**: Maintains browser context for authenticated requests
+| **Playwright** | Browser automation for handling dynamic content |
+| **playwright-stealth** | Avoids bot detection by masking automation signals |
+| **playwright-recaptcha** | Free reCAPTCHA solving via audio challenge |
+| **SpeechRecognition** | Audio transcription using Google's free API |
+| **pydub** | Audio format conversion |
+| **standard-aifc** | Python 3.13+ compatibility shim |
 
 ## Architecture
 
@@ -134,7 +182,8 @@ The scraper follows a modular design:
 ```
 scraper.py
 ├── BusinessScraper (main class)
-│   ├── solve_captcha()      - Handle reCAPTCHA verification
+│   ├── _simulate_human_behavior() - Mouse movements and scrolling
+│   ├── solve_captcha()      - Automatic reCAPTCHA solving with retry
 │   ├── get_session()        - Obtain session token
 │   ├── search()             - Execute API searches
 │   ├── get_business_details() - Fetch detailed business info
@@ -146,9 +195,10 @@ scraper.py
 
 The scraper handles various error scenarios:
 
+- **Rate limiting**: Exponential backoff with jitter for retries
 - **Network errors**: Logged and skipped, continues with next item
 - **Missing elements**: Gracefully handles missing HTML elements
-- **reCAPTCHA timeout**: Reports error if captcha not solved within 5 minutes
+- **reCAPTCHA timeout**: Falls back to manual solving in headed mode
 - **API errors**: Logs error details and continues processing
 
 ## Logging
@@ -163,17 +213,22 @@ Log format:
 2024-01-15 10:30:46 - INFO - Found 150 total businesses across 15 pages
 ```
 
-## Limitations
-
-1. **reCAPTCHA**: Requires manual solving in headed mode; automatic solving may not always work
-2. **Rate limiting**: The script includes delays, but aggressive usage may be blocked
-3. **Website changes**: The scraper depends on the current website structure
-4. **Session expiry**: Long-running scrapes may need re-authentication
-
 ## Troubleshooting
 
-### "Cannot solve captcha in headless mode"
-Run the scraper with the `--headed` flag to solve the captcha manually.
+### "The reCAPTCHA rate limit has been exceeded"
+Google has rate-limited your IP for audio challenges. Solutions:
+1. Use a proxy: `python scraper.py --proxy "http://host:port"`
+2. Wait a few hours and retry
+3. Use headed mode for manual solving
+
+### "FLAC conversion utility not available"
+Install FLAC: `sudo apt-get install flac` (Linux) or `brew install flac` (macOS)
+
+### "No module named 'aifc'" (Python 3.13+)
+Install the compatibility package: `pip install standard-aifc`
+
+### Browser fails to launch on headless server
+Use xvfb for headed mode: `xvfb-run python scraper.py --headed`
 
 ### "Session expired" errors
 The session token may have expired. Restart the scraper to get a new session.
