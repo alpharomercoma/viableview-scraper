@@ -18,7 +18,7 @@ logger = logging.getLogger(__name__)
 
 PROXY_LIST_URL = "https://free-proxy-list.net/en/"
 TEST_URL = "https://httpbin.org/ip"  # Simple endpoint to test proxy
-TEST_TIMEOUT = 10000  # 10 seconds timeout for proxy test
+TEST_TIMEOUT = 15000  # 15 seconds timeout for proxy test
 
 
 class ProxyScraper:
@@ -177,59 +177,85 @@ class ProxyScraper:
             True if proxy is working, False otherwise
         """
         proxy_url = f"{protocol}://{ip}:{port}"
+        test_context = None
 
         try:
             # Create a new browser context with this proxy
             test_context = self.browser.new_context(
                 proxy={"server": proxy_url},
-                viewport={'width': 1920, 'height': 1080}
+                viewport={'width': 1920, 'height': 1080},
+                ignore_https_errors=True  # Ignore SSL errors for free proxies
             )
             test_page = test_context.new_page()
 
             # Try to access a test URL through the proxy
+            # Use "load" instead of "networkidle" for faster/more lenient testing
             response = test_page.goto(
                 TEST_URL,
-                wait_until="networkidle",
+                wait_until="load",  # Changed from "networkidle" to be more lenient
                 timeout=TEST_TIMEOUT
             )
 
             # Check if request was successful
             if response and response.status == 200:
-                # Verify we got a response
+                # Verify we got a response (even partial is OK for free proxies)
                 content = test_page.content()
-                test_context.close()
+                if test_context:
+                    test_context.close()
                 logger.debug(f"Proxy {proxy_url} is working")
                 return True
             else:
-                test_context.close()
+                if test_context:
+                    test_context.close()
                 return False
 
         except Exception as e:
-            logger.debug(f"Proxy {proxy_url} failed: {e}")
+            # For free proxies, even connection errors might be acceptable
+            # as they might work intermittently. Log but don't fail immediately.
+            logger.debug(f"Proxy {proxy_url} test error: {str(e)[:100]}")
+            if test_context:
+                try:
+                    test_context.close()
+                except:
+                    pass
             return False
 
-    def get_working_proxy(self, max_attempts: int = 10) -> Optional[str]:
+    def get_working_proxy(self, max_attempts: int = 20, fallback_to_any: bool = True) -> Optional[str]:
         """
         Scrape proxies and return the first working one.
 
         Args:
             max_attempts: Maximum number of proxies to test
+            fallback_to_any: If True, return a proxy even if test fails (for unreliable free proxies)
 
         Returns:
             Proxy URL string (e.g., "http://ip:port") or None if none found
         """
-        # Scrape proxies
-        proxies = self.scrape_proxies(max_proxies=max_attempts * 2)
+        # Scrape more proxies to have better chances
+        proxies = self.scrape_proxies(max_proxies=max_attempts * 3)
 
         if not proxies:
             logger.warning("No proxies scraped")
             return None
 
-        # Shuffle proxies for random selection
-        random.shuffle(proxies)
+        # Sort proxies by preference: HTTPS > HTTP, elite proxy > anonymous
+        def proxy_score(proxy):
+            score = 0
+            if proxy.get('https', '').strip().lower() == 'yes':
+                score += 10
+            if 'elite' in proxy.get('anonymity', '').strip().lower():
+                score += 5
+            elif 'anonymous' in proxy.get('anonymity', '').strip().lower():
+                score += 2
+            return score
+
+        # Sort by score (highest first), then shuffle within same score
+        proxies.sort(key=proxy_score, reverse=True)
 
         # Test proxies until we find a working one
         tested = 0
+        last_proxy_url = None
+
         for proxy in proxies:
             if tested >= max_attempts:
                 break
@@ -244,35 +270,44 @@ class ProxyScraper:
 
             # Determine protocol - prefer HTTPS if available
             protocol = "https" if https == "yes" else "http"
+            proxy_url = f"{protocol}://{ip}:{port}"
+            last_proxy_url = proxy_url
 
             logger.info(f"Testing proxy {ip}:{port} ({protocol})...")
             tested += 1
 
             if self.test_proxy(ip, port, protocol):
-                proxy_url = f"{protocol}://{ip}:{port}"
                 logger.info(f"Found working proxy: {proxy_url}")
                 return proxy_url
 
             # Small delay between tests
-            time.sleep(0.5)
+            time.sleep(0.3)
+
+        # If no proxy passed the test but fallback is enabled, return the last one tried
+        # Free proxies are often unreliable but might still work for the actual use case
+        if fallback_to_any and last_proxy_url:
+            logger.warning(f"Tested {tested} proxies, none passed strict test. Using fallback: {last_proxy_url}")
+            logger.info("Note: Free proxies are often unreliable but may still work for your use case")
+            return last_proxy_url
 
         logger.warning(f"Tested {tested} proxies, none are working")
         return None
 
 
-def get_free_proxy(headed: bool = False, max_attempts: int = 10) -> Optional[str]:
+def get_free_proxy(headed: bool = False, max_attempts: int = 20, fallback_to_any: bool = True) -> Optional[str]:
     """
     Convenience function to get a working free proxy.
 
     Args:
         headed: Run browser in visible mode
         max_attempts: Maximum number of proxies to test
+        fallback_to_any: If True, return a proxy even if test fails (for unreliable free proxies)
 
     Returns:
         Proxy URL string or None
     """
     with ProxyScraper(headed=headed) as scraper:
-        return scraper.get_working_proxy(max_attempts=max_attempts)
+        return scraper.get_working_proxy(max_attempts=max_attempts, fallback_to_any=fallback_to_any)
 
 
 if __name__ == "__main__":

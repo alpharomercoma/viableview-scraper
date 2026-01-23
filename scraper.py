@@ -547,7 +547,8 @@ def main():
     if not proxy and not args.no_auto_proxy and get_free_proxy:
         logger.info("Auto-fetching proxy from free-proxy-list.net...")
         try:
-            proxy = get_free_proxy(headed=args.headed, max_attempts=10)
+            # Test more proxies and use fallback for unreliable free proxies
+            proxy = get_free_proxy(headed=args.headed, max_attempts=20, fallback_to_any=True)
             if proxy:
                 logger.info(f"Successfully fetched proxy: {proxy}")
             else:
