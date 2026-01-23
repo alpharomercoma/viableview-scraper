@@ -11,13 +11,13 @@ This script scrapes business data from the target website. It handles:
 - Proxy support for IP rotation
 
 Usage:
-    python scraper.py [--query QUERY] [--output OUTPUT] [--headed] [--proxy PROXY]
+    python scraper.py [--query QUERY] [--output OUTPUT] [--headless] [--proxy PROXY]
 
 Arguments:
-    --query   Search query (default: searches for all businesses with "llc")
-    --output  Output file path (default: output.json)
-    --headed  Run browser in headed mode (visible) for manual captcha solving
-    --proxy   Proxy server URL (e.g., http://user:pass@host:port or socks5://host:port)
+    --query     Search query (default: searches for all businesses with "llc")
+    --output    Output file path (default: output.json)
+    --headless  Run browser in headless mode (default is headed/visible for manual captcha solving)
+    --proxy     Proxy server URL (e.g., http://user:pass@host:port or socks5://host:port)
 """
 
 import argparse
@@ -525,9 +525,9 @@ def main():
         help="Output file path (default: output.json)"
     )
     parser.add_argument(
-        '--headed',
+        '--headless',
         action='store_true',
-        help="Run browser in headed mode (visible) for captcha solving"
+        help="Run browser in headless mode (default is headed/visible for manual captcha solving)"
     )
     parser.add_argument(
         '--proxy', '-p',
@@ -535,20 +535,23 @@ def main():
         help="Proxy server URL (e.g., http://user:pass@host:port or socks5://host:port)"
     )
     parser.add_argument(
-        '--no-auto-proxy',
+        '--auto-proxy',
         action='store_true',
-        help="Disable automatic proxy fetching (use only if --proxy is provided)"
+        help="Enable automatic proxy fetching from free-proxy-list.net"
     )
 
     args = parser.parse_args()
 
-    # Auto-fetch proxy by default if no proxy provided and auto-proxy is enabled
+    # Headed mode is now the default (headless=False means headed=True)
+    headed = not args.headless
+
+    # Auto-fetch proxy only if explicitly enabled
     proxy = args.proxy
-    if not proxy and not args.no_auto_proxy and get_free_proxy:
+    if not proxy and args.auto_proxy and get_free_proxy:
         logger.info("Auto-fetching proxy from free-proxy-list.net...")
         try:
             # Test more proxies and use fallback for unreliable free proxies
-            proxy = get_free_proxy(headed=args.headed, max_attempts=20, fallback_to_any=True)
+            proxy = get_free_proxy(headed=headed, max_attempts=20, fallback_to_any=True)
             if proxy:
                 logger.info(f"Successfully fetched proxy: {proxy}")
             else:
@@ -561,12 +564,12 @@ def main():
     logger.info("Business Registry Scraper Starting")
     logger.info(f"Query: {args.query}")
     logger.info(f"Output: {args.output}")
-    logger.info(f"Mode: {'Headed' if args.headed else 'Headless'}")
+    logger.info(f"Mode: {'Headed' if headed else 'Headless'}")
     logger.info(f"Proxy: {proxy if proxy else 'None'}")
     logger.info("=" * 60)
 
     try:
-        with BusinessScraper(headed=args.headed, proxy=proxy) as scraper:
+        with BusinessScraper(headed=headed, proxy=proxy) as scraper:
             # Step 1: Solve captcha
             captcha_token = scraper.solve_captcha()
 

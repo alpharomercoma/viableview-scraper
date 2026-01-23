@@ -56,21 +56,30 @@ A Python-based web scraper that extracts business data from the State Registry w
 
 ## Usage
 
-### Basic Usage (Automatic CAPTCHA Solving)
+### Basic Usage
 
-Run the scraper in headless mode with automatic CAPTCHA solving:
+Run the scraper (opens a visible browser for manual CAPTCHA solving):
 
 ```bash
 python scraper.py
 ```
 
 This will:
-1. Launch a headless browser with stealth mode
-2. Automatically solve the reCAPTCHA using audio challenge
-3. Scrape all businesses matching the default query ("llc")
-4. Save results to `output.json`
+1. Launch a visible browser with stealth mode
+2. Attempt to auto-solve reCAPTCHA using audio challenge
+3. If auto-solve fails, prompt you to solve the CAPTCHA manually
+4. Scrape all businesses matching the default query ("llc")
+5. Save results to `output.json`
 
-### Using a Proxy (Recommended)
+### Headless Mode (Automatic CAPTCHA Solving)
+
+For automated/server environments, use headless mode:
+
+```bash
+python scraper.py --headless
+```
+
+### Using a Proxy
 
 To avoid rate limiting on the audio challenge, use a proxy:
 
@@ -82,15 +91,15 @@ python scraper.py --proxy "http://user:pass@host:port"
 python scraper.py --proxy "socks5://host:port"
 ```
 
-### Manual CAPTCHA Solving (Fallback)
+### Auto-Fetch Proxy
 
-If automatic solving fails, run in headed mode:
+To automatically fetch a free proxy:
 
 ```bash
-python scraper.py --headed
+python scraper.py --auto-proxy
 ```
 
-On a headless server (no display), use xvfb:
+### Headless Mode on Server (No Display)
 
 ```bash
 xvfb-run python scraper.py --headed
@@ -106,8 +115,9 @@ python scraper.py [OPTIONS]
 |--------|-------|---------|-------------|
 | `--query` | `-q` | `llc` | Search query to find businesses |
 | `--output` | `-o` | `output.json` | Output file path |
-| `--headed` | | False | Run browser in visible mode for manual captcha solving |
+| `--headless` | | False | Run browser in headless mode (default is headed/visible) |
 | `--proxy` | `-p` | None | Proxy server URL (e.g., `http://host:port`) |
+| `--auto-proxy` | | False | Auto-fetch a free proxy from free-proxy-list.net |
 
 ### Examples
 
@@ -116,9 +126,9 @@ Search for businesses containing "tech" with a proxy:
 python scraper.py --query "tech" --proxy "http://proxy.example.com:8080"
 ```
 
-Save output to a custom file:
+Run in headless mode with auto-proxy:
 ```bash
-python scraper.py --output my_results.json
+python scraper.py --headless --auto-proxy
 ```
 
 ## Output Format
