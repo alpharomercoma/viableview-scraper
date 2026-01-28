@@ -278,33 +278,59 @@ class BusinessScraper:
             return None
 
         # Extract business details from the page
-        # The structure depends on how the detail page is rendered
+        # The page uses a card-based layout with .card divs and .small.muted labels
         try:
-            # Try to extract from definition lists or tables
             details = self.page.evaluate('''() => {
                 const data = {};
 
-                // Try to find business name
+                // Get business name from h2
                 const h2 = document.querySelector('h2');
                 if (h2) data.businessName = h2.textContent.trim();
 
-                // Try to find definition lists (dt/dd pairs)
-                const dts = document.querySelectorAll('dt');
-                dts.forEach(dt => {
-                    const dd = dt.nextElementSibling;
-                    if (dd && dd.tagName === 'DD') {
-                        const key = dt.textContent.trim().toLowerCase().replace(/[^a-z]/g, '');
-                        data[key] = dd.textContent.trim();
-                    }
-                });
+                // Find all cards and extract data based on their labels
+                const cards = document.querySelectorAll('.card');
+                cards.forEach(card => {
+                    const label = card.querySelector('.small.muted');
+                    if (!label) return;
 
-                // Try to find table rows
-                const rows = document.querySelectorAll('tr');
-                rows.forEach(row => {
-                    const cells = row.querySelectorAll('td, th');
-                    if (cells.length >= 2) {
-                        const key = cells[0].textContent.trim().toLowerCase().replace(/[^a-z]/g, '');
-                        data[key] = cells[1].textContent.trim();
+                    const labelText = label.textContent.trim();
+
+                    if (labelText === 'Status') {
+                        const statusSpan = card.querySelector('.status');
+                        if (statusSpan) data.status = statusSpan.textContent.trim();
+                    }
+                    else if (labelText === 'Filing Date') {
+                        const valueDiv = label.nextElementSibling;
+                        if (valueDiv) data.filingDate = valueDiv.textContent.trim();
+                    }
+                    else if (labelText === 'Address') {
+                        const valueDiv = label.nextElementSibling;
+                        if (valueDiv) data.address = valueDiv.textContent.trim();
+                    }
+                    else if (labelText === 'Registered Agent') {
+                        // Agent card has: label, name div, address div (muted), email div (muted)
+                        const children = card.querySelectorAll('div');
+                        let foundName = false;
+                        children.forEach(child => {
+                            const text = child.textContent.trim();
+                            // Skip the label itself
+                            if (text === 'Registered Agent') return;
+
+                            // The name is in a div with font-weight:600 (not muted after the label)
+                            if (!child.classList.contains('muted') && !foundName && text) {
+                                data.agentName = text;
+                                foundName = true;
+                            }
+                            // Address is in a muted div without "Email:"
+                            else if (child.classList.contains('muted') && !text.startsWith('Email:') && text !== 'Registered Agent') {
+                                data.agentAddress = text;
+                            }
+                            // Email is in a div starting with "Email:"
+                            else if (text.startsWith('Email:')) {
+                                const code = child.querySelector('code');
+                                data.agentEmail = code ? code.textContent.trim() : text.replace('Email:', '').trim();
+                            }
+                        });
                     }
                 });
 
@@ -377,18 +403,22 @@ class BusinessScraper:
                 logger.warning(f"Could not get details for {business_id}: {e}")
 
         # Combine search results with detail page data
+        # Output format per spec: business_name, registration_id, status, filing_date, agent_name, agent_address, agent_email
         record = {
             "business_name": business.get('businessName', ''),
             "registration_id": business.get('registrationId', ''),
             "status": business.get('status', ''),
             "filing_date": business.get('filingDate', ''),
+            "agent_name": "",
+            "agent_address": "",
+            "agent_email": "",
         }
 
-        # Add agent details if available
+        # Add agent details from detail page if available
         if details:
-            record["agent_name"] = details.get('agentname', details.get('agent', ''))
-            record["agent_address"] = details.get('agentaddress', details.get('address', ''))
-            record["agent_email"] = details.get('agentemail', details.get('email', ''))
+            record["agent_name"] = details.get('agentName', '')
+            record["agent_address"] = details.get('agentAddress', '')
+            record["agent_email"] = details.get('agentEmail', '')
         else:
             # Use data from search results if available
             record["agent_name"] = business.get('agentName', '')

@@ -22,7 +22,7 @@ A Python-based web scraper that extracts business data from the State Registry w
 1. Clone this repository:
    ```bash
    git clone <repository-url>
-   cd scraper
+   cd viableview-scraper
    ```
 
 2. Create a virtual environment (recommended):

@@ -1,11 +1,4502 @@
 [
   {
-    "business_name": "ABC COMPANY LLC",
-    "registration_id": "123456",
+    "business_name": "Apex Works LLC",
+    "registration_id": "SD0000002",
     "status": "Active",
-    "filing_date": "2023-05-14",
+    "filing_date": "2017-11-23",
+    "agent_name": "Jen Smith",
+    "agent_address": "2625 Hill Ave",
+    "agent_email": "jen.smith.66562b08-0bed-40b1-a1d0-92a3771cb516@example.com"
+  },
+  {
+    "business_name": "Green Labs LLC",
+    "registration_id": "SD0000004",
+    "status": "Pending",
+    "filing_date": "2007-02-18",
+    "agent_name": "John Smith",
+    "agent_address": "3743 Elm Ave",
+    "agent_email": "john.smith.9100c151-afe3-4427-8f10-b76ff4432442@example.com"
+  },
+  {
+    "business_name": "Golden Services LLC",
+    "registration_id": "SD0000005",
+    "status": "Active",
+    "filing_date": "2009-11-27",
+    "agent_name": "Gian Davis",
+    "agent_address": "4384 Broadway Ave",
+    "agent_email": "gian.davis.3786dba4-ca53-4934-9c5e-259aeec12a4f@example.com"
+  },
+  {
+    "business_name": "Green Services LLC",
+    "registration_id": "SD0000012",
+    "status": "Active",
+    "filing_date": "2010-02-25",
+    "agent_name": "Maria Miller",
+    "agent_address": "8655 Hill Ave",
+    "agent_email": "maria.miller.82e75986-6976-48b6-9038-d86e79de1268@example.com"
+  },
+  {
+    "business_name": "Pine Foods LLC",
+    "registration_id": "SD0000020",
+    "status": "Active",
+    "filing_date": "2011-09-06",
+    "agent_name": "Maria Johnson",
+    "agent_address": "9759 Broadway Ave",
+    "agent_email": "maria.johnson.b4a4c59f-1c88-4df3-8c08-74c9a3202896@example.com"
+  },
+  {
+    "business_name": "Apex Farms LLC",
+    "registration_id": "SD0000021",
+    "status": "Dissolved",
+    "filing_date": "2013-04-19",
+    "agent_name": "Gian Miller",
+    "agent_address": "3356 Elm Ave",
+    "agent_email": "gian.miller.31e409a6-6f12-4a67-9fd3-de828aeb2deb@example.com"
+  },
+  {
+    "business_name": "Bright Mart LLC",
+    "registration_id": "SD0000024",
+    "status": "Dissolved",
+    "filing_date": "1999-05-04",
+    "agent_name": "Jen Miller",
+    "agent_address": "9919 Maple Ave",
+    "agent_email": "jen.miller.5c86d47e-083c-415c-b4d6-dfc4e879a9ad@example.com"
+  },
+  {
+    "business_name": "Apex Builders LLC",
+    "registration_id": "SD0000036",
+    "status": "Inactive",
+    "filing_date": "2022-02-25",
+    "agent_name": "Dave Smith",
+    "agent_address": "9142 Maple Ave",
+    "agent_email": "dave.smith.6291687e-3d9f-4c86-9d6f-e1b64faaf497@example.com"
+  },
+  {
+    "business_name": "Pine Pharmacy LLC",
+    "registration_id": "SD0000039",
+    "status": "Active",
+    "filing_date": "2002-07-23",
+    "agent_name": "Ezra Anderson",
+    "agent_address": "5431 Hill Ave",
+    "agent_email": "ezra.anderson.2c411b63-ed66-4857-ab29-d2322dcb0c3d@example.com"
+  },
+  {
+    "business_name": "Summit Industries LLC",
+    "registration_id": "SD0000042",
+    "status": "Dissolved",
+    "filing_date": "2013-10-22",
+    "agent_name": "Maria Taylor",
+    "agent_address": "2987 Broadway Ave",
+    "agent_email": "maria.taylor.021e781b-c37e-4bd6-8e86-d42544392e50@example.com"
+  },
+  {
+    "business_name": "Quantum Consulting LLC",
+    "registration_id": "SD0000046",
+    "status": "Active",
+    "filing_date": "2021-11-08",
+    "agent_name": "Sara Wilson",
+    "agent_address": "8738 Hill Ave",
+    "agent_email": "sara.wilson.7aa506f4-1597-4411-bb85-500687bb1da7@example.com"
+  },
+  {
+    "business_name": "Sunny Services LLC",
+    "registration_id": "SD0000052",
+    "status": "Active",
+    "filing_date": "2005-02-24",
+    "agent_name": "Dave Miller",
+    "agent_address": "9669 Elm Ave",
+    "agent_email": "dave.miller.f655c915-caaa-436f-9927-f7d2ce1ec688@example.com"
+  },
+  {
+    "business_name": "Golden Market LLC",
+    "registration_id": "SD0000055",
+    "status": "Active",
+    "filing_date": "2020-10-10",
+    "agent_name": "Ezra Davis",
+    "agent_address": "8571 Hill Ave",
+    "agent_email": "ezra.davis.8619bc6b-894e-4ce9-bcce-ebb67db35f30@example.com"
+  },
+  {
+    "business_name": "Cedar Labs LLC",
+    "registration_id": "SD0000058",
+    "status": "Active",
+    "filing_date": "2024-05-26",
+    "agent_name": "Alex Garcia",
+    "agent_address": "4362 Maple Ave",
+    "agent_email": "alex.garcia.edf4b099-49d2-47d5-9e8d-dafd9f445f9b@example.com"
+  },
+  {
+    "business_name": "Sunny Market LLC",
+    "registration_id": "SD0000061",
+    "status": "Active",
+    "filing_date": "2000-08-17",
+    "agent_name": "Ezra Taylor",
+    "agent_address": "1504 Hill Ave",
+    "agent_email": "ezra.taylor.eed58f55-8df0-4464-8959-f00a1a5cfe7b@example.com"
+  },
+  {
+    "business_name": "Prime Mart LLC",
+    "registration_id": "SD0000065",
+    "status": "Active",
+    "filing_date": "1997-04-27",
+    "agent_name": "Maria Taylor",
+    "agent_address": "4791 Elm Ave",
+    "agent_email": "maria.taylor.37096889-e260-417a-a4db-38cfab58e4ea@example.com"
+  },
+  {
+    "business_name": "Sky Solutions LLC",
+    "registration_id": "SD0000067",
+    "status": "Active",
+    "filing_date": "2004-10-19",
+    "agent_name": "Dave Wilson",
+    "agent_address": "5456 Hill Ave",
+    "agent_email": "dave.wilson.f02b78b3-7a2d-42c4-a74f-a4198784844c@example.com"
+  },
+  {
+    "business_name": "Rapid Ventures LLC",
+    "registration_id": "SD0000069",
+    "status": "Active",
+    "filing_date": "2025-10-11",
+    "agent_name": "Dave Smith",
+    "agent_address": "2371 Hill Ave",
+    "agent_email": "dave.smith.1f4a7c1a-3684-473c-ba40-2f03a7cf8b46@example.com"
+  },
+  {
+    "business_name": "Cedar Labs LLC",
+    "registration_id": "SD0000077",
+    "status": "Active",
+    "filing_date": "2018-03-03",
+    "agent_name": "Maria Davis",
+    "agent_address": "2175 Elm Ave",
+    "agent_email": "maria.davis.8d0b9d94-3bbc-4bd9-a9d2-bc048d3e10bd@example.com"
+  },
+  {
+    "business_name": "Apex Ventures LLC",
+    "registration_id": "SD0000080",
+    "status": "Active",
+    "filing_date": "2025-09-11",
+    "agent_name": "Jen Anderson",
+    "agent_address": "1921 Maple Ave",
+    "agent_email": "jen.anderson.fe017d7a-c2cb-4571-8a55-2fa8a9e6bf86@example.com"
+  },
+  {
+    "business_name": "Quantum Studio LLC",
+    "registration_id": "SD0000090",
+    "status": "Active",
+    "filing_date": "2005-11-09",
+    "agent_name": "John Johnson",
+    "agent_address": "1408 Broadway Ave",
+    "agent_email": "john.johnson.0726e7ed-ee9c-4f85-bc09-6986a5c87cfd@example.com"
+  },
+  {
+    "business_name": "Pine Energy LLC",
+    "registration_id": "SD0000094",
+    "status": "Active",
+    "filing_date": "1999-10-22",
+    "agent_name": "Sara Johnson",
+    "agent_address": "8701 Maple Ave",
+    "agent_email": "sara.johnson.e9717955-d2d0-407f-8a27-5957bfe3c180@example.com"
+  },
+  {
+    "business_name": "Golden Farms LLC",
+    "registration_id": "SD0000099",
+    "status": "Active",
+    "filing_date": "2009-02-28",
+    "agent_name": "Ezra Anderson",
+    "agent_address": "4753 Broadway Ave",
+    "agent_email": "ezra.anderson.d6d4adb8-e68e-4d33-8628-633cae66032f@example.com"
+  },
+  {
+    "business_name": "Rapid Services LLC",
+    "registration_id": "SD0000102",
+    "status": "Active",
+    "filing_date": "2001-03-20",
+    "agent_name": "Dave Taylor",
+    "agent_address": "9246 Hill Ave",
+    "agent_email": "dave.taylor.39ebc44a-95ce-43f1-8f24-35611f6061e4@example.com"
+  },
+  {
+    "business_name": "Metro Works LLC",
+    "registration_id": "SD0000104",
+    "status": "Active",
+    "filing_date": "2009-01-02",
+    "agent_name": "John Anderson",
+    "agent_address": "7591 Broadway Ave",
+    "agent_email": "john.anderson.f0116151-8103-4e91-8683-b6322d6a32c2@example.com"
+  },
+  {
+    "business_name": "Silver Works LLC",
+    "registration_id": "SD0000110",
+    "status": "Active",
+    "filing_date": "2023-10-05",
+    "agent_name": "Maria Garcia",
+    "agent_address": "7180 Broadway Ave",
+    "agent_email": "maria.garcia.0792fe8b-fd69-4495-8f48-c9ef74ca9960@example.com"
+  },
+  {
+    "business_name": "Metro Industries LLC",
+    "registration_id": "SD0000113",
+    "status": "Active",
+    "filing_date": "2011-02-10",
+    "agent_name": "Dave Garcia",
+    "agent_address": "7177 Broadway Ave",
+    "agent_email": "dave.garcia.9a59196f-0a02-4c6e-a1ed-18d4c0437003@example.com"
+  },
+  {
+    "business_name": "Crystal Market LLC",
+    "registration_id": "SD0000131",
+    "status": "Active",
+    "filing_date": "2005-11-03",
+    "agent_name": "Maria Garcia",
+    "agent_address": "2124 Hill Ave",
+    "agent_email": "maria.garcia.27cc4e82-abac-47fb-9c76-f3bcf3368a78@example.com"
+  },
+  {
+    "business_name": "Sky Foods LLC",
+    "registration_id": "SD0000132",
+    "status": "Active",
+    "filing_date": "2004-03-06",
+    "agent_name": "Jen Johnson",
+    "agent_address": "4115 Maple Ave",
+    "agent_email": "jen.johnson.bd1ff915-5fbc-4ffb-ba1b-f52ea06f3080@example.com"
+  },
+  {
+    "business_name": "Blue Logistics LLC",
+    "registration_id": "SD0000134",
+    "status": "Dissolved",
+    "filing_date": "2019-10-09",
+    "agent_name": "Sara Taylor",
+    "agent_address": "8948 Elm Ave",
+    "agent_email": "sara.taylor.631b3127-32d0-4bb9-91ea-c69837b4e71e@example.com"
+  },
+  {
+    "business_name": "Harmony Energy LLC",
+    "registration_id": "SD0000139",
+    "status": "Active",
+    "filing_date": "2010-10-27",
+    "agent_name": "John Anderson",
+    "agent_address": "2204 Elm Ave",
+    "agent_email": "john.anderson.9b5a5baa-dbc3-421c-94af-42e286c0f0f4@example.com"
+  },
+  {
+    "business_name": "Bright Solutions LLC",
+    "registration_id": "SD0000141",
+    "status": "Active",
+    "filing_date": "1998-07-12",
+    "agent_name": "Maria Davis",
+    "agent_address": "9880 Hill Ave",
+    "agent_email": "maria.davis.b7934090-98c9-453b-b208-5d2072d73354@example.com"
+  },
+  {
+    "business_name": "Sky Foods LLC",
+    "registration_id": "SD0000142",
+    "status": "Active",
+    "filing_date": "2017-06-26",
+    "agent_name": "Maria Garcia",
+    "agent_address": "5383 Elm Ave",
+    "agent_email": "maria.garcia.2de78f6f-233c-45bd-92fe-6e34f1de227d@example.com"
+  },
+  {
+    "business_name": "Pine Ventures LLC",
+    "registration_id": "SD0000151",
+    "status": "Active",
+    "filing_date": "1999-01-18",
+    "agent_name": "Dave Davis",
+    "agent_address": "4716 Elm Ave",
+    "agent_email": "dave.davis.0983bba6-44fc-4875-8c5b-cad22ce46eca@example.com"
+  },
+  {
+    "business_name": "Cedar Foods LLC",
+    "registration_id": "SD0000152",
+    "status": "Active",
+    "filing_date": "2002-09-24",
+    "agent_name": "Maria Smith",
+    "agent_address": "6514 Hill Ave",
+    "agent_email": "maria.smith.266c80da-e947-44af-b5e8-3cfb5878f9b6@example.com"
+  },
+  {
+    "business_name": "Prime Mart LLC",
+    "registration_id": "SD0000153",
+    "status": "Active",
+    "filing_date": "2013-10-04",
+    "agent_name": "Dave Garcia",
+    "agent_address": "8271 Hill Ave",
+    "agent_email": "dave.garcia.d65614cf-bd4a-40e9-9077-d2bf8ba667e2@example.com"
+  },
+  {
+    "business_name": "Sunny Consulting LLC",
+    "registration_id": "SD0000154",
+    "status": "Active",
+    "filing_date": "2018-08-21",
+    "agent_name": "Gian Miller",
+    "agent_address": "9312 Maple Ave",
+    "agent_email": "gian.miller.eff5807f-bcfb-4772-8aa9-fdda68f5b6d2@example.com"
+  },
+  {
+    "business_name": "Sky Energy LLC",
+    "registration_id": "SD0000159",
+    "status": "Dissolved",
+    "filing_date": "1998-01-27",
+    "agent_name": "Maria Wilson",
+    "agent_address": "8535 Hill Ave",
+    "agent_email": "maria.wilson.dfea6b11-61e3-4405-83b3-5a692b29d9a5@example.com"
+  },
+  {
+    "business_name": "Bright Foods LLC",
+    "registration_id": "SD0000162",
+    "status": "Pending",
+    "filing_date": "2010-01-10",
+    "agent_name": "Ezra Wilson",
+    "agent_address": "6276 Hill Ave",
+    "agent_email": "ezra.wilson.4209e150-f874-43bc-ac8d-960a6d3a8370@example.com"
+  },
+  {
+    "business_name": "Quantum Farms LLC",
+    "registration_id": "SD0000163",
+    "status": "Active",
+    "filing_date": "2016-09-05",
+    "agent_name": "Ezra Garcia",
+    "agent_address": "3658 Broadway Ave",
+    "agent_email": "ezra.garcia.a35b76c1-3d24-4deb-92b6-2e7662205614@example.com"
+  },
+  {
+    "business_name": "Nova Trading LLC",
+    "registration_id": "SD0000165",
+    "status": "Inactive",
+    "filing_date": "2008-10-25",
+    "agent_name": "John Johnson",
+    "agent_address": "9741 Broadway Ave",
+    "agent_email": "john.johnson.e8424b08-4df0-4449-9cc4-9ddb953f66ed@example.com"
+  },
+  {
+    "business_name": "Ocean Group LLC",
+    "registration_id": "SD0000166",
+    "status": "Active",
+    "filing_date": "1996-07-15",
+    "agent_name": "Sara Garcia",
+    "agent_address": "8265 Elm Ave",
+    "agent_email": "sara.garcia.0950316d-0984-4c1d-9e5a-9b292349fcb8@example.com"
+  },
+  {
+    "business_name": "Quantum Group LLC",
+    "registration_id": "SD0000171",
+    "status": "Inactive",
+    "filing_date": "2001-10-24",
+    "agent_name": "Gian Miller",
+    "agent_address": "261 Maple Ave",
+    "agent_email": "gian.miller.4f418e95-701a-4f12-b5ae-27680f3bb718@example.com"
+  },
+  {
+    "business_name": "Rapid Services LLC",
+    "registration_id": "SD0000177",
+    "status": "Active",
+    "filing_date": "1995-04-17",
+    "agent_name": "Dave Taylor",
+    "agent_address": "267 Broadway Ave",
+    "agent_email": "dave.taylor.f0832a63-16e4-4f10-a0e8-813b9a175921@example.com"
+  },
+  {
+    "business_name": "Prime Pharmacy LLC",
+    "registration_id": "SD0000182",
+    "status": "Pending",
+    "filing_date": "2013-03-25",
+    "agent_name": "Maria Davis",
+    "agent_address": "9294 Hill Ave",
+    "agent_email": "maria.davis.0c0d0fea-fc4f-4392-94be-a129d7dd7663@example.com"
+  },
+  {
+    "business_name": "Pine Studio LLC",
+    "registration_id": "SD0000195",
+    "status": "Active",
+    "filing_date": "2003-04-17",
+    "agent_name": "Ezra Taylor",
+    "agent_address": "9653 Maple Ave",
+    "agent_email": "ezra.taylor.a8188c02-0d44-40e5-b17e-ef6e683a91e3@example.com"
+  },
+  {
+    "business_name": "Metro Ventures LLC",
+    "registration_id": "SD0000197",
+    "status": "Active",
+    "filing_date": "2017-08-11",
+    "agent_name": "John Smith",
+    "agent_address": "5630 Broadway Ave",
+    "agent_email": "john.smith.dd9aefb3-afa6-490c-afe2-f4b6a935714d@example.com"
+  },
+  {
+    "business_name": "Ocean Logistics LLC",
+    "registration_id": "SD0000210",
+    "status": "Active",
+    "filing_date": "2018-05-23",
+    "agent_name": "Gian Smith",
+    "agent_address": "1536 Hill Ave",
+    "agent_email": "gian.smith.e1ff764a-9a05-4b46-9cc1-d1ad120a0a6d@example.com"
+  },
+  {
+    "business_name": "Pine Foods LLC",
+    "registration_id": "SD0000212",
+    "status": "Active",
+    "filing_date": "2020-08-01",
+    "agent_name": "Dave Smith",
+    "agent_address": "7019 Maple Ave",
+    "agent_email": "dave.smith.fdd3ae0b-f349-481a-8b50-4fb1f15d1eab@example.com"
+  },
+  {
+    "business_name": "Sunny Market LLC",
+    "registration_id": "SD0000225",
+    "status": "Active",
+    "filing_date": "2011-06-02",
+    "agent_name": "Gian Garcia",
+    "agent_address": "4189 Broadway Ave",
+    "agent_email": "gian.garcia.343f5af2-3082-4a30-b594-7c2b875e498f@example.com"
+  },
+  {
+    "business_name": "Prime Services LLC",
+    "registration_id": "SD0000228",
+    "status": "Dissolved",
+    "filing_date": "1997-08-28",
+    "agent_name": "John Taylor",
+    "agent_address": "140 Elm Ave",
+    "agent_email": "john.taylor.b9edf611-73ef-4f0a-af51-f57a859ab824@example.com"
+  },
+  {
+    "business_name": "Crystal Ventures LLC",
+    "registration_id": "SD0000231",
+    "status": "Pending",
+    "filing_date": "1999-12-09",
+    "agent_name": "Ezra Wilson",
+    "agent_address": "7521 Broadway Ave",
+    "agent_email": "ezra.wilson.ac11f8d8-f12c-4779-9197-406f02218984@example.com"
+  },
+  {
+    "business_name": "Golden Pharmacy LLC",
+    "registration_id": "SD0000238",
+    "status": "Active",
+    "filing_date": "2009-01-06",
+    "agent_name": "Sara Anderson",
+    "agent_address": "7000 Maple Ave",
+    "agent_email": "sara.anderson.ac260aad-7981-4d9d-a192-4fe827ababe1@example.com"
+  },
+  {
+    "business_name": "Prime Ventures LLC",
+    "registration_id": "SD0000244",
+    "status": "Active",
+    "filing_date": "2002-10-08",
+    "agent_name": "Sara Wilson",
+    "agent_address": "3310 Maple Ave",
+    "agent_email": "sara.wilson.ac724714-adb3-4228-b343-af42873b6f9f@example.com"
+  },
+  {
+    "business_name": "Pine Solutions LLC",
+    "registration_id": "SD0000251",
+    "status": "Active",
+    "filing_date": "2000-07-06",
+    "agent_name": "Gian Taylor",
+    "agent_address": "517 Hill Ave",
+    "agent_email": "gian.taylor.6dcf76d2-189b-4369-81bd-8cda6360d1da@example.com"
+  },
+  {
+    "business_name": "Prime Mart LLC",
+    "registration_id": "SD0000254",
+    "status": "Active",
+    "filing_date": "1998-05-26",
+    "agent_name": "Jen Johnson",
+    "agent_address": "8924 Hill Ave",
+    "agent_email": "jen.johnson.56a88e1b-f836-48d6-a502-27f0504ad669@example.com"
+  },
+  {
+    "business_name": "Rapid Trading LLC",
+    "registration_id": "SD0000256",
+    "status": "Active",
+    "filing_date": "2020-09-14",
+    "agent_name": "Ezra Anderson",
+    "agent_address": "8783 Hill Ave",
+    "agent_email": "ezra.anderson.5c3080a5-f424-4b66-88a3-b3da37378949@example.com"
+  },
+  {
+    "business_name": "Harmony Market LLC",
+    "registration_id": "SD0000260",
+    "status": "Dissolved",
+    "filing_date": "2013-02-26",
+    "agent_name": "Ezra Miller",
+    "agent_address": "6285 Hill Ave",
+    "agent_email": "ezra.miller.23b2f038-98f0-4eee-a75e-bb4dc06b064e@example.com"
+  },
+  {
+    "business_name": "Sunny Energy LLC",
+    "registration_id": "SD0000262",
+    "status": "Active",
+    "filing_date": "2020-05-10",
+    "agent_name": "Alex Garcia",
+    "agent_address": "4933 Hill Ave",
+    "agent_email": "alex.garcia.06855003-c017-48fd-a6ff-6b9aa6f48552@example.com"
+  },
+  {
+    "business_name": "Silver Energy LLC",
+    "registration_id": "SD0000281",
+    "status": "Active",
+    "filing_date": "2015-05-25",
+    "agent_name": "John Smith",
+    "agent_address": "800 Broadway Ave",
+    "agent_email": "john.smith.466d7aff-123f-4eb5-858e-e8fbb38d75a2@example.com"
+  },
+  {
+    "business_name": "Blue Tech LLC",
+    "registration_id": "SD0000285",
+    "status": "Dissolved",
+    "filing_date": "2021-10-22",
+    "agent_name": "John Johnson",
+    "agent_address": "4202 Maple Ave",
+    "agent_email": "john.johnson.a879b7ce-e4d5-47e3-a4b9-3e2374cf74c5@example.com"
+  },
+  {
+    "business_name": "Crystal Labs LLC",
+    "registration_id": "SD0000290",
+    "status": "Active",
+    "filing_date": "2015-06-01",
+    "agent_name": "Ezra Davis",
+    "agent_address": "7905 Elm Ave",
+    "agent_email": "ezra.davis.422ac5da-f7bf-4393-bc12-0b9cf6603b9d@example.com"
+  },
+  {
+    "business_name": "Quantum Builders LLC",
+    "registration_id": "SD0000291",
+    "status": "Active",
+    "filing_date": "2024-03-17",
+    "agent_name": "John Taylor",
+    "agent_address": "5263 Maple Ave",
+    "agent_email": "john.taylor.145edb54-89aa-4735-90af-4db218e12e53@example.com"
+  },
+  {
+    "business_name": "Pine Solutions LLC",
+    "registration_id": "SD0000292",
+    "status": "Active",
+    "filing_date": "2012-11-13",
+    "agent_name": "Dave Taylor",
+    "agent_address": "9398 Hill Ave",
+    "agent_email": "dave.taylor.bc76c4e8-b79c-4346-9cea-4f988fa38804@example.com"
+  },
+  {
+    "business_name": "River Tech LLC",
+    "registration_id": "SD0000298",
+    "status": "Active",
+    "filing_date": "2008-10-16",
+    "agent_name": "Maria Johnson",
+    "agent_address": "6357 Elm Ave",
+    "agent_email": "maria.johnson.f434365e-6dce-41f5-9738-7e00e345995c@example.com"
+  },
+  {
+    "business_name": "Bright Tech LLC",
+    "registration_id": "SD0000309",
+    "status": "Active",
+    "filing_date": "2009-04-21",
+    "agent_name": "Ezra Johnson",
+    "agent_address": "6332 Elm Ave",
+    "agent_email": "ezra.johnson.3234c9d9-8393-4d4b-9a15-886ba1120ea1@example.com"
+  },
+  {
+    "business_name": "Bright Mart LLC",
+    "registration_id": "SD0000310",
+    "status": "Dissolved",
+    "filing_date": "2021-06-17",
+    "agent_name": "Jen Davis",
+    "agent_address": "5258 Broadway Ave",
+    "agent_email": "jen.davis.ee7e4267-8c15-4f3c-b4a3-0e0d6ea4b43a@example.com"
+  },
+  {
+    "business_name": "Silver Holdings LLC",
+    "registration_id": "SD0000311",
+    "status": "Active",
+    "filing_date": "2001-11-21",
+    "agent_name": "Alex Anderson",
+    "agent_address": "1191 Maple Ave",
+    "agent_email": "alex.anderson.486f370f-b041-4358-98d2-a3e5d0f9dbc2@example.com"
+  },
+  {
+    "business_name": "Cedar Mart LLC",
+    "registration_id": "SD0000314",
+    "status": "Active",
+    "filing_date": "2024-08-13",
+    "agent_name": "Maria Davis",
+    "agent_address": "2244 Hill Ave",
+    "agent_email": "maria.davis.6a24a78d-f0ea-48bf-9199-1f596216ce60@example.com"
+  },
+  {
+    "business_name": "Bright Industries LLC",
+    "registration_id": "SD0000316",
+    "status": "Active",
+    "filing_date": "2018-12-24",
+    "agent_name": "Maria Garcia",
+    "agent_address": "3024 Maple Ave",
+    "agent_email": "maria.garcia.73ab2d25-1638-449a-87b3-2216f41ab84e@example.com"
+  },
+  {
+    "business_name": "Bright Works LLC",
+    "registration_id": "SD0000333",
+    "status": "Active",
+    "filing_date": "2016-03-20",
+    "agent_name": "Gian Smith",
+    "agent_address": "8690 Hill Ave",
+    "agent_email": "gian.smith.d5872d4b-d751-4df1-8ce4-9e88a69b8a46@example.com"
+  },
+  {
+    "business_name": "Crystal Energy LLC",
+    "registration_id": "SD0000336",
+    "status": "Active",
+    "filing_date": "2015-10-09",
+    "agent_name": "Gian Miller",
+    "agent_address": "6521 Maple Ave",
+    "agent_email": "gian.miller.01b6d1f5-3e2d-4e2b-9295-6f003f4db596@example.com"
+  },
+  {
+    "business_name": "Ocean Holdings LLC",
+    "registration_id": "SD0000338",
+    "status": "Active",
+    "filing_date": "2007-06-26",
+    "agent_name": "Sara Johnson",
+    "agent_address": "2391 Hill Ave",
+    "agent_email": "sara.johnson.c0599e5d-7255-4fd3-8805-d4eb2e09a2e9@example.com"
+  },
+  {
+    "business_name": "Summit Studio LLC",
+    "registration_id": "SD0000339",
+    "status": "Active",
+    "filing_date": "2002-06-03",
+    "agent_name": "Jen Smith",
+    "agent_address": "2881 Hill Ave",
+    "agent_email": "jen.smith.5940955b-bc57-4ce4-8780-788e64d4f62d@example.com"
+  },
+  {
+    "business_name": "Blue Holdings LLC",
+    "registration_id": "SD0000341",
+    "status": "Pending",
+    "filing_date": "2019-07-12",
+    "agent_name": "Sara Johnson",
+    "agent_address": "1487 Elm Ave",
+    "agent_email": "sara.johnson.06e722e9-2c83-4487-b603-46b8d4fe6258@example.com"
+  },
+  {
+    "business_name": "Sky Trading LLC",
+    "registration_id": "SD0000343",
+    "status": "Active",
+    "filing_date": "2005-02-26",
+    "agent_name": "Dave Anderson",
+    "agent_address": "9236 Hill Ave",
+    "agent_email": "dave.anderson.b696c6ff-dcf9-4032-bcac-591b572fd23b@example.com"
+  },
+  {
+    "business_name": "Pine Tech LLC",
+    "registration_id": "SD0000350",
+    "status": "Active",
+    "filing_date": "2007-10-04",
+    "agent_name": "Maria Miller",
+    "agent_address": "3895 Elm Ave",
+    "agent_email": "maria.miller.47dc800c-9f75-4d78-a406-8e748f94f064@example.com"
+  },
+  {
+    "business_name": "River Industries LLC",
+    "registration_id": "SD0000359",
+    "status": "Active",
+    "filing_date": "2007-09-25",
+    "agent_name": "Maria Johnson",
+    "agent_address": "6397 Elm Ave",
+    "agent_email": "maria.johnson.8f782d33-a888-426b-ac0a-2fc3fbf24726@example.com"
+  },
+  {
+    "business_name": "Bright Services LLC",
+    "registration_id": "SD0000362",
+    "status": "Active",
+    "filing_date": "2006-07-09",
+    "agent_name": "Sara Garcia",
+    "agent_address": "5644 Elm Ave",
+    "agent_email": "sara.garcia.82b391fe-b32e-4a9c-aedb-3abe5a522d66@example.com"
+  },
+  {
+    "business_name": "River Industries LLC",
+    "registration_id": "SD0000363",
+    "status": "Active",
+    "filing_date": "2010-08-10",
+    "agent_name": "Alex Smith",
+    "agent_address": "8991 Elm Ave",
+    "agent_email": "alex.smith.a6fc482c-0bd7-4ed5-8439-d6e34a6f8742@example.com"
+  },
+  {
+    "business_name": "Golden Mart LLC",
+    "registration_id": "SD0000380",
+    "status": "Dissolved",
+    "filing_date": "2025-09-04",
+    "agent_name": "Alex Davis",
+    "agent_address": "8631 Maple Ave",
+    "agent_email": "alex.davis.a916f2fd-440f-4558-b76c-87463e912a04@example.com"
+  },
+  {
+    "business_name": "Harmony Consulting LLC",
+    "registration_id": "SD0000386",
+    "status": "Active",
+    "filing_date": "2020-08-06",
+    "agent_name": "Jen Smith",
+    "agent_address": "9451 Hill Ave",
+    "agent_email": "jen.smith.9967729d-777c-4bec-9513-ef01c915bdf7@example.com"
+  },
+  {
+    "business_name": "Pine Market LLC",
+    "registration_id": "SD0000391",
+    "status": "Active",
+    "filing_date": "2008-07-12",
+    "agent_name": "Gian Smith",
+    "agent_address": "5004 Maple Ave",
+    "agent_email": "gian.smith.11532424-293d-4fbf-930d-44961ecadc27@example.com"
+  },
+  {
+    "business_name": "Bright Tech LLC",
+    "registration_id": "SD0000397",
+    "status": "Active",
+    "filing_date": "2011-05-11",
+    "agent_name": "Sara Wilson",
+    "agent_address": "5775 Elm Ave",
+    "agent_email": "sara.wilson.0e9eb412-3baf-407c-b77a-8191f90af657@example.com"
+  },
+  {
+    "business_name": "Pine Logistics LLC",
+    "registration_id": "SD0000401",
+    "status": "Active",
+    "filing_date": "2021-03-24",
+    "agent_name": "Ezra Miller",
+    "agent_address": "7268 Elm Ave",
+    "agent_email": "ezra.miller.101159b4-e9b6-40d3-af46-39eb7d0eb04c@example.com"
+  },
+  {
+    "business_name": "Rapid Consulting LLC",
+    "registration_id": "SD0000402",
+    "status": "Active",
+    "filing_date": "1995-10-20",
+    "agent_name": "Alex Davis",
+    "agent_address": "437 Elm Ave",
+    "agent_email": "alex.davis.b8956205-08c0-48ac-ba10-afbbb706d432@example.com"
+  },
+  {
+    "business_name": "Nova Services LLC",
+    "registration_id": "SD0000404",
+    "status": "Active",
+    "filing_date": "1995-05-14",
+    "agent_name": "John Garcia",
+    "agent_address": "7207 Hill Ave",
+    "agent_email": "john.garcia.0a3637bd-7e1e-437c-9b50-581ebf8668c9@example.com"
+  },
+  {
+    "business_name": "Green Energy LLC",
+    "registration_id": "SD0000413",
+    "status": "Active",
+    "filing_date": "1996-11-19",
+    "agent_name": "Sara Johnson",
+    "agent_address": "6841 Maple Ave",
+    "agent_email": "sara.johnson.d62bc410-55eb-450d-a19a-a53daeaf122c@example.com"
+  },
+  {
+    "business_name": "Crystal Industries LLC",
+    "registration_id": "SD0000415",
+    "status": "Active",
+    "filing_date": "1999-02-23",
+    "agent_name": "Alex Davis",
+    "agent_address": "963 Broadway Ave",
+    "agent_email": "alex.davis.633278f6-0763-493f-8fe0-4b052f819105@example.com"
+  },
+  {
+    "business_name": "Harmony Works LLC",
+    "registration_id": "SD0000416",
+    "status": "Active",
+    "filing_date": "2017-10-26",
+    "agent_name": "Jen Wilson",
+    "agent_address": "2135 Hill Ave",
+    "agent_email": "jen.wilson.5d3f9b80-fc23-4a38-bf48-f1ac94678333@example.com"
+  },
+  {
+    "business_name": "River Ventures LLC",
+    "registration_id": "SD0000420",
+    "status": "Active",
+    "filing_date": "2010-03-21",
+    "agent_name": "Dave Anderson",
+    "agent_address": "927 Elm Ave",
+    "agent_email": "dave.anderson.bded7a95-0d65-4542-bb11-f32265d6924b@example.com"
+  },
+  {
+    "business_name": "Harmony Pharmacy LLC",
+    "registration_id": "SD0000421",
+    "status": "Active",
+    "filing_date": "2016-06-26",
+    "agent_name": "Jen Smith",
+    "agent_address": "5566 Hill Ave",
+    "agent_email": "jen.smith.c541bca3-05fc-4105-abbc-40d49d23c324@example.com"
+  },
+  {
+    "business_name": "Ocean Farms LLC",
+    "registration_id": "SD0000425",
+    "status": "Active",
+    "filing_date": "2024-01-22",
+    "agent_name": "Sara Johnson",
+    "agent_address": "8539 Elm Ave",
+    "agent_email": "sara.johnson.98901323-4cbb-4771-9e4b-8fb473fccf0d@example.com"
+  },
+  {
+    "business_name": "Quantum Foods LLC",
+    "registration_id": "SD0000429",
+    "status": "Active",
+    "filing_date": "2000-12-20",
+    "agent_name": "Gian Davis",
+    "agent_address": "8750 Broadway Ave",
+    "agent_email": "gian.davis.f543a1a6-046f-4b0b-806c-8fcda495cd18@example.com"
+  },
+  {
+    "business_name": "Green Energy LLC",
+    "registration_id": "SD0000438",
+    "status": "Active",
+    "filing_date": "2012-06-04",
+    "agent_name": "Ezra Anderson",
+    "agent_address": "5222 Hill Ave",
+    "agent_email": "ezra.anderson.87aae8fd-eb27-428c-a6ed-c986d42b7799@example.com"
+  },
+  {
+    "business_name": "Rapid Builders LLC",
+    "registration_id": "SD0000440",
+    "status": "Active",
+    "filing_date": "1995-03-24",
+    "agent_name": "John Garcia",
+    "agent_address": "6823 Hill Ave",
+    "agent_email": "john.garcia.86b299b7-5e05-442a-b23d-a158f60b9cf7@example.com"
+  },
+  {
+    "business_name": "Blue Logistics LLC",
+    "registration_id": "SD0000452",
+    "status": "Active",
+    "filing_date": "2011-02-22",
+    "agent_name": "Jen Miller",
+    "agent_address": "3173 Broadway Ave",
+    "agent_email": "jen.miller.8dbef417-b21f-4fc7-ab95-1dcec4f9035f@example.com"
+  },
+  {
+    "business_name": "Blue Group LLC",
+    "registration_id": "SD0000453",
+    "status": "Active",
+    "filing_date": "2014-11-27",
+    "agent_name": "John Johnson",
+    "agent_address": "9917 Maple Ave",
+    "agent_email": "john.johnson.0b774d7d-3954-4a53-8a94-9c020135aafd@example.com"
+  },
+  {
+    "business_name": "Sunny Holdings LLC",
+    "registration_id": "SD0000455",
+    "status": "Active",
+    "filing_date": "1996-07-13",
+    "agent_name": "Jen Garcia",
+    "agent_address": "7228 Broadway Ave",
+    "agent_email": "jen.garcia.e751c3f4-7ba2-4c26-b0fa-c328e71a5179@example.com"
+  },
+  {
+    "business_name": "Prime Industries LLC",
+    "registration_id": "SD0000460",
+    "status": "Pending",
+    "filing_date": "2016-04-10",
+    "agent_name": "Dave Johnson",
+    "agent_address": "7185 Maple Ave",
+    "agent_email": "dave.johnson.18634491-ed4a-48d0-83bb-eab0b8bab7ce@example.com"
+  },
+  {
+    "business_name": "Rapid Ventures LLC",
+    "registration_id": "SD0000463",
+    "status": "Active",
+    "filing_date": "2024-10-02",
+    "agent_name": "Maria Smith",
+    "agent_address": "5045 Broadway Ave",
+    "agent_email": "maria.smith.17ef1cce-7fbe-45ea-b697-4290795b3c7c@example.com"
+  },
+  {
+    "business_name": "Quantum Pharmacy LLC",
+    "registration_id": "SD0000465",
+    "status": "Pending",
+    "filing_date": "2013-09-05",
+    "agent_name": "Maria Wilson",
+    "agent_address": "1045 Broadway Ave",
+    "agent_email": "maria.wilson.1a7bea73-bfbf-4045-9389-3c44b89e4814@example.com"
+  },
+  {
+    "business_name": "Blue Ventures LLC",
+    "registration_id": "SD0000467",
+    "status": "Active",
+    "filing_date": "2000-02-23",
+    "agent_name": "Maria Davis",
+    "agent_address": "2354 Elm Ave",
+    "agent_email": "maria.davis.38c06f7d-9fd2-4577-b478-aef5b541fc42@example.com"
+  },
+  {
+    "business_name": "Sunny Builders LLC",
+    "registration_id": "SD0000475",
+    "status": "Inactive",
+    "filing_date": "2009-07-06",
+    "agent_name": "Maria Garcia",
+    "agent_address": "9481 Maple Ave",
+    "agent_email": "maria.garcia.70210e21-643d-40ba-9d4f-a4db6491fb60@example.com"
+  },
+  {
+    "business_name": "Bright Mart LLC",
+    "registration_id": "SD0000491",
+    "status": "Dissolved",
+    "filing_date": "2007-08-25",
+    "agent_name": "Maria Smith",
+    "agent_address": "8958 Elm Ave",
+    "agent_email": "maria.smith.ffb3b445-ced0-4b02-9d2c-45376a4fe833@example.com"
+  },
+  {
+    "business_name": "Rapid Industries LLC",
+    "registration_id": "SD0000493",
+    "status": "Active",
+    "filing_date": "2007-10-27",
+    "agent_name": "John Wilson",
+    "agent_address": "911 Maple Ave",
+    "agent_email": "john.wilson.59909481-d6ea-4e05-9445-c1fa53923d06@example.com"
+  },
+  {
+    "business_name": "Pine Group LLC",
+    "registration_id": "SD0000495",
+    "status": "Dissolved",
+    "filing_date": "2006-07-05",
+    "agent_name": "Gian Smith",
+    "agent_address": "4673 Elm Ave",
+    "agent_email": "gian.smith.1e19815c-5a79-4eb7-b192-1fb07c5059ff@example.com"
+  },
+  {
+    "business_name": "Rapid Market LLC",
+    "registration_id": "SD0000497",
+    "status": "Active",
+    "filing_date": "2004-08-28",
+    "agent_name": "John Smith",
+    "agent_address": "6718 Elm Ave",
+    "agent_email": "john.smith.6c618dda-78b5-4bce-bee2-4053adcc6d5c@example.com"
+  },
+  {
+    "business_name": "River Services LLC",
+    "registration_id": "SD0000500",
+    "status": "Active",
+    "filing_date": "2003-08-03",
+    "agent_name": "Ezra Miller",
+    "agent_address": "7809 Broadway Ave",
+    "agent_email": "ezra.miller.a895fddd-7121-4824-875c-efce81956749@example.com"
+  },
+  {
+    "business_name": "Metro Works LLC",
+    "registration_id": "SD0000501",
+    "status": "Inactive",
+    "filing_date": "2000-10-02",
+    "agent_name": "Maria Wilson",
+    "agent_address": "2685 Broadway Ave",
+    "agent_email": "maria.wilson.a70a3472-f636-4f9f-94ec-2dceb8735aa5@example.com"
+  },
+  {
+    "business_name": "Golden Mart LLC",
+    "registration_id": "SD0000508",
+    "status": "Active",
+    "filing_date": "2020-02-20",
+    "agent_name": "Maria Wilson",
+    "agent_address": "489 Broadway Ave",
+    "agent_email": "maria.wilson.b88fcae6-31a3-4fc2-a2dc-63d9a018941d@example.com"
+  },
+  {
+    "business_name": "Quantum Labs LLC",
+    "registration_id": "SD0000514",
+    "status": "Active",
+    "filing_date": "2007-07-23",
+    "agent_name": "Gian Davis",
+    "agent_address": "5558 Maple Ave",
+    "agent_email": "gian.davis.7211b5cf-3878-4e38-8606-f0b135e161bc@example.com"
+  },
+  {
+    "business_name": "Summit Farms LLC",
+    "registration_id": "SD0000515",
+    "status": "Active",
+    "filing_date": "2008-12-16",
+    "agent_name": "Ezra Wilson",
+    "agent_address": "7805 Hill Ave",
+    "agent_email": "ezra.wilson.21498b2c-8f07-4ace-a992-aec0bfff7cc2@example.com"
+  },
+  {
+    "business_name": "Pine Farms LLC",
+    "registration_id": "SD0000522",
+    "status": "Active",
+    "filing_date": "2006-07-12",
+    "agent_name": "Alex Miller",
+    "agent_address": "9718 Broadway Ave",
+    "agent_email": "alex.miller.0b636de7-c39d-430e-96af-7ae31b9911f9@example.com"
+  },
+  {
+    "business_name": "Golden Mart LLC",
+    "registration_id": "SD0000523",
+    "status": "Active",
+    "filing_date": "1995-09-11",
+    "agent_name": "Ezra Miller",
+    "agent_address": "344 Hill Ave",
+    "agent_email": "ezra.miller.336e5e8e-7986-41b1-ae54-d3f5476584f1@example.com"
+  },
+  {
+    "business_name": "Green Ventures LLC",
+    "registration_id": "SD0000532",
+    "status": "Active",
+    "filing_date": "2023-02-11",
+    "agent_name": "Gian Johnson",
+    "agent_address": "6512 Maple Ave",
+    "agent_email": "gian.johnson.c5471922-2e8c-4127-9400-7bc8a1c8c3a3@example.com"
+  },
+  {
+    "business_name": "Apex Trading LLC",
+    "registration_id": "SD0000533",
+    "status": "Active",
+    "filing_date": "2021-10-25",
+    "agent_name": "Alex Johnson",
+    "agent_address": "5144 Elm Ave",
+    "agent_email": "alex.johnson.cefc6e6d-b010-4962-bb92-e0b2f68ebc50@example.com"
+  },
+  {
+    "business_name": "Metro Mart LLC",
+    "registration_id": "SD0000536",
+    "status": "Active",
+    "filing_date": "2023-10-02",
+    "agent_name": "Ezra Miller",
+    "agent_address": "5955 Broadway Ave",
+    "agent_email": "ezra.miller.08ce3857-f2ae-4953-8bb1-4b2183e20ed8@example.com"
+  },
+  {
+    "business_name": "Pine Studio LLC",
+    "registration_id": "SD0000538",
+    "status": "Active",
+    "filing_date": "1997-08-16",
+    "agent_name": "John Garcia",
+    "agent_address": "4285 Broadway Ave",
+    "agent_email": "john.garcia.0d39fe50-01a6-43ee-9a10-79b6e154a6ab@example.com"
+  },
+  {
+    "business_name": "Pine Market LLC",
+    "registration_id": "SD0000540",
+    "status": "Active",
+    "filing_date": "2002-09-23",
+    "agent_name": "Gian Taylor",
+    "agent_address": "7847 Maple Ave",
+    "agent_email": "gian.taylor.fa6c81fb-7556-4769-8ad9-73bc0027f48a@example.com"
+  },
+  {
+    "business_name": "Metro Holdings LLC",
+    "registration_id": "SD0000543",
+    "status": "Active",
+    "filing_date": "2011-07-25",
+    "agent_name": "Alex Davis",
+    "agent_address": "3131 Elm Ave",
+    "agent_email": "alex.davis.b4951619-c057-4aa6-abe7-eb454066ac78@example.com"
+  },
+  {
+    "business_name": "Silver Ventures LLC",
+    "registration_id": "SD0000551",
+    "status": "Active",
+    "filing_date": "2017-09-16",
+    "agent_name": "Maria Johnson",
+    "agent_address": "5737 Broadway Ave",
+    "agent_email": "maria.johnson.3966f079-5660-421c-9a89-5b19b94a0fd7@example.com"
+  },
+  {
+    "business_name": "Apex Ventures LLC",
+    "registration_id": "SD0000553",
+    "status": "Inactive",
+    "filing_date": "1995-05-22",
+    "agent_name": "John Wilson",
+    "agent_address": "2529 Broadway Ave",
+    "agent_email": "john.wilson.b6732807-4a12-4d41-994e-ca18e466ccb0@example.com"
+  },
+  {
+    "business_name": "Crystal Studio LLC",
+    "registration_id": "SD0000558",
+    "status": "Active",
+    "filing_date": "2005-08-22",
+    "agent_name": "John Miller",
+    "agent_address": "7681 Hill Ave",
+    "agent_email": "john.miller.398d511f-9e1d-45d8-a451-842e7b0cb5ed@example.com"
+  },
+  {
+    "business_name": "Green Works LLC",
+    "registration_id": "SD0000560",
+    "status": "Active",
+    "filing_date": "2008-02-15",
+    "agent_name": "John Smith",
+    "agent_address": "1876 Hill Ave",
+    "agent_email": "john.smith.f0a9221a-792d-4465-b470-3d74da06e45a@example.com"
+  },
+  {
+    "business_name": "Nova Holdings LLC",
+    "registration_id": "SD0000562",
+    "status": "Active",
+    "filing_date": "2014-05-28",
+    "agent_name": "Sara Anderson",
+    "agent_address": "1921 Broadway Ave",
+    "agent_email": "sara.anderson.2b3d47a4-3104-4116-97dd-f64e574f8450@example.com"
+  },
+  {
+    "business_name": "Rapid Works LLC",
+    "registration_id": "SD0000573",
+    "status": "Active",
+    "filing_date": "2024-08-26",
+    "agent_name": "John Smith",
+    "agent_address": "8321 Broadway Ave",
+    "agent_email": "john.smith.03fe09c7-4154-4719-9649-4771945a1bd5@example.com"
+  },
+  {
+    "business_name": "Silver Foods LLC",
+    "registration_id": "SD0000582",
+    "status": "Active",
+    "filing_date": "2013-12-01",
+    "agent_name": "Alex Wilson",
+    "agent_address": "4912 Elm Ave",
+    "agent_email": "alex.wilson.6fa878b4-812d-4d20-b114-7bef00c02293@example.com"
+  },
+  {
+    "business_name": "Golden Logistics LLC",
+    "registration_id": "SD0000584",
+    "status": "Active",
+    "filing_date": "1999-08-07",
+    "agent_name": "Ezra Anderson",
+    "agent_address": "4330 Hill Ave",
+    "agent_email": "ezra.anderson.23c8a2c3-1fd5-44cd-af81-795637b632bb@example.com"
+  },
+  {
+    "business_name": "Cedar Farms LLC",
+    "registration_id": "SD0000595",
+    "status": "Active",
+    "filing_date": "2008-06-09",
+    "agent_name": "Alex Davis",
+    "agent_address": "9791 Maple Ave",
+    "agent_email": "alex.davis.cadb509e-241e-4bee-bd0f-8a6cb88a7eaf@example.com"
+  },
+  {
+    "business_name": "Prime Tech LLC",
+    "registration_id": "SD0000599",
+    "status": "Dissolved",
+    "filing_date": "2010-05-20",
+    "agent_name": "Alex Miller",
+    "agent_address": "755 Maple Ave",
+    "agent_email": "alex.miller.de378593-a532-4634-a280-f65f208dcbe8@example.com"
+  },
+  {
+    "business_name": "Bright Market LLC",
+    "registration_id": "SD0000600",
+    "status": "Active",
+    "filing_date": "2007-12-04",
+    "agent_name": "Ezra Davis",
+    "agent_address": "8280 Elm Ave",
+    "agent_email": "ezra.davis.153d7a1b-ab9f-496f-8cad-408384d72426@example.com"
+  },
+  {
+    "business_name": "Bright Labs LLC",
+    "registration_id": "SD0000607",
+    "status": "Dissolved",
+    "filing_date": "2015-11-21",
+    "agent_name": "Ezra Miller",
+    "agent_address": "2004 Hill Ave",
+    "agent_email": "ezra.miller.7fa4940c-9b57-4375-8c99-c078b9bc8b88@example.com"
+  },
+  {
+    "business_name": "River Energy LLC",
+    "registration_id": "SD0000608",
+    "status": "Inactive",
+    "filing_date": "2002-01-09",
+    "agent_name": "Gian Smith",
+    "agent_address": "6430 Maple Ave",
+    "agent_email": "gian.smith.b47b56b0-6e4e-4473-ba33-87e7b865ad91@example.com"
+  },
+  {
+    "business_name": "Pine Logistics LLC",
+    "registration_id": "SD0000609",
+    "status": "Pending",
+    "filing_date": "2002-12-14",
+    "agent_name": "Maria Wilson",
+    "agent_address": "5102 Broadway Ave",
+    "agent_email": "maria.wilson.e8d720f1-3a6b-47a2-8100-0dfc2fd135cb@example.com"
+  },
+  {
+    "business_name": "Quantum Pharmacy LLC",
+    "registration_id": "SD0000612",
+    "status": "Inactive",
+    "filing_date": "1996-08-02",
+    "agent_name": "John Smith",
+    "agent_address": "9172 Broadway Ave",
+    "agent_email": "john.smith.38dddfc0-229f-41e9-a36d-6f965728d5a4@example.com"
+  },
+  {
+    "business_name": "Nova Consulting LLC",
+    "registration_id": "SD0000617",
+    "status": "Active",
+    "filing_date": "2016-08-23",
+    "agent_name": "Gian Miller",
+    "agent_address": "6869 Elm Ave",
+    "agent_email": "gian.miller.b4c5456d-b772-43d2-8919-f3c4274179c2@example.com"
+  },
+  {
+    "business_name": "Prime Consulting LLC",
+    "registration_id": "SD0000621",
+    "status": "Active",
+    "filing_date": "2003-02-01",
+    "agent_name": "Gian Davis",
+    "agent_address": "5008 Hill Ave",
+    "agent_email": "gian.davis.a446dea7-a112-4d96-90b3-4e098697b12f@example.com"
+  },
+  {
+    "business_name": "Metro Solutions LLC",
+    "registration_id": "SD0000627",
+    "status": "Active",
+    "filing_date": "1997-05-15",
+    "agent_name": "Dave Wilson",
+    "agent_address": "6991 Hill Ave",
+    "agent_email": "dave.wilson.738b6759-db59-451a-bb63-d6f7c11d9253@example.com"
+  },
+  {
+    "business_name": "Ocean Industries LLC",
+    "registration_id": "SD0000633",
+    "status": "Active",
+    "filing_date": "2013-03-10",
+    "agent_name": "Gian Davis",
+    "agent_address": "6877 Hill Ave",
+    "agent_email": "gian.davis.b411eece-1cdf-4077-86ba-c1a23f824abe@example.com"
+  },
+  {
+    "business_name": "Metro Works LLC",
+    "registration_id": "SD0000637",
+    "status": "Active",
+    "filing_date": "2022-07-13",
+    "agent_name": "Ezra Taylor",
+    "agent_address": "1136 Hill Ave",
+    "agent_email": "ezra.taylor.f4430a49-1266-424d-8b78-8c5867b7ef1e@example.com"
+  },
+  {
+    "business_name": "River Studio LLC",
+    "registration_id": "SD0000642",
+    "status": "Pending",
+    "filing_date": "1997-02-17",
+    "agent_name": "Maria Miller",
+    "agent_address": "3407 Broadway Ave",
+    "agent_email": "maria.miller.76c998c1-ea88-4b79-a675-c291403164f1@example.com"
+  },
+  {
+    "business_name": "Ocean Tech LLC",
+    "registration_id": "SD0000643",
+    "status": "Active",
+    "filing_date": "2016-12-15",
+    "agent_name": "Alex Anderson",
+    "agent_address": "628 Broadway Ave",
+    "agent_email": "alex.anderson.0561a87c-2ba4-45a7-8c2d-c161868291f0@example.com"
+  },
+  {
+    "business_name": "Green Group LLC",
+    "registration_id": "SD0000647",
+    "status": "Active",
+    "filing_date": "2007-04-08",
+    "agent_name": "John Smith",
+    "agent_address": "6918 Broadway Ave",
+    "agent_email": "john.smith.a975077b-fbe2-4722-b534-d44df75c6918@example.com"
+  },
+  {
+    "business_name": "Quantum Pharmacy LLC",
+    "registration_id": "SD0000650",
+    "status": "Active",
+    "filing_date": "2009-04-03",
+    "agent_name": "John Davis",
+    "agent_address": "6745 Elm Ave",
+    "agent_email": "john.davis.5ac9db31-97a0-4a5f-ac00-1407c6a2eb8a@example.com"
+  },
+  {
+    "business_name": "Summit Ventures LLC",
+    "registration_id": "SD0000651",
+    "status": "Active",
+    "filing_date": "2020-10-06",
+    "agent_name": "Ezra Garcia",
+    "agent_address": "5450 Maple Ave",
+    "agent_email": "ezra.garcia.381d2e8b-83be-4b06-9c34-688844c66af9@example.com"
+  },
+  {
+    "business_name": "Pine Ventures LLC",
+    "registration_id": "SD0000652",
+    "status": "Active",
+    "filing_date": "2014-10-15",
     "agent_name": "Sara Davis",
-    "agent_address": "699 Broadway Ave",
-    "agent_email": "sara.davis.e71f523a99c3@example.com"
+    "agent_address": "357 Broadway Ave",
+    "agent_email": "sara.davis.38eab498-58e3-4933-bd8f-e10d26bdb8de@example.com"
+  },
+  {
+    "business_name": "Quantum Market LLC",
+    "registration_id": "SD0000665",
+    "status": "Active",
+    "filing_date": "2001-07-06",
+    "agent_name": "Ezra Miller",
+    "agent_address": "6753 Broadway Ave",
+    "agent_email": "ezra.miller.6d541e3c-0f13-45a1-93ed-46a526ea1064@example.com"
+  },
+  {
+    "business_name": "Green Solutions LLC",
+    "registration_id": "SD0000670",
+    "status": "Active",
+    "filing_date": "2020-01-04",
+    "agent_name": "Ezra Miller",
+    "agent_address": "7971 Hill Ave",
+    "agent_email": "ezra.miller.4abfc8ca-5ee0-4a2f-bed3-f81e77110e1f@example.com"
+  },
+  {
+    "business_name": "Rapid Works LLC",
+    "registration_id": "SD0000675",
+    "status": "Active",
+    "filing_date": "2020-02-10",
+    "agent_name": "John Taylor",
+    "agent_address": "8868 Maple Ave",
+    "agent_email": "john.taylor.4fb2cd0c-0380-42d6-b20d-b60050b3e674@example.com"
+  },
+  {
+    "business_name": "Cedar Works LLC",
+    "registration_id": "SD0000682",
+    "status": "Active",
+    "filing_date": "2022-12-19",
+    "agent_name": "Jen Anderson",
+    "agent_address": "973 Elm Ave",
+    "agent_email": "jen.anderson.f6e56850-a928-4e48-b327-52393719349b@example.com"
+  },
+  {
+    "business_name": "Blue Trading LLC",
+    "registration_id": "SD0000689",
+    "status": "Active",
+    "filing_date": "2010-11-22",
+    "agent_name": "Jen Johnson",
+    "agent_address": "9723 Maple Ave",
+    "agent_email": "jen.johnson.a6c37f87-6f1c-485b-8c9c-f33774a40e8c@example.com"
+  },
+  {
+    "business_name": "Golden Works LLC",
+    "registration_id": "SD0000691",
+    "status": "Active",
+    "filing_date": "2001-11-04",
+    "agent_name": "Sara Taylor",
+    "agent_address": "5159 Broadway Ave",
+    "agent_email": "sara.taylor.033877d3-f381-430b-a0b7-b95239c9c4a7@example.com"
+  },
+  {
+    "business_name": "Crystal Farms LLC",
+    "registration_id": "SD0000697",
+    "status": "Pending",
+    "filing_date": "2002-02-09",
+    "agent_name": "Ezra Johnson",
+    "agent_address": "5406 Broadway Ave",
+    "agent_email": "ezra.johnson.aa310550-8644-493c-83b0-265610416c79@example.com"
+  },
+  {
+    "business_name": "River Ventures LLC",
+    "registration_id": "SD0000704",
+    "status": "Active",
+    "filing_date": "2014-04-27",
+    "agent_name": "Alex Smith",
+    "agent_address": "9961 Hill Ave",
+    "agent_email": "alex.smith.6632be8f-d786-4d50-8d1f-6dde3d31f69f@example.com"
+  },
+  {
+    "business_name": "Nova Mart LLC",
+    "registration_id": "SD0000707",
+    "status": "Dissolved",
+    "filing_date": "2023-10-28",
+    "agent_name": "Sara Taylor",
+    "agent_address": "5392 Elm Ave",
+    "agent_email": "sara.taylor.3b8ae265-30fa-4718-8191-5de384813d72@example.com"
+  },
+  {
+    "business_name": "Metro Trading LLC",
+    "registration_id": "SD0000708",
+    "status": "Active",
+    "filing_date": "2018-03-13",
+    "agent_name": "Ezra Taylor",
+    "agent_address": "3246 Broadway Ave",
+    "agent_email": "ezra.taylor.64f8bfc6-1abe-4d4e-bd8f-747e61a55978@example.com"
+  },
+  {
+    "business_name": "Cedar Ventures LLC",
+    "registration_id": "SD0000714",
+    "status": "Active",
+    "filing_date": "2002-10-05",
+    "agent_name": "John Miller",
+    "agent_address": "4062 Hill Ave",
+    "agent_email": "john.miller.12fb5546-69b8-407a-b41c-f714040d836f@example.com"
+  },
+  {
+    "business_name": "Nova Ventures LLC",
+    "registration_id": "SD0000715",
+    "status": "Active",
+    "filing_date": "2011-10-06",
+    "agent_name": "Alex Johnson",
+    "agent_address": "2177 Hill Ave",
+    "agent_email": "alex.johnson.92fa0e13-b8a3-45f1-9d59-a1c9f69fee1f@example.com"
+  },
+  {
+    "business_name": "Nova Labs LLC",
+    "registration_id": "SD0000721",
+    "status": "Active",
+    "filing_date": "2012-10-11",
+    "agent_name": "Maria Smith",
+    "agent_address": "2104 Maple Ave",
+    "agent_email": "maria.smith.a341a6f8-7162-4f64-acc1-ded11bc9a26a@example.com"
+  },
+  {
+    "business_name": "Sky Works LLC",
+    "registration_id": "SD0000723",
+    "status": "Active",
+    "filing_date": "2003-12-05",
+    "agent_name": "Alex Anderson",
+    "agent_address": "8120 Broadway Ave",
+    "agent_email": "alex.anderson.5c6995c7-33ac-4e30-84de-cff4b7eb066a@example.com"
+  },
+  {
+    "business_name": "Golden Builders LLC",
+    "registration_id": "SD0000731",
+    "status": "Active",
+    "filing_date": "2009-11-13",
+    "agent_name": "Sara Johnson",
+    "agent_address": "6201 Hill Ave",
+    "agent_email": "sara.johnson.89c09115-c342-4da6-9595-d84e603a780e@example.com"
+  },
+  {
+    "business_name": "Blue Trading LLC",
+    "registration_id": "SD0000732",
+    "status": "Active",
+    "filing_date": "2015-01-05",
+    "agent_name": "Maria Smith",
+    "agent_address": "163 Broadway Ave",
+    "agent_email": "maria.smith.50710ab4-d1d1-48a8-af93-3b7f812f95b8@example.com"
+  },
+  {
+    "business_name": "Bright Pharmacy LLC",
+    "registration_id": "SD0000733",
+    "status": "Active",
+    "filing_date": "2010-10-15",
+    "agent_name": "Dave Garcia",
+    "agent_address": "4004 Broadway Ave",
+    "agent_email": "dave.garcia.c447bf78-3e8c-4d0d-9031-a657ad8a523c@example.com"
+  },
+  {
+    "business_name": "Bright Solutions LLC",
+    "registration_id": "SD0000734",
+    "status": "Active",
+    "filing_date": "1996-02-18",
+    "agent_name": "Maria Smith",
+    "agent_address": "3685 Broadway Ave",
+    "agent_email": "maria.smith.3adb37ad-42d4-4007-b88f-e4dae7e9413a@example.com"
+  },
+  {
+    "business_name": "Cedar Energy LLC",
+    "registration_id": "SD0000736",
+    "status": "Active",
+    "filing_date": "1998-06-03",
+    "agent_name": "Maria Anderson",
+    "agent_address": "8701 Elm Ave",
+    "agent_email": "maria.anderson.2b08ed15-91be-402d-978c-0738a9d9464e@example.com"
+  },
+  {
+    "business_name": "Sunny Builders LLC",
+    "registration_id": "SD0000739",
+    "status": "Active",
+    "filing_date": "1999-03-25",
+    "agent_name": "Dave Anderson",
+    "agent_address": "7895 Hill Ave",
+    "agent_email": "dave.anderson.f888fcea-88dc-4397-9aa5-68d65b5f0f73@example.com"
+  },
+  {
+    "business_name": "Golden Services LLC",
+    "registration_id": "SD0000744",
+    "status": "Active",
+    "filing_date": "2021-07-05",
+    "agent_name": "Jen Taylor",
+    "agent_address": "6752 Elm Ave",
+    "agent_email": "jen.taylor.d08f0f70-83b4-445f-85bc-d40a9fcd9071@example.com"
+  },
+  {
+    "business_name": "Bright Trading LLC",
+    "registration_id": "SD0000749",
+    "status": "Active",
+    "filing_date": "1995-05-07",
+    "agent_name": "Jen Johnson",
+    "agent_address": "9350 Broadway Ave",
+    "agent_email": "jen.johnson.76cff017-103a-4670-8ff6-7d2dba3914e6@example.com"
+  },
+  {
+    "business_name": "Harmony Ventures LLC",
+    "registration_id": "SD0000750",
+    "status": "Active",
+    "filing_date": "1997-05-01",
+    "agent_name": "Alex Wilson",
+    "agent_address": "6410 Elm Ave",
+    "agent_email": "alex.wilson.b75f94b2-9f36-411e-bd39-f4923dee8508@example.com"
+  },
+  {
+    "business_name": "Rapid Labs LLC",
+    "registration_id": "SD0000752",
+    "status": "Inactive",
+    "filing_date": "1997-12-08",
+    "agent_name": "Gian Taylor",
+    "agent_address": "2159 Elm Ave",
+    "agent_email": "gian.taylor.97d02e40-84e9-4009-be3f-817d5fa28a21@example.com"
+  },
+  {
+    "business_name": "Rapid Mart LLC",
+    "registration_id": "SD0000754",
+    "status": "Active",
+    "filing_date": "2009-06-06",
+    "agent_name": "Jen Wilson",
+    "agent_address": "5799 Broadway Ave",
+    "agent_email": "jen.wilson.33b07e96-2f0c-4608-86db-ece29d4a5a3a@example.com"
+  },
+  {
+    "business_name": "Apex Industries LLC",
+    "registration_id": "SD0000757",
+    "status": "Active",
+    "filing_date": "1998-05-13",
+    "agent_name": "John Davis",
+    "agent_address": "6370 Hill Ave",
+    "agent_email": "john.davis.7c14a740-d7de-4dba-8391-3f8c966d159c@example.com"
+  },
+  {
+    "business_name": "Pine Pharmacy LLC",
+    "registration_id": "SD0000764",
+    "status": "Active",
+    "filing_date": "2009-03-16",
+    "agent_name": "Jen Smith",
+    "agent_address": "7391 Maple Ave",
+    "agent_email": "jen.smith.62197a08-de72-4447-bdc5-46c00c98e9fa@example.com"
+  },
+  {
+    "business_name": "Ocean Market LLC",
+    "registration_id": "SD0000765",
+    "status": "Active",
+    "filing_date": "2018-04-14",
+    "agent_name": "Alex Wilson",
+    "agent_address": "3446 Maple Ave",
+    "agent_email": "alex.wilson.4e37a3c1-febd-4988-aee3-417c28c47210@example.com"
+  },
+  {
+    "business_name": "Cedar Group LLC",
+    "registration_id": "SD0000768",
+    "status": "Pending",
+    "filing_date": "2020-02-03",
+    "agent_name": "Dave Johnson",
+    "agent_address": "7286 Broadway Ave",
+    "agent_email": "dave.johnson.6ce8d79e-2c5b-4fb6-9ff7-7d04420ebf97@example.com"
+  },
+  {
+    "business_name": "Crystal Services LLC",
+    "registration_id": "SD0000773",
+    "status": "Active",
+    "filing_date": "1999-09-04",
+    "agent_name": "Gian Davis",
+    "agent_address": "1537 Broadway Ave",
+    "agent_email": "gian.davis.36beb55d-919f-4d19-a51c-b02dd7b61ad6@example.com"
+  },
+  {
+    "business_name": "Blue Studio LLC",
+    "registration_id": "SD0000774",
+    "status": "Active",
+    "filing_date": "2013-03-01",
+    "agent_name": "Sara Garcia",
+    "agent_address": "7443 Elm Ave",
+    "agent_email": "sara.garcia.e1dc1a8e-162d-42d7-bb6b-7966d3b64427@example.com"
+  },
+  {
+    "business_name": "Harmony Trading LLC",
+    "registration_id": "SD0000776",
+    "status": "Active",
+    "filing_date": "2014-02-04",
+    "agent_name": "Maria Johnson",
+    "agent_address": "1277 Hill Ave",
+    "agent_email": "maria.johnson.2522777f-185f-45ac-b666-0b0cda0807f8@example.com"
+  },
+  {
+    "business_name": "Sunny Studio LLC",
+    "registration_id": "SD0000787",
+    "status": "Active",
+    "filing_date": "2000-10-11",
+    "agent_name": "Jen Smith",
+    "agent_address": "9443 Broadway Ave",
+    "agent_email": "jen.smith.46395395-858b-42e3-beea-bc681f9e22d5@example.com"
+  },
+  {
+    "business_name": "Silver Energy LLC",
+    "registration_id": "SD0000790",
+    "status": "Active",
+    "filing_date": "1996-01-05",
+    "agent_name": "Alex Garcia",
+    "agent_address": "1452 Maple Ave",
+    "agent_email": "alex.garcia.d4b3ea33-dd43-4a43-8494-1684631c404d@example.com"
+  },
+  {
+    "business_name": "Metro Industries LLC",
+    "registration_id": "SD0000791",
+    "status": "Dissolved",
+    "filing_date": "2022-01-09",
+    "agent_name": "Jen Johnson",
+    "agent_address": "4330 Elm Ave",
+    "agent_email": "jen.johnson.4a904b40-257f-45cd-bcc6-1860a40a6ef3@example.com"
+  },
+  {
+    "business_name": "Sky Pharmacy LLC",
+    "registration_id": "SD0000799",
+    "status": "Active",
+    "filing_date": "2006-02-02",
+    "agent_name": "Jen Davis",
+    "agent_address": "6607 Maple Ave",
+    "agent_email": "jen.davis.8cd8a6fd-771a-4fa5-8e2e-4294cd028e71@example.com"
+  },
+  {
+    "business_name": "Apex Logistics LLC",
+    "registration_id": "SD0000801",
+    "status": "Active",
+    "filing_date": "2023-10-23",
+    "agent_name": "John Davis",
+    "agent_address": "4405 Hill Ave",
+    "agent_email": "john.davis.05f00771-9895-4a65-ad87-3b3284e2b443@example.com"
+  },
+  {
+    "business_name": "Prime Pharmacy LLC",
+    "registration_id": "SD0000803",
+    "status": "Active",
+    "filing_date": "2005-08-05",
+    "agent_name": "Gian Smith",
+    "agent_address": "2918 Elm Ave",
+    "agent_email": "gian.smith.99e08e5f-0927-4bef-be6b-7d11d8bbb6b0@example.com"
+  },
+  {
+    "business_name": "Golden Holdings LLC",
+    "registration_id": "SD0000804",
+    "status": "Active",
+    "filing_date": "2010-10-01",
+    "agent_name": "John Smith",
+    "agent_address": "294 Elm Ave",
+    "agent_email": "john.smith.457ba2d9-2a7c-4b06-98fb-bd2123811ba2@example.com"
+  },
+  {
+    "business_name": "Cedar Services LLC",
+    "registration_id": "SD0000813",
+    "status": "Active",
+    "filing_date": "2006-04-26",
+    "agent_name": "John Miller",
+    "agent_address": "4958 Elm Ave",
+    "agent_email": "john.miller.8fd283b8-9e7c-4817-beb5-fdd88c1f8188@example.com"
+  },
+  {
+    "business_name": "Quantum Foods LLC",
+    "registration_id": "SD0000821",
+    "status": "Active",
+    "filing_date": "2010-03-27",
+    "agent_name": "Dave Johnson",
+    "agent_address": "7093 Maple Ave",
+    "agent_email": "dave.johnson.66bd9cba-056f-4b2a-b7e9-01e73c4fa8de@example.com"
+  },
+  {
+    "business_name": "Harmony Farms LLC",
+    "registration_id": "SD0000824",
+    "status": "Active",
+    "filing_date": "1996-11-21",
+    "agent_name": "Maria Taylor",
+    "agent_address": "7519 Elm Ave",
+    "agent_email": "maria.taylor.f22ec9af-ca85-4bf2-a0e5-b1224411c7de@example.com"
+  },
+  {
+    "business_name": "Apex Trading LLC",
+    "registration_id": "SD0000828",
+    "status": "Active",
+    "filing_date": "2016-08-11",
+    "agent_name": "Maria Anderson",
+    "agent_address": "6892 Broadway Ave",
+    "agent_email": "maria.anderson.2aa19a4f-1ed3-403b-af04-917e7baadef1@example.com"
+  },
+  {
+    "business_name": "Golden Market LLC",
+    "registration_id": "SD0000831",
+    "status": "Active",
+    "filing_date": "2016-02-07",
+    "agent_name": "Gian Anderson",
+    "agent_address": "9320 Broadway Ave",
+    "agent_email": "gian.anderson.6ba11187-dc22-4b36-a743-3e7147567943@example.com"
+  },
+  {
+    "business_name": "Crystal Farms LLC",
+    "registration_id": "SD0000833",
+    "status": "Active",
+    "filing_date": "1999-09-10",
+    "agent_name": "Alex Smith",
+    "agent_address": "9864 Elm Ave",
+    "agent_email": "alex.smith.c9f33f6c-e04a-4546-96b1-0074e66f71c2@example.com"
+  },
+  {
+    "business_name": "Harmony Group LLC",
+    "registration_id": "SD0000837",
+    "status": "Active",
+    "filing_date": "1997-07-20",
+    "agent_name": "Maria Miller",
+    "agent_address": "693 Broadway Ave",
+    "agent_email": "maria.miller.a850b835-efae-429c-b8bb-d9378607ab8b@example.com"
+  },
+  {
+    "business_name": "Blue Services LLC",
+    "registration_id": "SD0000841",
+    "status": "Active",
+    "filing_date": "1999-08-06",
+    "agent_name": "Gian Davis",
+    "agent_address": "4800 Maple Ave",
+    "agent_email": "gian.davis.4e4571b5-3fbb-4f46-b693-e7cf32c693f1@example.com"
+  },
+  {
+    "business_name": "Blue Labs LLC",
+    "registration_id": "SD0000851",
+    "status": "Active",
+    "filing_date": "2025-06-16",
+    "agent_name": "John Miller",
+    "agent_address": "9044 Elm Ave",
+    "agent_email": "john.miller.32a7b49e-cd6b-4e1b-8cf4-25b5aade028c@example.com"
+  },
+  {
+    "business_name": "Metro Industries LLC",
+    "registration_id": "SD0000854",
+    "status": "Active",
+    "filing_date": "2006-02-03",
+    "agent_name": "Alex Davis",
+    "agent_address": "5347 Elm Ave",
+    "agent_email": "alex.davis.09d4b8e5-415a-4ce3-a46e-20af6f497a19@example.com"
+  },
+  {
+    "business_name": "Prime Energy LLC",
+    "registration_id": "SD0000856",
+    "status": "Active",
+    "filing_date": "1999-10-01",
+    "agent_name": "Gian Wilson",
+    "agent_address": "3530 Hill Ave",
+    "agent_email": "gian.wilson.83ce95ee-eab3-4e76-9ead-0e6b119c656c@example.com"
+  },
+  {
+    "business_name": "Sunny Group LLC",
+    "registration_id": "SD0000868",
+    "status": "Dissolved",
+    "filing_date": "2016-05-05",
+    "agent_name": "Sara Smith",
+    "agent_address": "8854 Maple Ave",
+    "agent_email": "sara.smith.20e087f7-574f-4c0e-a0a1-50e5587989f2@example.com"
+  },
+  {
+    "business_name": "Blue Ventures LLC",
+    "registration_id": "SD0000869",
+    "status": "Active",
+    "filing_date": "2004-10-14",
+    "agent_name": "Dave Miller",
+    "agent_address": "1805 Broadway Ave",
+    "agent_email": "dave.miller.943febe3-5608-4edb-8950-f2dc25284435@example.com"
+  },
+  {
+    "business_name": "Nova Industries LLC",
+    "registration_id": "SD0000872",
+    "status": "Dissolved",
+    "filing_date": "2015-01-08",
+    "agent_name": "Alex Davis",
+    "agent_address": "4356 Hill Ave",
+    "agent_email": "alex.davis.ddbc6307-3345-4b9c-ab9d-d8d335411626@example.com"
+  },
+  {
+    "business_name": "Metro Industries LLC",
+    "registration_id": "SD0000880",
+    "status": "Active",
+    "filing_date": "2011-04-12",
+    "agent_name": "Alex Miller",
+    "agent_address": "2654 Elm Ave",
+    "agent_email": "alex.miller.0575f147-c6e6-44f4-b2b0-0590269563ac@example.com"
+  },
+  {
+    "business_name": "Cedar Mart LLC",
+    "registration_id": "SD0000882",
+    "status": "Active",
+    "filing_date": "2019-12-08",
+    "agent_name": "Ezra Anderson",
+    "agent_address": "2159 Elm Ave",
+    "agent_email": "ezra.anderson.6af2d5ef-fd1d-417d-a387-fde3c8af5b9a@example.com"
+  },
+  {
+    "business_name": "Golden Logistics LLC",
+    "registration_id": "SD0000883",
+    "status": "Active",
+    "filing_date": "2017-12-14",
+    "agent_name": "John Anderson",
+    "agent_address": "3193 Elm Ave",
+    "agent_email": "john.anderson.09579feb-2b51-4994-b5db-0f6e41572519@example.com"
+  },
+  {
+    "business_name": "Pine Studio LLC",
+    "registration_id": "SD0000884",
+    "status": "Active",
+    "filing_date": "2009-04-04",
+    "agent_name": "Ezra Miller",
+    "agent_address": "7047 Broadway Ave",
+    "agent_email": "ezra.miller.7d014bfb-50c3-49f0-b0ef-88e19394e8ea@example.com"
+  },
+  {
+    "business_name": "Ocean Services LLC",
+    "registration_id": "SD0000886",
+    "status": "Active",
+    "filing_date": "2002-08-12",
+    "agent_name": "Jen Wilson",
+    "agent_address": "2365 Broadway Ave",
+    "agent_email": "jen.wilson.9e0061bb-0337-456f-a0cc-1edeffdd1af4@example.com"
+  },
+  {
+    "business_name": "Sunny Market LLC",
+    "registration_id": "SD0000896",
+    "status": "Active",
+    "filing_date": "2011-10-21",
+    "agent_name": "Dave Davis",
+    "agent_address": "2764 Broadway Ave",
+    "agent_email": "dave.davis.61971fe1-1f60-4224-ab7c-f64ab3573d0b@example.com"
+  },
+  {
+    "business_name": "Apex Consulting LLC",
+    "registration_id": "SD0000897",
+    "status": "Dissolved",
+    "filing_date": "2014-03-05",
+    "agent_name": "Gian Johnson",
+    "agent_address": "865 Maple Ave",
+    "agent_email": "gian.johnson.57ceeb6e-b08c-46a7-a73b-1a9da01ca7bc@example.com"
+  },
+  {
+    "business_name": "River Solutions LLC",
+    "registration_id": "SD0000900",
+    "status": "Active",
+    "filing_date": "2008-11-12",
+    "agent_name": "Dave Wilson",
+    "agent_address": "6958 Maple Ave",
+    "agent_email": "dave.wilson.773cb6b6-3ec3-4c52-96bc-a26b1952a424@example.com"
+  },
+  {
+    "business_name": "Sunny Foods LLC",
+    "registration_id": "SD0000903",
+    "status": "Inactive",
+    "filing_date": "2024-08-20",
+    "agent_name": "Dave Johnson",
+    "agent_address": "635 Elm Ave",
+    "agent_email": "dave.johnson.7cd5df65-32e4-4132-93a7-3c39e740e0b0@example.com"
+  },
+  {
+    "business_name": "Harmony Farms LLC",
+    "registration_id": "SD0000916",
+    "status": "Active",
+    "filing_date": "2000-05-20",
+    "agent_name": "Maria Wilson",
+    "agent_address": "891 Broadway Ave",
+    "agent_email": "maria.wilson.4c637b1c-cd19-4658-bfe9-d7d68eaff072@example.com"
+  },
+  {
+    "business_name": "Golden Builders LLC",
+    "registration_id": "SD0000926",
+    "status": "Active",
+    "filing_date": "2024-12-19",
+    "agent_name": "Ezra Smith",
+    "agent_address": "7624 Elm Ave",
+    "agent_email": "ezra.smith.4fe3aa56-eaa4-4d4a-896e-cde89eaf2b24@example.com"
+  },
+  {
+    "business_name": "Apex Holdings LLC",
+    "registration_id": "SD0000929",
+    "status": "Active",
+    "filing_date": "1999-12-05",
+    "agent_name": "Gian Taylor",
+    "agent_address": "4009 Hill Ave",
+    "agent_email": "gian.taylor.c97e4c30-fd5b-496c-ba3d-1f08fccd830b@example.com"
+  },
+  {
+    "business_name": "Quantum Group LLC",
+    "registration_id": "SD0000938",
+    "status": "Active",
+    "filing_date": "2001-04-04",
+    "agent_name": "Ezra Anderson",
+    "agent_address": "5777 Maple Ave",
+    "agent_email": "ezra.anderson.fc3932c8-9c1c-4410-b4f4-5ea8e0b57ff4@example.com"
+  },
+  {
+    "business_name": "Sunny Group LLC",
+    "registration_id": "SD0000953",
+    "status": "Active",
+    "filing_date": "2006-08-15",
+    "agent_name": "Alex Wilson",
+    "agent_address": "548 Hill Ave",
+    "agent_email": "alex.wilson.d5e96da7-d401-437c-8aa0-2c4f4e3d46de@example.com"
+  },
+  {
+    "business_name": "Silver Pharmacy LLC",
+    "registration_id": "SD0000954",
+    "status": "Active",
+    "filing_date": "2025-09-28",
+    "agent_name": "Alex Davis",
+    "agent_address": "4205 Maple Ave",
+    "agent_email": "alex.davis.c072894f-c418-4c77-8dbe-37a9eb759a8b@example.com"
+  },
+  {
+    "business_name": "Silver Labs LLC",
+    "registration_id": "SD0000957",
+    "status": "Active",
+    "filing_date": "1998-09-19",
+    "agent_name": "Jen Smith",
+    "agent_address": "9540 Hill Ave",
+    "agent_email": "jen.smith.7eb81d93-d5c2-4fd2-9ef4-8b3d702dbd17@example.com"
+  },
+  {
+    "business_name": "Green Trading LLC",
+    "registration_id": "SD0000967",
+    "status": "Active",
+    "filing_date": "2003-09-12",
+    "agent_name": "Dave Garcia",
+    "agent_address": "1222 Elm Ave",
+    "agent_email": "dave.garcia.34863e4f-56d6-40f6-aa0c-ae07935714f2@example.com"
+  },
+  {
+    "business_name": "Blue Builders LLC",
+    "registration_id": "SD0000969",
+    "status": "Inactive",
+    "filing_date": "2017-12-24",
+    "agent_name": "Alex Garcia",
+    "agent_address": "5273 Hill Ave",
+    "agent_email": "alex.garcia.3a4fc6eb-ae98-47bd-a801-cc1992235278@example.com"
+  },
+  {
+    "business_name": "Quantum Ventures LLC",
+    "registration_id": "SD0000971",
+    "status": "Inactive",
+    "filing_date": "1996-09-12",
+    "agent_name": "Sara Wilson",
+    "agent_address": "8837 Hill Ave",
+    "agent_email": "sara.wilson.7709666b-7eda-4965-8c2a-5e727774109b@example.com"
+  },
+  {
+    "business_name": "Summit Consulting LLC",
+    "registration_id": "SD0000973",
+    "status": "Active",
+    "filing_date": "2008-05-15",
+    "agent_name": "John Garcia",
+    "agent_address": "9434 Elm Ave",
+    "agent_email": "john.garcia.3377cb30-38df-4afe-a907-558d6d4967cd@example.com"
+  },
+  {
+    "business_name": "Cedar Holdings LLC",
+    "registration_id": "SD0000976",
+    "status": "Active",
+    "filing_date": "2014-01-25",
+    "agent_name": "John Wilson",
+    "agent_address": "5176 Maple Ave",
+    "agent_email": "john.wilson.4723d00d-4efb-4224-b1c7-55d4ff3503b6@example.com"
+  },
+  {
+    "business_name": "Prime Consulting LLC",
+    "registration_id": "SD0000979",
+    "status": "Dissolved",
+    "filing_date": "2018-10-12",
+    "agent_name": "Alex Johnson",
+    "agent_address": "8315 Elm Ave",
+    "agent_email": "alex.johnson.ffd5c57c-729a-416c-9168-fbb52e652b50@example.com"
+  },
+  {
+    "business_name": "River Solutions LLC",
+    "registration_id": "SD0000980",
+    "status": "Dissolved",
+    "filing_date": "1995-01-13",
+    "agent_name": "Gian Wilson",
+    "agent_address": "5088 Broadway Ave",
+    "agent_email": "gian.wilson.4020595f-86ed-46cd-890d-fd6b86d60593@example.com"
+  },
+  {
+    "business_name": "Apex Holdings LLC",
+    "registration_id": "SD0000982",
+    "status": "Active",
+    "filing_date": "1999-03-23",
+    "agent_name": "Alex Miller",
+    "agent_address": "6099 Hill Ave",
+    "agent_email": "alex.miller.4b9c7936-ad61-4b31-8f7c-00df24c087bd@example.com"
+  },
+  {
+    "business_name": "Rapid Services LLC",
+    "registration_id": "SD0000988",
+    "status": "Active",
+    "filing_date": "2017-07-10",
+    "agent_name": "Jen Garcia",
+    "agent_address": "4943 Elm Ave",
+    "agent_email": "jen.garcia.57e9359a-3031-4797-8f58-7242f8e0f2ea@example.com"
+  },
+  {
+    "business_name": "Blue Builders LLC",
+    "registration_id": "SD0000990",
+    "status": "Inactive",
+    "filing_date": "2002-03-13",
+    "agent_name": "Dave Wilson",
+    "agent_address": "3086 Hill Ave",
+    "agent_email": "dave.wilson.e5e6da20-643e-494d-95fe-7dd171171e78@example.com"
+  },
+  {
+    "business_name": "Harmony Works LLC",
+    "registration_id": "SD0000995",
+    "status": "Inactive",
+    "filing_date": "2006-09-08",
+    "agent_name": "John Garcia",
+    "agent_address": "3717 Maple Ave",
+    "agent_email": "john.garcia.4d5fd347-fc37-4946-96c7-1b243476116a@example.com"
+  },
+  {
+    "business_name": "Cedar Tech LLC",
+    "registration_id": "SD0000997",
+    "status": "Active",
+    "filing_date": "2012-11-10",
+    "agent_name": "Sara Anderson",
+    "agent_address": "2308 Maple Ave",
+    "agent_email": "sara.anderson.4031310b-8819-4b80-b6df-8b58e21062fd@example.com"
+  },
+  {
+    "business_name": "Apex Works LLC",
+    "registration_id": "SD0001002",
+    "status": "Active",
+    "filing_date": "2018-10-20",
+    "agent_name": "Ezra Anderson",
+    "agent_address": "938 Broadway Ave",
+    "agent_email": "ezra.anderson.82da708c-20ea-4633-994b-2f7d60a4f842@example.com"
+  },
+  {
+    "business_name": "Harmony Trading LLC",
+    "registration_id": "SD0001005",
+    "status": "Active",
+    "filing_date": "2019-04-12",
+    "agent_name": "Gian Taylor",
+    "agent_address": "7558 Broadway Ave",
+    "agent_email": "gian.taylor.f39fb112-aa56-47bf-8e02-29287c6b3810@example.com"
+  },
+  {
+    "business_name": "Quantum Studio LLC",
+    "registration_id": "SD0001006",
+    "status": "Active",
+    "filing_date": "2000-01-21",
+    "agent_name": "Ezra Smith",
+    "agent_address": "7491 Elm Ave",
+    "agent_email": "ezra.smith.0c1b66d3-bdf0-4e82-af25-91b50bc83c14@example.com"
+  },
+  {
+    "business_name": "Prime Pharmacy LLC",
+    "registration_id": "SD0001010",
+    "status": "Active",
+    "filing_date": "2013-05-17",
+    "agent_name": "Ezra Johnson",
+    "agent_address": "3264 Broadway Ave",
+    "agent_email": "ezra.johnson.58337251-33ee-4bf9-8373-0a58c91ab596@example.com"
+  },
+  {
+    "business_name": "Ocean Solutions LLC",
+    "registration_id": "SD0001016",
+    "status": "Active",
+    "filing_date": "2009-08-19",
+    "agent_name": "Sara Taylor",
+    "agent_address": "9168 Broadway Ave",
+    "agent_email": "sara.taylor.95f1e124-1c72-48f1-99ba-299e060408a4@example.com"
+  },
+  {
+    "business_name": "Metro Market LLC",
+    "registration_id": "SD0001019",
+    "status": "Active",
+    "filing_date": "1997-10-03",
+    "agent_name": "Alex Garcia",
+    "agent_address": "2979 Broadway Ave",
+    "agent_email": "alex.garcia.e9d26fd9-19f9-42be-a0f1-240f78bc99a7@example.com"
+  },
+  {
+    "business_name": "Sky Tech LLC",
+    "registration_id": "SD0001023",
+    "status": "Active",
+    "filing_date": "2004-01-26",
+    "agent_name": "Alex Taylor",
+    "agent_address": "2988 Maple Ave",
+    "agent_email": "alex.taylor.ad5b7095-0dfc-4566-87a9-2c2b83b32162@example.com"
+  },
+  {
+    "business_name": "Cedar Mart LLC",
+    "registration_id": "SD0001025",
+    "status": "Active",
+    "filing_date": "2000-10-17",
+    "agent_name": "Alex Garcia",
+    "agent_address": "5537 Hill Ave",
+    "agent_email": "alex.garcia.1682bcf9-e892-470d-8208-f8cf658c4c93@example.com"
+  },
+  {
+    "business_name": "Green Trading LLC",
+    "registration_id": "SD0001041",
+    "status": "Active",
+    "filing_date": "2012-01-20",
+    "agent_name": "Sara Garcia",
+    "agent_address": "1710 Maple Ave",
+    "agent_email": "sara.garcia.97554fcd-86af-44a8-8641-0b723582b427@example.com"
+  },
+  {
+    "business_name": "Blue Farms LLC",
+    "registration_id": "SD0001042",
+    "status": "Active",
+    "filing_date": "2021-07-25",
+    "agent_name": "John Smith",
+    "agent_address": "7815 Hill Ave",
+    "agent_email": "john.smith.aed0a0d3-c76a-4fb6-8cac-bc28110ccd32@example.com"
+  },
+  {
+    "business_name": "Rapid Ventures LLC",
+    "registration_id": "SD0001048",
+    "status": "Active",
+    "filing_date": "2009-05-27",
+    "agent_name": "Alex Wilson",
+    "agent_address": "9048 Maple Ave",
+    "agent_email": "alex.wilson.c1a6e8b5-82ff-4c1e-b563-7e587039da3e@example.com"
+  },
+  {
+    "business_name": "Sunny Services LLC",
+    "registration_id": "SD0001053",
+    "status": "Active",
+    "filing_date": "1999-08-04",
+    "agent_name": "Dave Anderson",
+    "agent_address": "7823 Maple Ave",
+    "agent_email": "dave.anderson.7d10c800-5f13-40ba-9051-b6b776ccdcc3@example.com"
+  },
+  {
+    "business_name": "Pine Works LLC",
+    "registration_id": "SD0001060",
+    "status": "Active",
+    "filing_date": "1999-02-08",
+    "agent_name": "John Garcia",
+    "agent_address": "9380 Maple Ave",
+    "agent_email": "john.garcia.e2bacb93-6a8a-410b-add5-df17efb9f4e0@example.com"
+  },
+  {
+    "business_name": "Golden Logistics LLC",
+    "registration_id": "SD0001061",
+    "status": "Active",
+    "filing_date": "2018-06-28",
+    "agent_name": "Gian Johnson",
+    "agent_address": "2008 Broadway Ave",
+    "agent_email": "gian.johnson.c461b4a1-2f07-444d-80e3-371df8154e38@example.com"
+  },
+  {
+    "business_name": "Rapid Consulting LLC",
+    "registration_id": "SD0001062",
+    "status": "Active",
+    "filing_date": "2017-02-01",
+    "agent_name": "Sara Johnson",
+    "agent_address": "6348 Elm Ave",
+    "agent_email": "sara.johnson.89fd706b-aa1f-42de-acfc-4ca416f80d11@example.com"
+  },
+  {
+    "business_name": "Harmony Energy LLC",
+    "registration_id": "SD0001067",
+    "status": "Active",
+    "filing_date": "2018-06-15",
+    "agent_name": "Dave Miller",
+    "agent_address": "8023 Elm Ave",
+    "agent_email": "dave.miller.ebe71d26-ef8b-4e3e-83c1-f6e24681d230@example.com"
+  },
+  {
+    "business_name": "Harmony Ventures LLC",
+    "registration_id": "SD0001076",
+    "status": "Active",
+    "filing_date": "2023-02-13",
+    "agent_name": "Dave Taylor",
+    "agent_address": "9882 Elm Ave",
+    "agent_email": "dave.taylor.8fcd52cb-ca4b-49b5-90f4-d93f9f99aab1@example.com"
+  },
+  {
+    "business_name": "Blue Studio LLC",
+    "registration_id": "SD0001080",
+    "status": "Active",
+    "filing_date": "2019-03-15",
+    "agent_name": "Dave Wilson",
+    "agent_address": "1775 Elm Ave",
+    "agent_email": "dave.wilson.57d5e2f3-63a8-4613-9b97-d9f9397b0bbf@example.com"
+  },
+  {
+    "business_name": "Pine Market LLC",
+    "registration_id": "SD0001083",
+    "status": "Inactive",
+    "filing_date": "1996-12-23",
+    "agent_name": "John Garcia",
+    "agent_address": "2493 Broadway Ave",
+    "agent_email": "john.garcia.8dabd733-d52f-4835-b5ac-9d7680a19b01@example.com"
+  },
+  {
+    "business_name": "Green Industries LLC",
+    "registration_id": "SD0001086",
+    "status": "Active",
+    "filing_date": "2021-12-08",
+    "agent_name": "Alex Davis",
+    "agent_address": "2510 Maple Ave",
+    "agent_email": "alex.davis.de845e47-4118-4a4d-82e2-eee42568a20f@example.com"
+  },
+  {
+    "business_name": "Green Consulting LLC",
+    "registration_id": "SD0001088",
+    "status": "Active",
+    "filing_date": "2013-08-01",
+    "agent_name": "Maria Anderson",
+    "agent_address": "3496 Maple Ave",
+    "agent_email": "maria.anderson.ec98ea7d-5608-4a42-8fa9-d4b530d6c047@example.com"
+  },
+  {
+    "business_name": "Nova Works LLC",
+    "registration_id": "SD0001092",
+    "status": "Active",
+    "filing_date": "2001-03-28",
+    "agent_name": "Ezra Wilson",
+    "agent_address": "7511 Hill Ave",
+    "agent_email": "ezra.wilson.3d65e6b9-97c9-4986-b7e2-a5edeefcf7a3@example.com"
+  },
+  {
+    "business_name": "River Holdings LLC",
+    "registration_id": "SD0001096",
+    "status": "Active",
+    "filing_date": "2018-04-15",
+    "agent_name": "Dave Johnson",
+    "agent_address": "2521 Maple Ave",
+    "agent_email": "dave.johnson.0a3ef7f0-e1a4-405f-a4c4-c0d8310eb53f@example.com"
+  },
+  {
+    "business_name": "Silver Works LLC",
+    "registration_id": "SD0001103",
+    "status": "Active",
+    "filing_date": "2013-01-09",
+    "agent_name": "Dave Johnson",
+    "agent_address": "5342 Elm Ave",
+    "agent_email": "dave.johnson.792596f8-1718-4969-888e-8d35accd5713@example.com"
+  },
+  {
+    "business_name": "River Builders LLC",
+    "registration_id": "SD0001105",
+    "status": "Active",
+    "filing_date": "2004-04-25",
+    "agent_name": "John Davis",
+    "agent_address": "395 Broadway Ave",
+    "agent_email": "john.davis.d6857805-8274-45e8-bf20-fcaa5b70eaaf@example.com"
+  },
+  {
+    "business_name": "Blue Mart LLC",
+    "registration_id": "SD0001106",
+    "status": "Active",
+    "filing_date": "2021-11-03",
+    "agent_name": "John Anderson",
+    "agent_address": "5867 Hill Ave",
+    "agent_email": "john.anderson.622067ca-1841-4757-8807-2ad8b36745e4@example.com"
+  },
+  {
+    "business_name": "Pine Energy LLC",
+    "registration_id": "SD0001108",
+    "status": "Active",
+    "filing_date": "2010-07-25",
+    "agent_name": "Dave Smith",
+    "agent_address": "6235 Broadway Ave",
+    "agent_email": "dave.smith.d14871fb-edc4-444c-af9d-e67aeb35e99b@example.com"
+  },
+  {
+    "business_name": "Rapid Group LLC",
+    "registration_id": "SD0001114",
+    "status": "Active",
+    "filing_date": "2006-12-14",
+    "agent_name": "John Anderson",
+    "agent_address": "7770 Broadway Ave",
+    "agent_email": "john.anderson.e22af251-6e26-44fa-8c85-ff182cbe5e75@example.com"
+  },
+  {
+    "business_name": "Silver Industries LLC",
+    "registration_id": "SD0001117",
+    "status": "Active",
+    "filing_date": "1999-05-05",
+    "agent_name": "Sara Smith",
+    "agent_address": "1857 Elm Ave",
+    "agent_email": "sara.smith.45ccbb36-37a6-4cbc-8b96-cad823750a4d@example.com"
+  },
+  {
+    "business_name": "Harmony Works LLC",
+    "registration_id": "SD0001118",
+    "status": "Active",
+    "filing_date": "2020-03-11",
+    "agent_name": "Alex Taylor",
+    "agent_address": "7846 Hill Ave",
+    "agent_email": "alex.taylor.cae2614f-1fcc-4572-b0c9-224f3c0fd3c0@example.com"
+  },
+  {
+    "business_name": "River Pharmacy LLC",
+    "registration_id": "SD0001124",
+    "status": "Active",
+    "filing_date": "2005-09-17",
+    "agent_name": "Jen Miller",
+    "agent_address": "9749 Maple Ave",
+    "agent_email": "jen.miller.8f519789-1c20-430b-835c-6f5af0838bef@example.com"
+  },
+  {
+    "business_name": "River Group LLC",
+    "registration_id": "SD0001130",
+    "status": "Active",
+    "filing_date": "2007-06-04",
+    "agent_name": "Gian Smith",
+    "agent_address": "682 Broadway Ave",
+    "agent_email": "gian.smith.3c82a306-4793-447b-9dbc-2c231de4673f@example.com"
+  },
+  {
+    "business_name": "Prime Logistics LLC",
+    "registration_id": "SD0001141",
+    "status": "Active",
+    "filing_date": "2011-05-15",
+    "agent_name": "Ezra Miller",
+    "agent_address": "3057 Maple Ave",
+    "agent_email": "ezra.miller.a9c1a243-b69e-41a1-922a-1dc554e2e2cd@example.com"
+  },
+  {
+    "business_name": "River Consulting LLC",
+    "registration_id": "SD0001149",
+    "status": "Active",
+    "filing_date": "2019-11-25",
+    "agent_name": "Jen Anderson",
+    "agent_address": "4015 Maple Ave",
+    "agent_email": "jen.anderson.9629f4fb-233b-4065-a551-d44237496111@example.com"
+  },
+  {
+    "business_name": "Apex Builders LLC",
+    "registration_id": "SD0001151",
+    "status": "Active",
+    "filing_date": "1996-06-15",
+    "agent_name": "Jen Wilson",
+    "agent_address": "8407 Hill Ave",
+    "agent_email": "jen.wilson.28c97288-737b-48a3-b5a1-f3a01b9b8dab@example.com"
+  },
+  {
+    "business_name": "Green Ventures LLC",
+    "registration_id": "SD0001152",
+    "status": "Active",
+    "filing_date": "2001-05-17",
+    "agent_name": "Maria Miller",
+    "agent_address": "991 Broadway Ave",
+    "agent_email": "maria.miller.83c3ac19-f5ee-4b31-b7fe-cfe20c0ef12e@example.com"
+  },
+  {
+    "business_name": "Rapid Consulting LLC",
+    "registration_id": "SD0001155",
+    "status": "Active",
+    "filing_date": "2003-07-08",
+    "agent_name": "Sara Garcia",
+    "agent_address": "3196 Hill Ave",
+    "agent_email": "sara.garcia.5bb02c01-7a5d-4474-9901-6b8688af984c@example.com"
+  },
+  {
+    "business_name": "Ocean Builders LLC",
+    "registration_id": "SD0001160",
+    "status": "Active",
+    "filing_date": "2011-06-14",
+    "agent_name": "Jen Johnson",
+    "agent_address": "3983 Maple Ave",
+    "agent_email": "jen.johnson.d30e7114-6b4e-40ef-bcb6-7aed54b07e1f@example.com"
+  },
+  {
+    "business_name": "Summit Ventures LLC",
+    "registration_id": "SD0001161",
+    "status": "Active",
+    "filing_date": "2024-01-14",
+    "agent_name": "Ezra Taylor",
+    "agent_address": "511 Elm Ave",
+    "agent_email": "ezra.taylor.51555143-81fe-4fa0-b82f-e67cb29c2bb8@example.com"
+  },
+  {
+    "business_name": "Rapid Foods LLC",
+    "registration_id": "SD0001164",
+    "status": "Active",
+    "filing_date": "1996-03-10",
+    "agent_name": "Sara Garcia",
+    "agent_address": "5085 Elm Ave",
+    "agent_email": "sara.garcia.94a1c312-d30a-46b6-b18e-f507af0c48fc@example.com"
+  },
+  {
+    "business_name": "Silver Foods LLC",
+    "registration_id": "SD0001165",
+    "status": "Pending",
+    "filing_date": "2014-01-27",
+    "agent_name": "Dave Johnson",
+    "agent_address": "4389 Elm Ave",
+    "agent_email": "dave.johnson.912bae82-ead5-4274-803d-3a0a781aa38d@example.com"
+  },
+  {
+    "business_name": "Summit Works LLC",
+    "registration_id": "SD0001166",
+    "status": "Inactive",
+    "filing_date": "2004-03-03",
+    "agent_name": "Maria Johnson",
+    "agent_address": "8143 Maple Ave",
+    "agent_email": "maria.johnson.0f49fd29-82b2-4c06-9291-a4a9e3fe892b@example.com"
+  },
+  {
+    "business_name": "Harmony Holdings LLC",
+    "registration_id": "SD0001172",
+    "status": "Inactive",
+    "filing_date": "2000-05-14",
+    "agent_name": "Maria Smith",
+    "agent_address": "2309 Maple Ave",
+    "agent_email": "maria.smith.1ccedeaf-5a2e-4abf-bd78-64d2de83b7c7@example.com"
+  },
+  {
+    "business_name": "Pine Tech LLC",
+    "registration_id": "SD0001174",
+    "status": "Active",
+    "filing_date": "2021-09-07",
+    "agent_name": "Jen Anderson",
+    "agent_address": "8672 Maple Ave",
+    "agent_email": "jen.anderson.a496e686-a1e7-420e-a6d6-c1c097f01746@example.com"
+  },
+  {
+    "business_name": "Apex Ventures LLC",
+    "registration_id": "SD0001180",
+    "status": "Active",
+    "filing_date": "2024-12-24",
+    "agent_name": "Jen Anderson",
+    "agent_address": "2661 Hill Ave",
+    "agent_email": "jen.anderson.d06a5ad2-32c1-4655-8b52-5b68edcc2291@example.com"
+  },
+  {
+    "business_name": "Sunny Holdings LLC",
+    "registration_id": "SD0001182",
+    "status": "Active",
+    "filing_date": "2005-02-17",
+    "agent_name": "Dave Miller",
+    "agent_address": "1374 Elm Ave",
+    "agent_email": "dave.miller.f53aa160-8f41-4400-8c58-7d603ee6f9ad@example.com"
+  },
+  {
+    "business_name": "Nova Foods LLC",
+    "registration_id": "SD0001186",
+    "status": "Active",
+    "filing_date": "1995-10-12",
+    "agent_name": "Ezra Smith",
+    "agent_address": "5173 Hill Ave",
+    "agent_email": "ezra.smith.5876e1af-61ca-406f-9a1e-ba5e06630d11@example.com"
+  },
+  {
+    "business_name": "Golden Builders LLC",
+    "registration_id": "SD0001187",
+    "status": "Active",
+    "filing_date": "2012-02-19",
+    "agent_name": "Gian Johnson",
+    "agent_address": "542 Elm Ave",
+    "agent_email": "gian.johnson.e701f1e4-ccbc-4883-a2af-b6e3a429e7db@example.com"
+  },
+  {
+    "business_name": "Rapid Works LLC",
+    "registration_id": "SD0001190",
+    "status": "Active",
+    "filing_date": "1998-05-25",
+    "agent_name": "Maria Davis",
+    "agent_address": "9549 Broadway Ave",
+    "agent_email": "maria.davis.abe58e7d-7f96-420f-95cc-a097c649c2bd@example.com"
+  },
+  {
+    "business_name": "Cedar Studio LLC",
+    "registration_id": "SD0001192",
+    "status": "Active",
+    "filing_date": "2003-12-02",
+    "agent_name": "Sara Johnson",
+    "agent_address": "7824 Broadway Ave",
+    "agent_email": "sara.johnson.6972cf03-5910-4823-9926-c16aaa20a133@example.com"
+  },
+  {
+    "business_name": "Sunny Services LLC",
+    "registration_id": "SD0001196",
+    "status": "Active",
+    "filing_date": "2003-11-20",
+    "agent_name": "Ezra Davis",
+    "agent_address": "4154 Maple Ave",
+    "agent_email": "ezra.davis.62516f53-2de9-4455-bca1-9f9c80b85fa5@example.com"
+  },
+  {
+    "business_name": "Harmony Holdings LLC",
+    "registration_id": "SD0001197",
+    "status": "Pending",
+    "filing_date": "2002-03-23",
+    "agent_name": "Sara Johnson",
+    "agent_address": "6477 Maple Ave",
+    "agent_email": "sara.johnson.d20931ca-17d3-4705-8bfc-2c49b936c5b0@example.com"
+  },
+  {
+    "business_name": "Nova Solutions LLC",
+    "registration_id": "SD0001198",
+    "status": "Active",
+    "filing_date": "2015-04-23",
+    "agent_name": "John Wilson",
+    "agent_address": "3390 Hill Ave",
+    "agent_email": "john.wilson.63731965-4e61-4def-b9a0-8aaa06e6f1da@example.com"
+  },
+  {
+    "business_name": "Rapid Builders LLC",
+    "registration_id": "SD0001199",
+    "status": "Inactive",
+    "filing_date": "2005-07-13",
+    "agent_name": "Maria Davis",
+    "agent_address": "6386 Elm Ave",
+    "agent_email": "maria.davis.278a36bf-0d7d-4c22-b424-6aa68f833986@example.com"
+  },
+  {
+    "business_name": "Ocean Builders LLC",
+    "registration_id": "SD0001203",
+    "status": "Inactive",
+    "filing_date": "2015-08-13",
+    "agent_name": "John Miller",
+    "agent_address": "6085 Elm Ave",
+    "agent_email": "john.miller.ad0419ac-7bf0-4efa-adea-4bc67d713f92@example.com"
+  },
+  {
+    "business_name": "River Works LLC",
+    "registration_id": "SD0001205",
+    "status": "Active",
+    "filing_date": "1995-06-25",
+    "agent_name": "Sara Taylor",
+    "agent_address": "3178 Maple Ave",
+    "agent_email": "sara.taylor.4f0907f8-981e-4e72-86e1-489b9b7d4355@example.com"
+  },
+  {
+    "business_name": "Apex Pharmacy LLC",
+    "registration_id": "SD0001207",
+    "status": "Inactive",
+    "filing_date": "2006-08-25",
+    "agent_name": "Dave Davis",
+    "agent_address": "7068 Broadway Ave",
+    "agent_email": "dave.davis.4924046f-e774-4181-91dd-2a1ec7a78f27@example.com"
+  },
+  {
+    "business_name": "Apex Group LLC",
+    "registration_id": "SD0001210",
+    "status": "Active",
+    "filing_date": "2003-10-18",
+    "agent_name": "Jen Garcia",
+    "agent_address": "114 Hill Ave",
+    "agent_email": "jen.garcia.5fa344ea-8e26-44b0-8156-2bb0948b4226@example.com"
+  },
+  {
+    "business_name": "Blue Trading LLC",
+    "registration_id": "SD0001212",
+    "status": "Active",
+    "filing_date": "2001-03-27",
+    "agent_name": "Maria Davis",
+    "agent_address": "3435 Maple Ave",
+    "agent_email": "maria.davis.935f1493-211f-424a-8d86-18cce69af2dd@example.com"
+  },
+  {
+    "business_name": "Summit Labs LLC",
+    "registration_id": "SD0001220",
+    "status": "Active",
+    "filing_date": "2015-09-03",
+    "agent_name": "Jen Wilson",
+    "agent_address": "500 Broadway Ave",
+    "agent_email": "jen.wilson.f4dfb9a9-207d-494d-8284-bf173473a493@example.com"
+  },
+  {
+    "business_name": "Blue Tech LLC",
+    "registration_id": "SD0001221",
+    "status": "Inactive",
+    "filing_date": "2018-01-03",
+    "agent_name": "John Davis",
+    "agent_address": "7887 Broadway Ave",
+    "agent_email": "john.davis.9d95a0f1-2eb6-4ea9-93e2-89ff03b61ba1@example.com"
+  },
+  {
+    "business_name": "Sky Group LLC",
+    "registration_id": "SD0001224",
+    "status": "Active",
+    "filing_date": "2010-01-17",
+    "agent_name": "Sara Smith",
+    "agent_address": "55 Elm Ave",
+    "agent_email": "sara.smith.9a6b87e3-1880-496f-9c67-bcdd557fb8b9@example.com"
+  },
+  {
+    "business_name": "Green Industries LLC",
+    "registration_id": "SD0001227",
+    "status": "Active",
+    "filing_date": "1996-07-07",
+    "agent_name": "Gian Smith",
+    "agent_address": "8625 Maple Ave",
+    "agent_email": "gian.smith.7345c248-fc6b-4468-995d-db5963de4574@example.com"
+  },
+  {
+    "business_name": "Rapid Logistics LLC",
+    "registration_id": "SD0001228",
+    "status": "Active",
+    "filing_date": "1996-02-28",
+    "agent_name": "Sara Miller",
+    "agent_address": "4247 Maple Ave",
+    "agent_email": "sara.miller.fea0cda9-8863-4916-a776-212bf0c4ee6c@example.com"
+  },
+  {
+    "business_name": "Metro Mart LLC",
+    "registration_id": "SD0001232",
+    "status": "Active",
+    "filing_date": "2020-04-24",
+    "agent_name": "Jen Davis",
+    "agent_address": "391 Broadway Ave",
+    "agent_email": "jen.davis.0696c82c-0a1f-46fe-86be-72144b8c9cb5@example.com"
+  },
+  {
+    "business_name": "Pine Studio LLC",
+    "registration_id": "SD0001239",
+    "status": "Active",
+    "filing_date": "2021-10-17",
+    "agent_name": "Gian Taylor",
+    "agent_address": "8158 Elm Ave",
+    "agent_email": "gian.taylor.f7bc43ac-f8b8-4a2d-aad7-132570708c10@example.com"
+  },
+  {
+    "business_name": "Cedar Group LLC",
+    "registration_id": "SD0001240",
+    "status": "Pending",
+    "filing_date": "2024-07-01",
+    "agent_name": "Gian Garcia",
+    "agent_address": "959 Broadway Ave",
+    "agent_email": "gian.garcia.6cd32b0c-360c-4a21-aca1-680451453dd8@example.com"
+  },
+  {
+    "business_name": "Cedar Group LLC",
+    "registration_id": "SD0001241",
+    "status": "Inactive",
+    "filing_date": "2022-09-21",
+    "agent_name": "Alex Davis",
+    "agent_address": "6514 Hill Ave",
+    "agent_email": "alex.davis.13732eb0-1ac3-47a3-8927-fe53d241afe1@example.com"
+  },
+  {
+    "business_name": "Crystal Group LLC",
+    "registration_id": "SD0001253",
+    "status": "Pending",
+    "filing_date": "2010-03-13",
+    "agent_name": "Sara Taylor",
+    "agent_address": "2859 Maple Ave",
+    "agent_email": "sara.taylor.c0e77cb5-6cdc-4e2d-b3bb-5051b125ea21@example.com"
+  },
+  {
+    "business_name": "Crystal Solutions LLC",
+    "registration_id": "SD0001256",
+    "status": "Inactive",
+    "filing_date": "2007-10-13",
+    "agent_name": "Alex Smith",
+    "agent_address": "9214 Hill Ave",
+    "agent_email": "alex.smith.f46f4dce-b5c3-4ced-b415-7139ac9c41a4@example.com"
+  },
+  {
+    "business_name": "Blue Foods LLC",
+    "registration_id": "SD0001260",
+    "status": "Active",
+    "filing_date": "1996-10-21",
+    "agent_name": "John Wilson",
+    "agent_address": "900 Hill Ave",
+    "agent_email": "john.wilson.c811eaf8-47ca-4ee5-8ee8-b283f2e9ba2e@example.com"
+  },
+  {
+    "business_name": "Metro Tech LLC",
+    "registration_id": "SD0001263",
+    "status": "Active",
+    "filing_date": "2010-12-21",
+    "agent_name": "Maria Johnson",
+    "agent_address": "4327 Broadway Ave",
+    "agent_email": "maria.johnson.5ec056fd-0543-41c8-9505-506f8605a7a2@example.com"
+  },
+  {
+    "business_name": "Blue Farms LLC",
+    "registration_id": "SD0001266",
+    "status": "Active",
+    "filing_date": "2008-04-27",
+    "agent_name": "Dave Wilson",
+    "agent_address": "6170 Broadway Ave",
+    "agent_email": "dave.wilson.2bc9041a-1ee7-45f5-ab3f-6722e2705b1c@example.com"
+  },
+  {
+    "business_name": "Quantum Mart LLC",
+    "registration_id": "SD0001268",
+    "status": "Pending",
+    "filing_date": "1998-07-09",
+    "agent_name": "Dave Davis",
+    "agent_address": "4108 Broadway Ave",
+    "agent_email": "dave.davis.24acf207-2b39-43d7-9170-5141bc167238@example.com"
+  },
+  {
+    "business_name": "Quantum Ventures LLC",
+    "registration_id": "SD0001269",
+    "status": "Dissolved",
+    "filing_date": "2023-08-24",
+    "agent_name": "Maria Johnson",
+    "agent_address": "239 Maple Ave",
+    "agent_email": "maria.johnson.354610ef-6898-4123-bb57-efdd81b35c72@example.com"
+  },
+  {
+    "business_name": "Blue Energy LLC",
+    "registration_id": "SD0001273",
+    "status": "Active",
+    "filing_date": "1999-02-22",
+    "agent_name": "Gian Wilson",
+    "agent_address": "2618 Broadway Ave",
+    "agent_email": "gian.wilson.116b96bd-a2cb-4f5c-893c-346cf9ba7da3@example.com"
+  },
+  {
+    "business_name": "Quantum Energy LLC",
+    "registration_id": "SD0001274",
+    "status": "Active",
+    "filing_date": "2012-08-04",
+    "agent_name": "John Garcia",
+    "agent_address": "1201 Maple Ave",
+    "agent_email": "john.garcia.ad3c9fd0-c005-4a3f-bf1f-ff10dad6d295@example.com"
+  },
+  {
+    "business_name": "Green Pharmacy LLC",
+    "registration_id": "SD0001276",
+    "status": "Dissolved",
+    "filing_date": "2017-12-08",
+    "agent_name": "Jen Garcia",
+    "agent_address": "4894 Elm Ave",
+    "agent_email": "jen.garcia.02210dd1-0526-4ca9-a823-cadf6c3b775d@example.com"
+  },
+  {
+    "business_name": "Summit Works LLC",
+    "registration_id": "SD0001277",
+    "status": "Active",
+    "filing_date": "2004-06-15",
+    "agent_name": "John Wilson",
+    "agent_address": "2943 Maple Ave",
+    "agent_email": "john.wilson.b90c0be3-0140-432b-9dd9-3552c0c4a40e@example.com"
+  },
+  {
+    "business_name": "Sky Market LLC",
+    "registration_id": "SD0001287",
+    "status": "Dissolved",
+    "filing_date": "1998-08-20",
+    "agent_name": "Alex Wilson",
+    "agent_address": "9545 Maple Ave",
+    "agent_email": "alex.wilson.563ec0bf-9c55-4d12-aff9-fd1ddb06fc27@example.com"
+  },
+  {
+    "business_name": "Sunny Foods LLC",
+    "registration_id": "SD0001288",
+    "status": "Inactive",
+    "filing_date": "2001-07-10",
+    "agent_name": "Dave Johnson",
+    "agent_address": "5363 Elm Ave",
+    "agent_email": "dave.johnson.03696b80-2828-402e-9f7b-98fb3f38f688@example.com"
+  },
+  {
+    "business_name": "Quantum Group LLC",
+    "registration_id": "SD0001291",
+    "status": "Active",
+    "filing_date": "2011-08-18",
+    "agent_name": "Dave Smith",
+    "agent_address": "4461 Elm Ave",
+    "agent_email": "dave.smith.e88cf2aa-0031-45db-b6d9-badd480a2ee7@example.com"
+  },
+  {
+    "business_name": "Crystal Builders LLC",
+    "registration_id": "SD0001298",
+    "status": "Active",
+    "filing_date": "2022-09-24",
+    "agent_name": "Alex Johnson",
+    "agent_address": "8625 Maple Ave",
+    "agent_email": "alex.johnson.5d07bfe7-6b7b-470a-818a-e1dfd9453952@example.com"
+  },
+  {
+    "business_name": "Prime Industries LLC",
+    "registration_id": "SD0001299",
+    "status": "Active",
+    "filing_date": "2001-02-05",
+    "agent_name": "Sara Miller",
+    "agent_address": "1527 Broadway Ave",
+    "agent_email": "sara.miller.74c9eb9e-dc78-475f-92aa-aafb50244a8d@example.com"
+  },
+  {
+    "business_name": "Quantum Tech LLC",
+    "registration_id": "SD0001300",
+    "status": "Active",
+    "filing_date": "2008-05-16",
+    "agent_name": "Gian Smith",
+    "agent_address": "8734 Maple Ave",
+    "agent_email": "gian.smith.9972ee6d-a191-44b3-9341-4879a84f3b2f@example.com"
+  },
+  {
+    "business_name": "River Farms LLC",
+    "registration_id": "SD0001301",
+    "status": "Active",
+    "filing_date": "2000-03-12",
+    "agent_name": "Jen Wilson",
+    "agent_address": "9218 Elm Ave",
+    "agent_email": "jen.wilson.1d441484-253b-4d09-91f5-9c2d0d76891f@example.com"
+  },
+  {
+    "business_name": "Crystal Pharmacy LLC",
+    "registration_id": "SD0001305",
+    "status": "Active",
+    "filing_date": "2002-09-18",
+    "agent_name": "Gian Wilson",
+    "agent_address": "4016 Maple Ave",
+    "agent_email": "gian.wilson.1bd5b950-58e0-466c-88cf-2d196e02fb05@example.com"
+  },
+  {
+    "business_name": "Prime Foods LLC",
+    "registration_id": "SD0001310",
+    "status": "Active",
+    "filing_date": "2012-08-20",
+    "agent_name": "Gian Davis",
+    "agent_address": "6108 Elm Ave",
+    "agent_email": "gian.davis.0051d59a-4bd0-4278-a902-f91b9e011d08@example.com"
+  },
+  {
+    "business_name": "Silver Labs LLC",
+    "registration_id": "SD0001312",
+    "status": "Active",
+    "filing_date": "2022-03-07",
+    "agent_name": "Maria Wilson",
+    "agent_address": "403 Broadway Ave",
+    "agent_email": "maria.wilson.0db74355-431f-40d8-a91d-93e210e17f62@example.com"
+  },
+  {
+    "business_name": "Prime Trading LLC",
+    "registration_id": "SD0001318",
+    "status": "Active",
+    "filing_date": "2020-09-22",
+    "agent_name": "Gian Smith",
+    "agent_address": "9454 Elm Ave",
+    "agent_email": "gian.smith.c804f825-b679-4158-bed7-2cd78ad65231@example.com"
+  },
+  {
+    "business_name": "Green Studio LLC",
+    "registration_id": "SD0001322",
+    "status": "Active",
+    "filing_date": "2000-08-08",
+    "agent_name": "Maria Smith",
+    "agent_address": "7269 Broadway Ave",
+    "agent_email": "maria.smith.d9509d86-aa54-4056-94ed-0ebabfb49d22@example.com"
+  },
+  {
+    "business_name": "Crystal Studio LLC",
+    "registration_id": "SD0001323",
+    "status": "Active",
+    "filing_date": "1999-03-28",
+    "agent_name": "Gian Wilson",
+    "agent_address": "4287 Maple Ave",
+    "agent_email": "gian.wilson.ed7cc7f2-a17d-4b9b-92d4-d5390d5aad16@example.com"
+  },
+  {
+    "business_name": "Bright Services LLC",
+    "registration_id": "SD0001327",
+    "status": "Active",
+    "filing_date": "2003-02-16",
+    "agent_name": "Sara Johnson",
+    "agent_address": "6010 Hill Ave",
+    "agent_email": "sara.johnson.d1889171-2ed5-45e8-885b-4f6225575574@example.com"
+  },
+  {
+    "business_name": "Silver Builders LLC",
+    "registration_id": "SD0001328",
+    "status": "Inactive",
+    "filing_date": "1998-06-23",
+    "agent_name": "Alex Smith",
+    "agent_address": "6704 Hill Ave",
+    "agent_email": "alex.smith.01763738-5e28-4a1f-90d0-73b188ad245a@example.com"
+  },
+  {
+    "business_name": "Silver Services LLC",
+    "registration_id": "SD0001329",
+    "status": "Active",
+    "filing_date": "2002-06-03",
+    "agent_name": "Jen Taylor",
+    "agent_address": "4929 Maple Ave",
+    "agent_email": "jen.taylor.576b795d-91f2-4a26-8772-73df13b37d57@example.com"
+  },
+  {
+    "business_name": "Quantum Holdings LLC",
+    "registration_id": "SD0001330",
+    "status": "Active",
+    "filing_date": "1995-01-19",
+    "agent_name": "Gian Taylor",
+    "agent_address": "6988 Hill Ave",
+    "agent_email": "gian.taylor.6b9fd3ad-327c-4de0-8c5c-cb1dc9658c60@example.com"
+  },
+  {
+    "business_name": "Sunny Trading LLC",
+    "registration_id": "SD0001340",
+    "status": "Active",
+    "filing_date": "2016-12-25",
+    "agent_name": "John Taylor",
+    "agent_address": "377 Elm Ave",
+    "agent_email": "john.taylor.85fe7bfd-8783-456b-856b-01ca0b31a9f7@example.com"
+  },
+  {
+    "business_name": "Sky Tech LLC",
+    "registration_id": "SD0001341",
+    "status": "Pending",
+    "filing_date": "2024-07-09",
+    "agent_name": "Maria Johnson",
+    "agent_address": "7403 Elm Ave",
+    "agent_email": "maria.johnson.69a10693-27e3-4390-a60d-84c9ead579ae@example.com"
+  },
+  {
+    "business_name": "Green Solutions LLC",
+    "registration_id": "SD0001345",
+    "status": "Active",
+    "filing_date": "2002-12-04",
+    "agent_name": "John Wilson",
+    "agent_address": "7008 Broadway Ave",
+    "agent_email": "john.wilson.d82d3e2e-aa4f-4f8e-86f9-ff79568afcd8@example.com"
+  },
+  {
+    "business_name": "Prime Mart LLC",
+    "registration_id": "SD0001347",
+    "status": "Inactive",
+    "filing_date": "2024-07-23",
+    "agent_name": "Alex Miller",
+    "agent_address": "7043 Broadway Ave",
+    "agent_email": "alex.miller.825882e4-7116-4b11-bfe4-c9824871b225@example.com"
+  },
+  {
+    "business_name": "Harmony Mart LLC",
+    "registration_id": "SD0001357",
+    "status": "Active",
+    "filing_date": "2013-05-11",
+    "agent_name": "Maria Garcia",
+    "agent_address": "969 Hill Ave",
+    "agent_email": "maria.garcia.01f9add5-1255-4f37-b367-cff659f77715@example.com"
+  },
+  {
+    "business_name": "Quantum Ventures LLC",
+    "registration_id": "SD0001360",
+    "status": "Active",
+    "filing_date": "2014-11-21",
+    "agent_name": "Jen Garcia",
+    "agent_address": "779 Elm Ave",
+    "agent_email": "jen.garcia.78aac271-c194-4db9-9d22-2f82e7f5544f@example.com"
+  },
+  {
+    "business_name": "Sunny Holdings LLC",
+    "registration_id": "SD0001362",
+    "status": "Inactive",
+    "filing_date": "2024-05-11",
+    "agent_name": "Dave Wilson",
+    "agent_address": "8816 Broadway Ave",
+    "agent_email": "dave.wilson.7c79c920-9e76-4aa4-91ed-9fab3639d072@example.com"
+  },
+  {
+    "business_name": "Bright Energy LLC",
+    "registration_id": "SD0001378",
+    "status": "Active",
+    "filing_date": "2014-04-15",
+    "agent_name": "Alex Johnson",
+    "agent_address": "2419 Hill Ave",
+    "agent_email": "alex.johnson.86a76e1f-81bf-4b19-a211-b6e2c294a8f7@example.com"
+  },
+  {
+    "business_name": "Green Trading LLC",
+    "registration_id": "SD0001383",
+    "status": "Active",
+    "filing_date": "2000-01-01",
+    "agent_name": "Dave Anderson",
+    "agent_address": "6226 Broadway Ave",
+    "agent_email": "dave.anderson.ec3c405d-bd2e-4423-b8f6-8b1f4ca1733d@example.com"
+  },
+  {
+    "business_name": "Bright Studio LLC",
+    "registration_id": "SD0001391",
+    "status": "Active",
+    "filing_date": "2016-11-21",
+    "agent_name": "Sara Wilson",
+    "agent_address": "9698 Hill Ave",
+    "agent_email": "sara.wilson.5c3cf03c-fbb5-4191-87d2-a6cbb07abcb9@example.com"
+  },
+  {
+    "business_name": "Sunny Builders LLC",
+    "registration_id": "SD0001397",
+    "status": "Inactive",
+    "filing_date": "2006-11-10",
+    "agent_name": "Gian Anderson",
+    "agent_address": "8296 Maple Ave",
+    "agent_email": "gian.anderson.e66f0ba1-99b3-4155-946c-eb0afcfc5640@example.com"
+  },
+  {
+    "business_name": "Sunny Tech LLC",
+    "registration_id": "SD0001400",
+    "status": "Active",
+    "filing_date": "2011-11-27",
+    "agent_name": "Dave Davis",
+    "agent_address": "1486 Maple Ave",
+    "agent_email": "dave.davis.35672e65-6684-427e-beef-5834c5f8e389@example.com"
+  },
+  {
+    "business_name": "Harmony Energy LLC",
+    "registration_id": "SD0001402",
+    "status": "Active",
+    "filing_date": "2022-08-26",
+    "agent_name": "Maria Anderson",
+    "agent_address": "1334 Broadway Ave",
+    "agent_email": "maria.anderson.f8851e2c-602d-40e3-afba-659c491ab039@example.com"
+  },
+  {
+    "business_name": "Pine Pharmacy LLC",
+    "registration_id": "SD0001410",
+    "status": "Active",
+    "filing_date": "2009-05-23",
+    "agent_name": "Dave Wilson",
+    "agent_address": "5784 Broadway Ave",
+    "agent_email": "dave.wilson.675b469e-19a8-4700-9ea0-3bfd234bf71d@example.com"
+  },
+  {
+    "business_name": "River Mart LLC",
+    "registration_id": "SD0001412",
+    "status": "Active",
+    "filing_date": "2014-02-08",
+    "agent_name": "Dave Anderson",
+    "agent_address": "1562 Broadway Ave",
+    "agent_email": "dave.anderson.c54a882c-a548-4113-be94-52b3695b0c5d@example.com"
+  },
+  {
+    "business_name": "Pine Solutions LLC",
+    "registration_id": "SD0001414",
+    "status": "Active",
+    "filing_date": "1995-02-22",
+    "agent_name": "Gian Wilson",
+    "agent_address": "985 Broadway Ave",
+    "agent_email": "gian.wilson.b8f05fad-ce8e-41ad-a2bf-53be00d51151@example.com"
+  },
+  {
+    "business_name": "Prime Studio LLC",
+    "registration_id": "SD0001415",
+    "status": "Active",
+    "filing_date": "1998-06-07",
+    "agent_name": "Dave Wilson",
+    "agent_address": "534 Hill Ave",
+    "agent_email": "dave.wilson.d21062a9-cd65-4b13-9902-49b4923dc70d@example.com"
+  },
+  {
+    "business_name": "Golden Foods LLC",
+    "registration_id": "SD0001417",
+    "status": "Pending",
+    "filing_date": "2004-11-20",
+    "agent_name": "Alex Johnson",
+    "agent_address": "59 Elm Ave",
+    "agent_email": "alex.johnson.14a8189a-3838-476f-80f9-701468b73e28@example.com"
+  },
+  {
+    "business_name": "Metro Builders LLC",
+    "registration_id": "SD0001418",
+    "status": "Inactive",
+    "filing_date": "2008-01-17",
+    "agent_name": "Jen Johnson",
+    "agent_address": "3637 Elm Ave",
+    "agent_email": "jen.johnson.ed320cca-7429-4978-a07f-b89c5c9063a0@example.com"
+  },
+  {
+    "business_name": "Golden Foods LLC",
+    "registration_id": "SD0001420",
+    "status": "Active",
+    "filing_date": "2010-10-19",
+    "agent_name": "Ezra Smith",
+    "agent_address": "1217 Hill Ave",
+    "agent_email": "ezra.smith.c254030c-1653-43c8-aa28-0f13ecbf20e8@example.com"
+  },
+  {
+    "business_name": "Apex Tech LLC",
+    "registration_id": "SD0001422",
+    "status": "Active",
+    "filing_date": "2009-07-25",
+    "agent_name": "Sara Davis",
+    "agent_address": "2642 Elm Ave",
+    "agent_email": "sara.davis.46e7f9c0-9cf4-4e8f-a718-a9b7e1481fd4@example.com"
+  },
+  {
+    "business_name": "Prime Market LLC",
+    "registration_id": "SD0001424",
+    "status": "Active",
+    "filing_date": "2016-10-23",
+    "agent_name": "Jen Wilson",
+    "agent_address": "1570 Broadway Ave",
+    "agent_email": "jen.wilson.c9bbffb3-4ca5-4b84-9bd3-728f9f808def@example.com"
+  },
+  {
+    "business_name": "Blue Foods LLC",
+    "registration_id": "SD0001425",
+    "status": "Active",
+    "filing_date": "2023-07-27",
+    "agent_name": "Sara Anderson",
+    "agent_address": "8372 Elm Ave",
+    "agent_email": "sara.anderson.b1529921-3d77-4692-94e0-0ad97f2039ce@example.com"
+  },
+  {
+    "business_name": "Apex Industries LLC",
+    "registration_id": "SD0001430",
+    "status": "Active",
+    "filing_date": "2008-12-06",
+    "agent_name": "John Wilson",
+    "agent_address": "8602 Broadway Ave",
+    "agent_email": "john.wilson.e3eb02ba-0067-45f2-8bbf-0302dfbf7de9@example.com"
+  },
+  {
+    "business_name": "Pine Industries LLC",
+    "registration_id": "SD0001432",
+    "status": "Active",
+    "filing_date": "2023-06-19",
+    "agent_name": "John Anderson",
+    "agent_address": "9119 Broadway Ave",
+    "agent_email": "john.anderson.c52ef5ef-a0ea-4f0b-a1cd-e52d3b904f11@example.com"
+  },
+  {
+    "business_name": "Pine Mart LLC",
+    "registration_id": "SD0001434",
+    "status": "Active",
+    "filing_date": "2011-03-06",
+    "agent_name": "Sara Garcia",
+    "agent_address": "9040 Maple Ave",
+    "agent_email": "sara.garcia.cf7ac6fc-4daf-49bb-abca-629e06ef25b1@example.com"
+  },
+  {
+    "business_name": "Blue Builders LLC",
+    "registration_id": "SD0001437",
+    "status": "Active",
+    "filing_date": "1996-05-23",
+    "agent_name": "Maria Taylor",
+    "agent_address": "8169 Elm Ave",
+    "agent_email": "maria.taylor.659c5110-a8b6-48fe-a228-252c487611e7@example.com"
+  },
+  {
+    "business_name": "Quantum Group LLC",
+    "registration_id": "SD0001441",
+    "status": "Inactive",
+    "filing_date": "2000-10-24",
+    "agent_name": "Jen Davis",
+    "agent_address": "8877 Elm Ave",
+    "agent_email": "jen.davis.e51646cd-4587-42a2-84f7-0ac75e5f94a9@example.com"
+  },
+  {
+    "business_name": "Metro Energy LLC",
+    "registration_id": "SD0001444",
+    "status": "Active",
+    "filing_date": "2004-05-10",
+    "agent_name": "Ezra Davis",
+    "agent_address": "5026 Maple Ave",
+    "agent_email": "ezra.davis.657746b5-56e4-48d0-8388-be15806ec91a@example.com"
+  },
+  {
+    "business_name": "Rapid Studio LLC",
+    "registration_id": "SD0001446",
+    "status": "Active",
+    "filing_date": "2025-03-09",
+    "agent_name": "Gian Wilson",
+    "agent_address": "4377 Maple Ave",
+    "agent_email": "gian.wilson.5c3e5156-62eb-4200-bbb6-70ad663465ed@example.com"
+  },
+  {
+    "business_name": "Silver Works LLC",
+    "registration_id": "SD0001447",
+    "status": "Active",
+    "filing_date": "2010-10-22",
+    "agent_name": "Alex Miller",
+    "agent_address": "1396 Hill Ave",
+    "agent_email": "alex.miller.4e536781-df0f-455c-8952-81def993fea4@example.com"
+  },
+  {
+    "business_name": "Pine Works LLC",
+    "registration_id": "SD0001461",
+    "status": "Active",
+    "filing_date": "2024-03-16",
+    "agent_name": "Jen Garcia",
+    "agent_address": "5249 Hill Ave",
+    "agent_email": "jen.garcia.e29a2679-c694-4f76-ac4e-152c5c6fe026@example.com"
+  },
+  {
+    "business_name": "Rapid Tech LLC",
+    "registration_id": "SD0001473",
+    "status": "Active",
+    "filing_date": "2007-03-13",
+    "agent_name": "Ezra Davis",
+    "agent_address": "9363 Hill Ave",
+    "agent_email": "ezra.davis.ee72e9de-9f8b-44d9-9251-0786f952a600@example.com"
+  },
+  {
+    "business_name": "Metro Farms LLC",
+    "registration_id": "SD0001474",
+    "status": "Active",
+    "filing_date": "2003-08-02",
+    "agent_name": "John Garcia",
+    "agent_address": "1112 Elm Ave",
+    "agent_email": "john.garcia.7fca04f0-239e-403e-a50e-2765311da685@example.com"
+  },
+  {
+    "business_name": "Silver Market LLC",
+    "registration_id": "SD0001482",
+    "status": "Active",
+    "filing_date": "1995-06-16",
+    "agent_name": "Dave Miller",
+    "agent_address": "7873 Broadway Ave",
+    "agent_email": "dave.miller.a21a6b47-68e1-4805-881c-dc6335b8bf5c@example.com"
+  },
+  {
+    "business_name": "Cedar Services LLC",
+    "registration_id": "SD0001488",
+    "status": "Inactive",
+    "filing_date": "2014-05-17",
+    "agent_name": "Jen Anderson",
+    "agent_address": "7130 Maple Ave",
+    "agent_email": "jen.anderson.eb15fc13-0ad8-4d74-893f-f14e81633d5f@example.com"
+  },
+  {
+    "business_name": "Crystal Solutions LLC",
+    "registration_id": "SD0001491",
+    "status": "Active",
+    "filing_date": "2016-11-23",
+    "agent_name": "Sara Wilson",
+    "agent_address": "8210 Hill Ave",
+    "agent_email": "sara.wilson.84792550-4d4e-47b3-b026-797abe717458@example.com"
+  },
+  {
+    "business_name": "Ocean Logistics LLC",
+    "registration_id": "SD0001507",
+    "status": "Active",
+    "filing_date": "2017-03-06",
+    "agent_name": "Gian Smith",
+    "agent_address": "7208 Hill Ave",
+    "agent_email": "gian.smith.d903a8ad-582b-44e3-829d-2409fd614949@example.com"
+  },
+  {
+    "business_name": "River Mart LLC",
+    "registration_id": "SD0001513",
+    "status": "Inactive",
+    "filing_date": "2024-04-20",
+    "agent_name": "Jen Wilson",
+    "agent_address": "2929 Elm Ave",
+    "agent_email": "jen.wilson.90d8053c-19b2-425d-bc4c-37c635560ace@example.com"
+  },
+  {
+    "business_name": "Silver Ventures LLC",
+    "registration_id": "SD0001514",
+    "status": "Active",
+    "filing_date": "1999-08-13",
+    "agent_name": "Dave Garcia",
+    "agent_address": "2689 Broadway Ave",
+    "agent_email": "dave.garcia.4ea5d86b-7e8b-4bd8-ae67-3fe1847d7fe8@example.com"
+  },
+  {
+    "business_name": "Bright Pharmacy LLC",
+    "registration_id": "SD0001523",
+    "status": "Active",
+    "filing_date": "2018-02-08",
+    "agent_name": "Alex Garcia",
+    "agent_address": "1062 Broadway Ave",
+    "agent_email": "alex.garcia.9abd8cf5-b208-4dc8-a2e9-740f184ba22e@example.com"
+  },
+  {
+    "business_name": "Prime Builders LLC",
+    "registration_id": "SD0001524",
+    "status": "Dissolved",
+    "filing_date": "2000-02-12",
+    "agent_name": "Gian Garcia",
+    "agent_address": "7144 Hill Ave",
+    "agent_email": "gian.garcia.85a88cfc-066f-40f5-a5b5-cdcd341771a7@example.com"
+  },
+  {
+    "business_name": "Cedar Builders LLC",
+    "registration_id": "SD0001526",
+    "status": "Active",
+    "filing_date": "2007-03-19",
+    "agent_name": "Alex Wilson",
+    "agent_address": "8542 Elm Ave",
+    "agent_email": "alex.wilson.d161fa69-f9e9-4ed6-8d3a-1f4674732a96@example.com"
+  },
+  {
+    "business_name": "Bright Mart LLC",
+    "registration_id": "SD0001536",
+    "status": "Active",
+    "filing_date": "1997-04-05",
+    "agent_name": "Maria Johnson",
+    "agent_address": "8866 Maple Ave",
+    "agent_email": "maria.johnson.458b89d8-be6f-47ca-a9c6-54180ae96eda@example.com"
+  },
+  {
+    "business_name": "Quantum Solutions LLC",
+    "registration_id": "SD0001544",
+    "status": "Dissolved",
+    "filing_date": "2001-10-26",
+    "agent_name": "Dave Davis",
+    "agent_address": "4744 Hill Ave",
+    "agent_email": "dave.davis.6f1ec421-67a5-489e-b515-4ac4ed0852e4@example.com"
+  },
+  {
+    "business_name": "Crystal Services LLC",
+    "registration_id": "SD0001549",
+    "status": "Active",
+    "filing_date": "2025-08-26",
+    "agent_name": "Sara Davis",
+    "agent_address": "762 Elm Ave",
+    "agent_email": "sara.davis.bcf94d18-078e-4654-83a7-94a49f2ef01c@example.com"
+  },
+  {
+    "business_name": "Quantum Farms LLC",
+    "registration_id": "SD0001550",
+    "status": "Active",
+    "filing_date": "2022-10-12",
+    "agent_name": "Ezra Miller",
+    "agent_address": "1600 Elm Ave",
+    "agent_email": "ezra.miller.0998cbb8-bc95-4c91-a15e-7fc18a111f93@example.com"
+  },
+  {
+    "business_name": "Prime Studio LLC",
+    "registration_id": "SD0001552",
+    "status": "Active",
+    "filing_date": "2015-04-14",
+    "agent_name": "Alex Miller",
+    "agent_address": "4853 Elm Ave",
+    "agent_email": "alex.miller.26c57f30-370e-4d1e-bac9-b35303a2339f@example.com"
+  },
+  {
+    "business_name": "Sunny Builders LLC",
+    "registration_id": "SD0001553",
+    "status": "Active",
+    "filing_date": "2003-11-11",
+    "agent_name": "Gian Garcia",
+    "agent_address": "4939 Broadway Ave",
+    "agent_email": "gian.garcia.34272e5b-c28e-43a0-a1ea-d06daa349bc1@example.com"
+  },
+  {
+    "business_name": "Prime Trading LLC",
+    "registration_id": "SD0001555",
+    "status": "Active",
+    "filing_date": "2001-11-21",
+    "agent_name": "Jen Taylor",
+    "agent_address": "5044 Hill Ave",
+    "agent_email": "jen.taylor.c46bc880-98ab-4d91-a974-7c8d0dd508ff@example.com"
+  },
+  {
+    "business_name": "Sky Industries LLC",
+    "registration_id": "SD0001564",
+    "status": "Active",
+    "filing_date": "1998-09-07",
+    "agent_name": "Alex Davis",
+    "agent_address": "8548 Maple Ave",
+    "agent_email": "alex.davis.9830c33a-bc45-49f3-9af2-0878a1d588c5@example.com"
+  },
+  {
+    "business_name": "River Services LLC",
+    "registration_id": "SD0001570",
+    "status": "Active",
+    "filing_date": "2002-11-23",
+    "agent_name": "John Anderson",
+    "agent_address": "8563 Elm Ave",
+    "agent_email": "john.anderson.82d815e0-5bf1-4855-82b9-f8059af704cc@example.com"
+  },
+  {
+    "business_name": "Harmony Labs LLC",
+    "registration_id": "SD0001573",
+    "status": "Inactive",
+    "filing_date": "2004-09-18",
+    "agent_name": "John Taylor",
+    "agent_address": "245 Elm Ave",
+    "agent_email": "john.taylor.331cab07-3ac9-4561-9e34-ecd1bb45770b@example.com"
+  },
+  {
+    "business_name": "Sky Trading LLC",
+    "registration_id": "SD0001575",
+    "status": "Active",
+    "filing_date": "2001-11-01",
+    "agent_name": "Ezra Johnson",
+    "agent_address": "1352 Maple Ave",
+    "agent_email": "ezra.johnson.aff15865-31d7-49b1-80ba-672d4744d9b3@example.com"
+  },
+  {
+    "business_name": "Summit Ventures LLC",
+    "registration_id": "SD0001576",
+    "status": "Active",
+    "filing_date": "2024-06-19",
+    "agent_name": "John Taylor",
+    "agent_address": "7677 Broadway Ave",
+    "agent_email": "john.taylor.e97ee189-6602-4b2a-a211-0de6fa156217@example.com"
+  },
+  {
+    "business_name": "Bright Trading LLC",
+    "registration_id": "SD0001580",
+    "status": "Active",
+    "filing_date": "2005-01-05",
+    "agent_name": "Alex Anderson",
+    "agent_address": "1151 Elm Ave",
+    "agent_email": "alex.anderson.4fa02b2f-36f0-4e59-a629-c806d61566d9@example.com"
+  },
+  {
+    "business_name": "Apex Group LLC",
+    "registration_id": "SD0001582",
+    "status": "Active",
+    "filing_date": "2015-06-18",
+    "agent_name": "Gian Miller",
+    "agent_address": "7388 Maple Ave",
+    "agent_email": "gian.miller.9d01f4e8-718f-4262-9895-bab9011bc02b@example.com"
+  },
+  {
+    "business_name": "Apex Farms LLC",
+    "registration_id": "SD0001584",
+    "status": "Active",
+    "filing_date": "2021-09-08",
+    "agent_name": "Dave Smith",
+    "agent_address": "2605 Hill Ave",
+    "agent_email": "dave.smith.aa3fc68f-c0d8-4a6b-8ff7-4bdbea43abb7@example.com"
+  },
+  {
+    "business_name": "Quantum Studio LLC",
+    "registration_id": "SD0001585",
+    "status": "Active",
+    "filing_date": "2002-05-06",
+    "agent_name": "Jen Johnson",
+    "agent_address": "6763 Broadway Ave",
+    "agent_email": "jen.johnson.c21b2b43-9212-4da5-bdc5-d98b47d738b2@example.com"
+  },
+  {
+    "business_name": "Nova Market LLC",
+    "registration_id": "SD0001592",
+    "status": "Active",
+    "filing_date": "2001-09-16",
+    "agent_name": "Alex Davis",
+    "agent_address": "6640 Elm Ave",
+    "agent_email": "alex.davis.f85b57d2-c08f-43d9-b1ca-a396e0f39e0c@example.com"
+  },
+  {
+    "business_name": "River Labs LLC",
+    "registration_id": "SD0001593",
+    "status": "Inactive",
+    "filing_date": "1998-04-23",
+    "agent_name": "John Wilson",
+    "agent_address": "3172 Hill Ave",
+    "agent_email": "john.wilson.c4f24fac-2eeb-4f59-8179-d9910368fff3@example.com"
+  },
+  {
+    "business_name": "Prime Energy LLC",
+    "registration_id": "SD0001598",
+    "status": "Pending",
+    "filing_date": "2021-05-26",
+    "agent_name": "Sara Miller",
+    "agent_address": "3515 Maple Ave",
+    "agent_email": "sara.miller.22bce0d1-83da-4ae5-8012-c109adf674ec@example.com"
+  },
+  {
+    "business_name": "Crystal Trading LLC",
+    "registration_id": "SD0001599",
+    "status": "Active",
+    "filing_date": "2014-01-02",
+    "agent_name": "Ezra Johnson",
+    "agent_address": "6260 Maple Ave",
+    "agent_email": "ezra.johnson.84e00a4a-7240-4d69-a478-f553fecfbc15@example.com"
+  },
+  {
+    "business_name": "Green Ventures LLC",
+    "registration_id": "SD0001600",
+    "status": "Active",
+    "filing_date": "2007-08-23",
+    "agent_name": "Sara Smith",
+    "agent_address": "9751 Elm Ave",
+    "agent_email": "sara.smith.f7951c62-d2bc-43e9-926c-ffa90e434201@example.com"
+  },
+  {
+    "business_name": "Summit Pharmacy LLC",
+    "registration_id": "SD0001602",
+    "status": "Active",
+    "filing_date": "2010-04-05",
+    "agent_name": "Sara Taylor",
+    "agent_address": "3552 Hill Ave",
+    "agent_email": "sara.taylor.42d3f596-bdb5-4db2-8ce1-8ac2aa3c5833@example.com"
+  },
+  {
+    "business_name": "Golden Consulting LLC",
+    "registration_id": "SD0001603",
+    "status": "Active",
+    "filing_date": "2000-03-03",
+    "agent_name": "Sara Taylor",
+    "agent_address": "1248 Hill Ave",
+    "agent_email": "sara.taylor.0b2abfb3-6b3d-47bd-9d2e-b263ade29f86@example.com"
+  },
+  {
+    "business_name": "Metro Pharmacy LLC",
+    "registration_id": "SD0001608",
+    "status": "Active",
+    "filing_date": "1999-08-14",
+    "agent_name": "Sara Garcia",
+    "agent_address": "4439 Elm Ave",
+    "agent_email": "sara.garcia.f13e4779-8d62-4895-b924-34400d5b05f3@example.com"
+  },
+  {
+    "business_name": "Quantum Foods LLC",
+    "registration_id": "SD0001611",
+    "status": "Active",
+    "filing_date": "2003-05-15",
+    "agent_name": "Dave Johnson",
+    "agent_address": "9259 Broadway Ave",
+    "agent_email": "dave.johnson.23c1e074-41ed-41eb-88f8-d31e3feaa9d8@example.com"
+  },
+  {
+    "business_name": "Sky Holdings LLC",
+    "registration_id": "SD0001614",
+    "status": "Active",
+    "filing_date": "2025-09-14",
+    "agent_name": "Maria Garcia",
+    "agent_address": "169 Maple Ave",
+    "agent_email": "maria.garcia.b0dd841f-71c2-47be-8e1f-aac0a164d127@example.com"
+  },
+  {
+    "business_name": "Blue Foods LLC",
+    "registration_id": "SD0001616",
+    "status": "Active",
+    "filing_date": "2011-07-08",
+    "agent_name": "Alex Johnson",
+    "agent_address": "89 Broadway Ave",
+    "agent_email": "alex.johnson.ef8946ae-282d-41ca-8e05-92a1dee3777f@example.com"
+  },
+  {
+    "business_name": "Sky Works LLC",
+    "registration_id": "SD0001617",
+    "status": "Active",
+    "filing_date": "1998-07-26",
+    "agent_name": "Ezra Garcia",
+    "agent_address": "3861 Maple Ave",
+    "agent_email": "ezra.garcia.7004497a-45fe-4a01-96a2-3c6972aa668f@example.com"
+  },
+  {
+    "business_name": "Crystal Studio LLC",
+    "registration_id": "SD0001622",
+    "status": "Active",
+    "filing_date": "2007-10-20",
+    "agent_name": "Ezra Anderson",
+    "agent_address": "7245 Maple Ave",
+    "agent_email": "ezra.anderson.3049b5ae-def2-4cd5-930f-a33b8ba9e5a8@example.com"
+  },
+  {
+    "business_name": "Green Trading LLC",
+    "registration_id": "SD0001623",
+    "status": "Active",
+    "filing_date": "2003-11-24",
+    "agent_name": "Maria Garcia",
+    "agent_address": "3655 Hill Ave",
+    "agent_email": "maria.garcia.bf0177b4-8856-4d40-b2fb-81ac3c59c04b@example.com"
+  },
+  {
+    "business_name": "Summit Mart LLC",
+    "registration_id": "SD0001624",
+    "status": "Active",
+    "filing_date": "2023-07-05",
+    "agent_name": "John Taylor",
+    "agent_address": "4303 Elm Ave",
+    "agent_email": "john.taylor.baa2a8b4-668a-44aa-81c2-a18e57176470@example.com"
+  },
+  {
+    "business_name": "Blue Mart LLC",
+    "registration_id": "SD0001626",
+    "status": "Active",
+    "filing_date": "1998-09-05",
+    "agent_name": "Ezra Johnson",
+    "agent_address": "2904 Elm Ave",
+    "agent_email": "ezra.johnson.aa8feaf7-52ff-4f92-89ed-f966a5fc3def@example.com"
+  },
+  {
+    "business_name": "Metro Market LLC",
+    "registration_id": "SD0001627",
+    "status": "Active",
+    "filing_date": "2022-07-04",
+    "agent_name": "Maria Davis",
+    "agent_address": "917 Elm Ave",
+    "agent_email": "maria.davis.e9d86c98-3b26-4e49-adc8-fb641aa09896@example.com"
+  },
+  {
+    "business_name": "Crystal Studio LLC",
+    "registration_id": "SD0001628",
+    "status": "Active",
+    "filing_date": "1999-09-08",
+    "agent_name": "Sara Johnson",
+    "agent_address": "2889 Maple Ave",
+    "agent_email": "sara.johnson.a4853e46-038c-47f4-ac8e-6423bd275be6@example.com"
+  },
+  {
+    "business_name": "Blue Trading LLC",
+    "registration_id": "SD0001631",
+    "status": "Active",
+    "filing_date": "1995-06-16",
+    "agent_name": "Maria Miller",
+    "agent_address": "3858 Elm Ave",
+    "agent_email": "maria.miller.79110966-7834-449e-b89f-90c5fa18a70c@example.com"
+  },
+  {
+    "business_name": "Bright Studio LLC",
+    "registration_id": "SD0001632",
+    "status": "Active",
+    "filing_date": "2008-09-06",
+    "agent_name": "Maria Taylor",
+    "agent_address": "3012 Hill Ave",
+    "agent_email": "maria.taylor.36fe3caa-08d1-41b6-a301-8ccfb9bbc080@example.com"
+  },
+  {
+    "business_name": "Bright Industries LLC",
+    "registration_id": "SD0001638",
+    "status": "Active",
+    "filing_date": "2009-04-01",
+    "agent_name": "Alex Wilson",
+    "agent_address": "9623 Elm Ave",
+    "agent_email": "alex.wilson.8af0a5f0-a490-4f38-8e45-3030f4315626@example.com"
+  },
+  {
+    "business_name": "Metro Trading LLC",
+    "registration_id": "SD0001640",
+    "status": "Pending",
+    "filing_date": "2000-02-06",
+    "agent_name": "Jen Johnson",
+    "agent_address": "3065 Maple Ave",
+    "agent_email": "jen.johnson.b44c46b7-be5c-47c8-9e21-d89c9ac5a5b7@example.com"
+  },
+  {
+    "business_name": "Blue Industries LLC",
+    "registration_id": "SD0001647",
+    "status": "Active",
+    "filing_date": "2010-03-05",
+    "agent_name": "Jen Taylor",
+    "agent_address": "8044 Broadway Ave",
+    "agent_email": "jen.taylor.b0850a86-fbfa-4e21-a5ab-16e38634e087@example.com"
+  },
+  {
+    "business_name": "Prime Holdings LLC",
+    "registration_id": "SD0001650",
+    "status": "Active",
+    "filing_date": "1996-07-20",
+    "agent_name": "Dave Miller",
+    "agent_address": "6537 Hill Ave",
+    "agent_email": "dave.miller.4cc001e0-ce53-4540-98f4-4015947ab49b@example.com"
+  },
+  {
+    "business_name": "Apex Tech LLC",
+    "registration_id": "SD0001654",
+    "status": "Active",
+    "filing_date": "1998-12-14",
+    "agent_name": "Alex Smith",
+    "agent_address": "2424 Broadway Ave",
+    "agent_email": "alex.smith.7c23463d-5d26-4bce-ae16-63c4e7c2c16c@example.com"
+  },
+  {
+    "business_name": "Cedar Industries LLC",
+    "registration_id": "SD0001656",
+    "status": "Active",
+    "filing_date": "2005-01-27",
+    "agent_name": "Ezra Miller",
+    "agent_address": "2557 Hill Ave",
+    "agent_email": "ezra.miller.80ea110c-e90a-4d22-9cc6-57066f358256@example.com"
+  },
+  {
+    "business_name": "Rapid Farms LLC",
+    "registration_id": "SD0001659",
+    "status": "Active",
+    "filing_date": "2020-10-15",
+    "agent_name": "Sara Garcia",
+    "agent_address": "4853 Elm Ave",
+    "agent_email": "sara.garcia.ef25e06c-7d45-41c8-9937-769f1e18b39e@example.com"
+  },
+  {
+    "business_name": "Golden Market LLC",
+    "registration_id": "SD0001669",
+    "status": "Active",
+    "filing_date": "2020-09-09",
+    "agent_name": "Alex Anderson",
+    "agent_address": "2143 Hill Ave",
+    "agent_email": "alex.anderson.7e1dc991-1f31-4a25-b090-23ed17f2a2a7@example.com"
+  },
+  {
+    "business_name": "Nova Holdings LLC",
+    "registration_id": "SD0001670",
+    "status": "Active",
+    "filing_date": "2000-11-05",
+    "agent_name": "John Taylor",
+    "agent_address": "6088 Hill Ave",
+    "agent_email": "john.taylor.d6b7b004-25c6-4faa-bde1-ca84ec026bfa@example.com"
+  },
+  {
+    "business_name": "Crystal Group LLC",
+    "registration_id": "SD0001671",
+    "status": "Pending",
+    "filing_date": "1998-07-06",
+    "agent_name": "Gian Johnson",
+    "agent_address": "4744 Elm Ave",
+    "agent_email": "gian.johnson.a3ef7522-51a7-4a3d-bf74-3e497ce647d2@example.com"
+  },
+  {
+    "business_name": "Prime Studio LLC",
+    "registration_id": "SD0001673",
+    "status": "Active",
+    "filing_date": "2023-05-06",
+    "agent_name": "John Smith",
+    "agent_address": "6929 Broadway Ave",
+    "agent_email": "john.smith.62a68fdf-8d7c-44f6-bd7e-a329d86b6c18@example.com"
+  },
+  {
+    "business_name": "Prime Market LLC",
+    "registration_id": "SD0001678",
+    "status": "Inactive",
+    "filing_date": "2002-06-21",
+    "agent_name": "Sara Garcia",
+    "agent_address": "7062 Hill Ave",
+    "agent_email": "sara.garcia.4f59e2aa-13cd-4779-9f0c-40edd893590e@example.com"
+  },
+  {
+    "business_name": "Blue Labs LLC",
+    "registration_id": "SD0001680",
+    "status": "Active",
+    "filing_date": "2012-07-10",
+    "agent_name": "Gian Anderson",
+    "agent_address": "365 Maple Ave",
+    "agent_email": "gian.anderson.29587b8c-db21-4e5a-97c4-b851458b41aa@example.com"
+  },
+  {
+    "business_name": "Green Industries LLC",
+    "registration_id": "SD0001681",
+    "status": "Active",
+    "filing_date": "2024-02-19",
+    "agent_name": "Maria Garcia",
+    "agent_address": "1283 Elm Ave",
+    "agent_email": "maria.garcia.8645437f-967e-4b2b-8d4d-1725815bcc39@example.com"
+  },
+  {
+    "business_name": "Cedar Services LLC",
+    "registration_id": "SD0001682",
+    "status": "Active",
+    "filing_date": "2012-10-02",
+    "agent_name": "Gian Davis",
+    "agent_address": "4061 Maple Ave",
+    "agent_email": "gian.davis.96b8820a-92ef-4b1b-8716-bf0529b3ef55@example.com"
+  },
+  {
+    "business_name": "Cedar Pharmacy LLC",
+    "registration_id": "SD0001684",
+    "status": "Active",
+    "filing_date": "2007-10-17",
+    "agent_name": "Alex Davis",
+    "agent_address": "2667 Elm Ave",
+    "agent_email": "alex.davis.797b698c-3690-416e-9199-d43591dc92b2@example.com"
+  },
+  {
+    "business_name": "Golden Holdings LLC",
+    "registration_id": "SD0001686",
+    "status": "Active",
+    "filing_date": "2005-10-13",
+    "agent_name": "Sara Johnson",
+    "agent_address": "2347 Maple Ave",
+    "agent_email": "sara.johnson.ac614dd0-ed86-420f-9ad7-0c72aa863b63@example.com"
+  },
+  {
+    "business_name": "Summit Solutions LLC",
+    "registration_id": "SD0001688",
+    "status": "Active",
+    "filing_date": "2023-08-11",
+    "agent_name": "Maria Anderson",
+    "agent_address": "7322 Broadway Ave",
+    "agent_email": "maria.anderson.6ae3585b-e046-4837-b33f-bb9169b57e3e@example.com"
+  },
+  {
+    "business_name": "Sunny Farms LLC",
+    "registration_id": "SD0001690",
+    "status": "Inactive",
+    "filing_date": "1999-12-01",
+    "agent_name": "Alex Smith",
+    "agent_address": "83 Maple Ave",
+    "agent_email": "alex.smith.5895202c-795b-462b-91b6-de5cb48dbbe5@example.com"
+  },
+  {
+    "business_name": "Blue Pharmacy LLC",
+    "registration_id": "SD0001692",
+    "status": "Active",
+    "filing_date": "2018-03-04",
+    "agent_name": "Sara Taylor",
+    "agent_address": "7958 Hill Ave",
+    "agent_email": "sara.taylor.cc7ed2da-a3af-45bc-921c-ab69b3bc8d97@example.com"
+  },
+  {
+    "business_name": "Crystal Solutions LLC",
+    "registration_id": "SD0001696",
+    "status": "Inactive",
+    "filing_date": "2005-11-17",
+    "agent_name": "Maria Wilson",
+    "agent_address": "7173 Hill Ave",
+    "agent_email": "maria.wilson.1b8753c1-4a94-4c87-a7c0-07a12f6d31af@example.com"
+  },
+  {
+    "business_name": "River Mart LLC",
+    "registration_id": "SD0001702",
+    "status": "Active",
+    "filing_date": "2002-10-03",
+    "agent_name": "Alex Wilson",
+    "agent_address": "3299 Maple Ave",
+    "agent_email": "alex.wilson.def2f7ab-9d9d-4a98-a0aa-6693363fbe59@example.com"
+  },
+  {
+    "business_name": "Ocean Ventures LLC",
+    "registration_id": "SD0001704",
+    "status": "Active",
+    "filing_date": "2003-07-04",
+    "agent_name": "Ezra Garcia",
+    "agent_address": "6414 Elm Ave",
+    "agent_email": "ezra.garcia.78ef4b44-bf58-4b07-8b52-5f5819e98c75@example.com"
+  },
+  {
+    "business_name": "Apex Pharmacy LLC",
+    "registration_id": "SD0001714",
+    "status": "Inactive",
+    "filing_date": "1996-10-25",
+    "agent_name": "Jen Anderson",
+    "agent_address": "827 Elm Ave",
+    "agent_email": "jen.anderson.ed6e9d01-b122-40fe-a1ec-d1bce7bee266@example.com"
+  },
+  {
+    "business_name": "River Studio LLC",
+    "registration_id": "SD0001715",
+    "status": "Active",
+    "filing_date": "2009-09-17",
+    "agent_name": "Dave Smith",
+    "agent_address": "6501 Hill Ave",
+    "agent_email": "dave.smith.2660406d-413a-420e-bb7a-4ec677943972@example.com"
+  },
+  {
+    "business_name": "Prime Market LLC",
+    "registration_id": "SD0001718",
+    "status": "Active",
+    "filing_date": "2011-05-11",
+    "agent_name": "Sara Miller",
+    "agent_address": "3879 Elm Ave",
+    "agent_email": "sara.miller.40060032-e1e3-4f0b-87e1-eae4e5013288@example.com"
+  },
+  {
+    "business_name": "Crystal Studio LLC",
+    "registration_id": "SD0001719",
+    "status": "Active",
+    "filing_date": "1996-04-23",
+    "agent_name": "Ezra Davis",
+    "agent_address": "3471 Broadway Ave",
+    "agent_email": "ezra.davis.a1b42c6e-3e59-435f-8ebf-9099d76f902a@example.com"
+  },
+  {
+    "business_name": "Sky Group LLC",
+    "registration_id": "SD0001725",
+    "status": "Active",
+    "filing_date": "2013-09-06",
+    "agent_name": "Ezra Wilson",
+    "agent_address": "3353 Maple Ave",
+    "agent_email": "ezra.wilson.e377e24b-1c23-4934-b4b9-6e938e158b5b@example.com"
+  },
+  {
+    "business_name": "Ocean Industries LLC",
+    "registration_id": "SD0001730",
+    "status": "Active",
+    "filing_date": "2011-01-13",
+    "agent_name": "John Wilson",
+    "agent_address": "8655 Broadway Ave",
+    "agent_email": "john.wilson.230ad5c7-188c-4bb1-8eed-5f153e420828@example.com"
+  },
+  {
+    "business_name": "Crystal Industries LLC",
+    "registration_id": "SD0001735",
+    "status": "Active",
+    "filing_date": "2013-11-04",
+    "agent_name": "Dave Anderson",
+    "agent_address": "6431 Maple Ave",
+    "agent_email": "dave.anderson.58e5199a-dd75-43ef-b085-d0772157e3de@example.com"
+  },
+  {
+    "business_name": "Blue Industries LLC",
+    "registration_id": "SD0001736",
+    "status": "Active",
+    "filing_date": "2021-01-08",
+    "agent_name": "Maria Anderson",
+    "agent_address": "3198 Elm Ave",
+    "agent_email": "maria.anderson.d208a6e9-a57d-4473-b78a-13d7475a3389@example.com"
+  },
+  {
+    "business_name": "Metro Services LLC",
+    "registration_id": "SD0001739",
+    "status": "Active",
+    "filing_date": "2024-05-19",
+    "agent_name": "Alex Anderson",
+    "agent_address": "7364 Broadway Ave",
+    "agent_email": "alex.anderson.be68cbfc-6b21-4ac5-b1bb-28ca40347396@example.com"
+  },
+  {
+    "business_name": "Sky Holdings LLC",
+    "registration_id": "SD0001747",
+    "status": "Active",
+    "filing_date": "2022-05-20",
+    "agent_name": "Alex Davis",
+    "agent_address": "9832 Broadway Ave",
+    "agent_email": "alex.davis.fec47bac-7dc8-4ef1-a063-fded6d4012c0@example.com"
+  },
+  {
+    "business_name": "Metro Services LLC",
+    "registration_id": "SD0001753",
+    "status": "Active",
+    "filing_date": "2008-07-04",
+    "agent_name": "Dave Garcia",
+    "agent_address": "4767 Broadway Ave",
+    "agent_email": "dave.garcia.89a926f7-303e-4549-9fd3-5c7d58d3cfb3@example.com"
+  },
+  {
+    "business_name": "Silver Tech LLC",
+    "registration_id": "SD0001755",
+    "status": "Active",
+    "filing_date": "2010-04-21",
+    "agent_name": "Gian Smith",
+    "agent_address": "3708 Hill Ave",
+    "agent_email": "gian.smith.b5df3677-cf71-4328-bf3a-3a1f44db829d@example.com"
+  },
+  {
+    "business_name": "Pine Logistics LLC",
+    "registration_id": "SD0001759",
+    "status": "Inactive",
+    "filing_date": "2015-01-23",
+    "agent_name": "Alex Garcia",
+    "agent_address": "8828 Elm Ave",
+    "agent_email": "alex.garcia.a37af477-e0f3-486e-bfc4-70052efce7ad@example.com"
+  },
+  {
+    "business_name": "Summit Pharmacy LLC",
+    "registration_id": "SD0001765",
+    "status": "Pending",
+    "filing_date": "2007-05-23",
+    "agent_name": "Alex Davis",
+    "agent_address": "5622 Hill Ave",
+    "agent_email": "alex.davis.ecfcf877-240d-4ce8-9d2b-78dc418c92f5@example.com"
+  },
+  {
+    "business_name": "Rapid Consulting LLC",
+    "registration_id": "SD0001766",
+    "status": "Dissolved",
+    "filing_date": "2014-08-10",
+    "agent_name": "Ezra Taylor",
+    "agent_address": "707 Hill Ave",
+    "agent_email": "ezra.taylor.92e59b17-1f7a-4128-915e-8ed5d8c473eb@example.com"
+  },
+  {
+    "business_name": "Prime Trading LLC",
+    "registration_id": "SD0001769",
+    "status": "Active",
+    "filing_date": "2007-01-10",
+    "agent_name": "Sara Wilson",
+    "agent_address": "3710 Hill Ave",
+    "agent_email": "sara.wilson.3e156a41-6ef9-4a25-bb0b-92c9a9112208@example.com"
+  },
+  {
+    "business_name": "Bright Mart LLC",
+    "registration_id": "SD0001773",
+    "status": "Active",
+    "filing_date": "2010-09-15",
+    "agent_name": "Ezra Smith",
+    "agent_address": "5427 Broadway Ave",
+    "agent_email": "ezra.smith.0eaf5467-b71e-4979-914f-7f8958e087be@example.com"
+  },
+  {
+    "business_name": "Quantum Services LLC",
+    "registration_id": "SD0001774",
+    "status": "Active",
+    "filing_date": "2002-07-27",
+    "agent_name": "Maria Johnson",
+    "agent_address": "7037 Elm Ave",
+    "agent_email": "maria.johnson.a956ea86-9fe9-4177-821c-bc1524dd2044@example.com"
+  },
+  {
+    "business_name": "Blue Group LLC",
+    "registration_id": "SD0001775",
+    "status": "Active",
+    "filing_date": "2001-10-02",
+    "agent_name": "Alex Smith",
+    "agent_address": "2355 Elm Ave",
+    "agent_email": "alex.smith.2ca9d75b-a4af-4651-b71b-2838df745e03@example.com"
+  },
+  {
+    "business_name": "Quantum Foods LLC",
+    "registration_id": "SD0001777",
+    "status": "Active",
+    "filing_date": "2012-07-02",
+    "agent_name": "Dave Miller",
+    "agent_address": "5280 Elm Ave",
+    "agent_email": "dave.miller.2635918b-10c7-4cac-85bb-85cc446b1c38@example.com"
+  },
+  {
+    "business_name": "Nova Energy LLC",
+    "registration_id": "SD0001782",
+    "status": "Active",
+    "filing_date": "2006-01-03",
+    "agent_name": "John Taylor",
+    "agent_address": "3784 Broadway Ave",
+    "agent_email": "john.taylor.e0bd6724-8147-484f-99d9-4d7db01e967a@example.com"
+  },
+  {
+    "business_name": "Crystal Ventures LLC",
+    "registration_id": "SD0001783",
+    "status": "Active",
+    "filing_date": "1996-06-17",
+    "agent_name": "Gian Garcia",
+    "agent_address": "2946 Elm Ave",
+    "agent_email": "gian.garcia.558b2f8d-d74a-435c-856c-b8e96dfbf1d6@example.com"
+  },
+  {
+    "business_name": "Pine Labs LLC",
+    "registration_id": "SD0001785",
+    "status": "Active",
+    "filing_date": "2009-02-19",
+    "agent_name": "Ezra Miller",
+    "agent_address": "6639 Maple Ave",
+    "agent_email": "ezra.miller.f3c6d820-1223-4786-aedb-2498f6aa14c9@example.com"
+  },
+  {
+    "business_name": "Metro Labs LLC",
+    "registration_id": "SD0001787",
+    "status": "Active",
+    "filing_date": "2002-12-23",
+    "agent_name": "Jen Davis",
+    "agent_address": "107 Broadway Ave",
+    "agent_email": "jen.davis.4dcda4f1-5640-4562-888f-2022c979d8a1@example.com"
+  },
+  {
+    "business_name": "Prime Tech LLC",
+    "registration_id": "SD0001791",
+    "status": "Active",
+    "filing_date": "1995-02-14",
+    "agent_name": "Jen Miller",
+    "agent_address": "2275 Maple Ave",
+    "agent_email": "jen.miller.cc26a826-4df4-4783-88f9-f383cb321f2c@example.com"
+  },
+  {
+    "business_name": "Cedar Ventures LLC",
+    "registration_id": "SD0001792",
+    "status": "Active",
+    "filing_date": "2011-03-20",
+    "agent_name": "Gian Johnson",
+    "agent_address": "5388 Elm Ave",
+    "agent_email": "gian.johnson.4afb3f55-db1f-4e55-a754-90fa6125059f@example.com"
+  },
+  {
+    "business_name": "River Mart LLC",
+    "registration_id": "SD0001797",
+    "status": "Active",
+    "filing_date": "2010-05-01",
+    "agent_name": "Maria Anderson",
+    "agent_address": "7439 Hill Ave",
+    "agent_email": "maria.anderson.7dd861a5-226b-41c8-897c-f417d88c64c4@example.com"
+  },
+  {
+    "business_name": "Rapid Energy LLC",
+    "registration_id": "SD0001798",
+    "status": "Inactive",
+    "filing_date": "2008-03-01",
+    "agent_name": "Alex Wilson",
+    "agent_address": "6621 Elm Ave",
+    "agent_email": "alex.wilson.63879a06-eb74-4911-8580-a6b76fb1c591@example.com"
+  },
+  {
+    "business_name": "Prime Industries LLC",
+    "registration_id": "SD0001802",
+    "status": "Active",
+    "filing_date": "2024-02-11",
+    "agent_name": "Alex Miller",
+    "agent_address": "276 Broadway Ave",
+    "agent_email": "alex.miller.38433f0a-9ef2-40d3-9d0b-87aef1e92df7@example.com"
+  },
+  {
+    "business_name": "Bright Mart LLC",
+    "registration_id": "SD0001805",
+    "status": "Active",
+    "filing_date": "1996-07-23",
+    "agent_name": "Gian Anderson",
+    "agent_address": "5022 Hill Ave",
+    "agent_email": "gian.anderson.88f84f94-5adc-4a8a-8811-bc9eee8f52de@example.com"
+  },
+  {
+    "business_name": "Rapid Tech LLC",
+    "registration_id": "SD0001808",
+    "status": "Active",
+    "filing_date": "2006-06-24",
+    "agent_name": "Jen Wilson",
+    "agent_address": "8189 Hill Ave",
+    "agent_email": "jen.wilson.8a313aab-c8cc-4a74-ab4c-ac3196735e77@example.com"
+  },
+  {
+    "business_name": "Silver Mart LLC",
+    "registration_id": "SD0001820",
+    "status": "Active",
+    "filing_date": "2008-12-09",
+    "agent_name": "Maria Wilson",
+    "agent_address": "8529 Hill Ave",
+    "agent_email": "maria.wilson.366a88fa-9305-40a5-8310-abf3a7b296c6@example.com"
+  },
+  {
+    "business_name": "Sky Solutions LLC",
+    "registration_id": "SD0001821",
+    "status": "Active",
+    "filing_date": "2000-04-21",
+    "agent_name": "Sara Wilson",
+    "agent_address": "8998 Hill Ave",
+    "agent_email": "sara.wilson.7e969d9e-0770-4396-8583-5363f1522404@example.com"
+  },
+  {
+    "business_name": "Apex Ventures LLC",
+    "registration_id": "SD0001825",
+    "status": "Active",
+    "filing_date": "2011-10-01",
+    "agent_name": "Dave Smith",
+    "agent_address": "598 Hill Ave",
+    "agent_email": "dave.smith.349dcf27-d8f3-4d09-8ed7-3471796c15f4@example.com"
+  },
+  {
+    "business_name": "Pine Ventures LLC",
+    "registration_id": "SD0001828",
+    "status": "Active",
+    "filing_date": "2004-06-17",
+    "agent_name": "Alex Miller",
+    "agent_address": "9029 Hill Ave",
+    "agent_email": "alex.miller.439bd58d-c83d-469f-b45f-8b97196fabdc@example.com"
+  },
+  {
+    "business_name": "Crystal Consulting LLC",
+    "registration_id": "SD0001829",
+    "status": "Inactive",
+    "filing_date": "2025-01-22",
+    "agent_name": "Maria Davis",
+    "agent_address": "9736 Hill Ave",
+    "agent_email": "maria.davis.04dc955b-ea33-4113-8a90-eac071d59636@example.com"
+  },
+  {
+    "business_name": "Silver Holdings LLC",
+    "registration_id": "SD0001830",
+    "status": "Dissolved",
+    "filing_date": "2020-11-20",
+    "agent_name": "John Garcia",
+    "agent_address": "9300 Hill Ave",
+    "agent_email": "john.garcia.014cc9c1-6bad-48f5-9dba-3226c645835a@example.com"
+  },
+  {
+    "business_name": "Bright Group LLC",
+    "registration_id": "SD0001838",
+    "status": "Active",
+    "filing_date": "2013-11-15",
+    "agent_name": "Maria Davis",
+    "agent_address": "4967 Elm Ave",
+    "agent_email": "maria.davis.63e765fd-c2ee-43b2-8c5d-ee2ebc7748a3@example.com"
+  },
+  {
+    "business_name": "Quantum Energy LLC",
+    "registration_id": "SD0001843",
+    "status": "Active",
+    "filing_date": "2015-12-09",
+    "agent_name": "Ezra Smith",
+    "agent_address": "7654 Maple Ave",
+    "agent_email": "ezra.smith.1a113a76-3790-44b2-951b-366d617b9567@example.com"
+  },
+  {
+    "business_name": "Sunny Group LLC",
+    "registration_id": "SD0001845",
+    "status": "Active",
+    "filing_date": "2009-01-11",
+    "agent_name": "John Johnson",
+    "agent_address": "6637 Broadway Ave",
+    "agent_email": "john.johnson.dfbd2f0a-db53-4e71-9d15-f3dc43c2b33b@example.com"
+  },
+  {
+    "business_name": "Summit Tech LLC",
+    "registration_id": "SD0001851",
+    "status": "Active",
+    "filing_date": "2009-10-03",
+    "agent_name": "Jen Anderson",
+    "agent_address": "1980 Elm Ave",
+    "agent_email": "jen.anderson.9b5dbac1-99be-402d-a603-5ac766802a02@example.com"
+  },
+  {
+    "business_name": "Quantum Foods LLC",
+    "registration_id": "SD0001853",
+    "status": "Active",
+    "filing_date": "2002-08-25",
+    "agent_name": "John Wilson",
+    "agent_address": "6258 Elm Ave",
+    "agent_email": "john.wilson.68903a07-7b31-480f-8d39-877bdc548dec@example.com"
+  },
+  {
+    "business_name": "Bright Pharmacy LLC",
+    "registration_id": "SD0001855",
+    "status": "Pending",
+    "filing_date": "2018-06-11",
+    "agent_name": "Jen Miller",
+    "agent_address": "9010 Hill Ave",
+    "agent_email": "jen.miller.7eaff7a3-a11e-40a8-bf17-61f2173095bb@example.com"
+  },
+  {
+    "business_name": "Blue Trading LLC",
+    "registration_id": "SD0001867",
+    "status": "Inactive",
+    "filing_date": "1998-04-09",
+    "agent_name": "John Davis",
+    "agent_address": "3742 Maple Ave",
+    "agent_email": "john.davis.fae3cff4-a85b-40e3-9e6e-0c33e95d6fe5@example.com"
+  },
+  {
+    "business_name": "Pine Market LLC",
+    "registration_id": "SD0001872",
+    "status": "Active",
+    "filing_date": "2019-07-06",
+    "agent_name": "Ezra Anderson",
+    "agent_address": "4927 Broadway Ave",
+    "agent_email": "ezra.anderson.e0b602fd-4651-43b4-99e5-07e4b2044e34@example.com"
+  },
+  {
+    "business_name": "River Holdings LLC",
+    "registration_id": "SD0001879",
+    "status": "Dissolved",
+    "filing_date": "2003-09-20",
+    "agent_name": "Maria Anderson",
+    "agent_address": "4517 Maple Ave",
+    "agent_email": "maria.anderson.64afc853-667c-4e01-8993-be3ce973fbbd@example.com"
+  },
+  {
+    "business_name": "Silver Builders LLC",
+    "registration_id": "SD0001880",
+    "status": "Pending",
+    "filing_date": "2007-04-19",
+    "agent_name": "Maria Wilson",
+    "agent_address": "4564 Maple Ave",
+    "agent_email": "maria.wilson.20089799-de3e-4161-b51d-574c8913c16a@example.com"
+  },
+  {
+    "business_name": "Silver Farms LLC",
+    "registration_id": "SD0001887",
+    "status": "Pending",
+    "filing_date": "2013-11-23",
+    "agent_name": "Jen Garcia",
+    "agent_address": "643 Maple Ave",
+    "agent_email": "jen.garcia.b85199e4-25e1-49d3-9ed3-a9990d131f72@example.com"
+  },
+  {
+    "business_name": "Blue Holdings LLC",
+    "registration_id": "SD0001892",
+    "status": "Active",
+    "filing_date": "1998-03-27",
+    "agent_name": "Maria Taylor",
+    "agent_address": "1240 Maple Ave",
+    "agent_email": "maria.taylor.b3f94562-11c6-4246-919a-70fd4c8ef04c@example.com"
+  },
+  {
+    "business_name": "Nova Pharmacy LLC",
+    "registration_id": "SD0001895",
+    "status": "Active",
+    "filing_date": "2016-07-22",
+    "agent_name": "Ezra Miller",
+    "agent_address": "5652 Elm Ave",
+    "agent_email": "ezra.miller.f359d117-5d0a-4571-9a1c-aeca8446e2d2@example.com"
+  },
+  {
+    "business_name": "Blue Foods LLC",
+    "registration_id": "SD0001900",
+    "status": "Active",
+    "filing_date": "2015-05-04",
+    "agent_name": "Ezra Garcia",
+    "agent_address": "4280 Broadway Ave",
+    "agent_email": "ezra.garcia.18ddb6dc-362f-4f23-8762-5c52df7ba52a@example.com"
+  },
+  {
+    "business_name": "Sky Labs LLC",
+    "registration_id": "SD0001901",
+    "status": "Inactive",
+    "filing_date": "1995-11-27",
+    "agent_name": "Jen Johnson",
+    "agent_address": "7970 Maple Ave",
+    "agent_email": "jen.johnson.55e57e48-34b0-4369-aa18-21b0cdba7241@example.com"
+  },
+  {
+    "business_name": "Bright Builders LLC",
+    "registration_id": "SD0001902",
+    "status": "Active",
+    "filing_date": "2000-04-17",
+    "agent_name": "Maria Garcia",
+    "agent_address": "3767 Maple Ave",
+    "agent_email": "maria.garcia.dd4bf637-fcb1-4255-98c4-ba43ecf51142@example.com"
+  },
+  {
+    "business_name": "Apex Energy LLC",
+    "registration_id": "SD0001905",
+    "status": "Inactive",
+    "filing_date": "2025-06-07",
+    "agent_name": "Maria Garcia",
+    "agent_address": "135 Hill Ave",
+    "agent_email": "maria.garcia.f2855ea9-68e5-4db3-b4fe-29e94ddda27e@example.com"
+  },
+  {
+    "business_name": "Cedar Market LLC",
+    "registration_id": "SD0001918",
+    "status": "Active",
+    "filing_date": "2021-08-19",
+    "agent_name": "Jen Garcia",
+    "agent_address": "6054 Hill Ave",
+    "agent_email": "jen.garcia.a4d04727-a0f8-4079-a324-5b6f09d217ed@example.com"
+  },
+  {
+    "business_name": "Ocean Holdings LLC",
+    "registration_id": "SD0001921",
+    "status": "Active",
+    "filing_date": "2025-03-20",
+    "agent_name": "Jen Johnson",
+    "agent_address": "6682 Hill Ave",
+    "agent_email": "jen.johnson.1114b7e2-7763-4bf6-9605-d646dbc70541@example.com"
+  },
+  {
+    "business_name": "Bright Holdings LLC",
+    "registration_id": "SD0001922",
+    "status": "Active",
+    "filing_date": "2002-10-06",
+    "agent_name": "Dave Smith",
+    "agent_address": "6501 Maple Ave",
+    "agent_email": "dave.smith.85f18a2b-264b-40f6-aeaf-e733629025f0@example.com"
+  },
+  {
+    "business_name": "Rapid Energy LLC",
+    "registration_id": "SD0001923",
+    "status": "Pending",
+    "filing_date": "1998-04-19",
+    "agent_name": "Jen Wilson",
+    "agent_address": "134 Maple Ave",
+    "agent_email": "jen.wilson.5f8ec438-f36c-4780-a720-6bd196fbdc22@example.com"
+  },
+  {
+    "business_name": "Golden Group LLC",
+    "registration_id": "SD0001925",
+    "status": "Active",
+    "filing_date": "2015-01-06",
+    "agent_name": "Ezra Garcia",
+    "agent_address": "3028 Elm Ave",
+    "agent_email": "ezra.garcia.b02b728f-5c6d-441e-9194-46499a110a43@example.com"
+  },
+  {
+    "business_name": "Silver Builders LLC",
+    "registration_id": "SD0001940",
+    "status": "Inactive",
+    "filing_date": "2019-03-25",
+    "agent_name": "Maria Davis",
+    "agent_address": "5245 Broadway Ave",
+    "agent_email": "maria.davis.7a94fa13-c9d3-4b51-b8d9-b366ea8a9796@example.com"
+  },
+  {
+    "business_name": "Quantum Labs LLC",
+    "registration_id": "SD0001945",
+    "status": "Active",
+    "filing_date": "2008-11-08",
+    "agent_name": "Alex Smith",
+    "agent_address": "1858 Broadway Ave",
+    "agent_email": "alex.smith.8f1ec8eb-8c17-4640-af79-fbb8c067623d@example.com"
+  },
+  {
+    "business_name": "Rapid Builders LLC",
+    "registration_id": "SD0001946",
+    "status": "Inactive",
+    "filing_date": "2021-01-24",
+    "agent_name": "Maria Anderson",
+    "agent_address": "4157 Maple Ave",
+    "agent_email": "maria.anderson.45b6b976-8332-47a1-9839-6f3bc0ad6b91@example.com"
+  },
+  {
+    "business_name": "Harmony Foods LLC",
+    "registration_id": "SD0001949",
+    "status": "Inactive",
+    "filing_date": "1999-05-20",
+    "agent_name": "Gian Smith",
+    "agent_address": "24 Broadway Ave",
+    "agent_email": "gian.smith.a2c45855-bbb1-4295-9422-1af96e701a10@example.com"
+  },
+  {
+    "business_name": "Rapid Labs LLC",
+    "registration_id": "SD0001954",
+    "status": "Active",
+    "filing_date": "2014-09-23",
+    "agent_name": "Ezra Johnson",
+    "agent_address": "1758 Elm Ave",
+    "agent_email": "ezra.johnson.2daa313e-1f63-4035-9caa-748c520b02e9@example.com"
+  },
+  {
+    "business_name": "Metro Industries LLC",
+    "registration_id": "SD0001957",
+    "status": "Active",
+    "filing_date": "2008-06-15",
+    "agent_name": "Alex Wilson",
+    "agent_address": "3932 Maple Ave",
+    "agent_email": "alex.wilson.f5757d5b-9e8b-4a51-a739-380db7a2d1be@example.com"
+  },
+  {
+    "business_name": "Rapid Logistics LLC",
+    "registration_id": "SD0001964",
+    "status": "Inactive",
+    "filing_date": "2017-05-05",
+    "agent_name": "Dave Davis",
+    "agent_address": "859 Elm Ave",
+    "agent_email": "dave.davis.10c77194-263c-4e04-b968-1cd9b952ed23@example.com"
+  },
+  {
+    "business_name": "Golden Market LLC",
+    "registration_id": "SD0001968",
+    "status": "Active",
+    "filing_date": "2002-10-23",
+    "agent_name": "Gian Miller",
+    "agent_address": "7845 Maple Ave",
+    "agent_email": "gian.miller.1807d92f-843a-4183-8efa-5c90e9a765b2@example.com"
+  },
+  {
+    "business_name": "Crystal Foods LLC",
+    "registration_id": "SD0001969",
+    "status": "Active",
+    "filing_date": "2020-11-19",
+    "agent_name": "Sara Johnson",
+    "agent_address": "728 Broadway Ave",
+    "agent_email": "sara.johnson.6fbb0645-d1f0-48d5-bf51-47329c4a8236@example.com"
+  },
+  {
+    "business_name": "Blue Consulting LLC",
+    "registration_id": "SD0001973",
+    "status": "Dissolved",
+    "filing_date": "2025-08-23",
+    "agent_name": "Gian Garcia",
+    "agent_address": "8504 Maple Ave",
+    "agent_email": "gian.garcia.7579ef03-3029-4ca6-b295-48b491b1d65a@example.com"
+  },
+  {
+    "business_name": "Sky Trading LLC",
+    "registration_id": "SD0001978",
+    "status": "Inactive",
+    "filing_date": "2004-09-02",
+    "agent_name": "Gian Miller",
+    "agent_address": "1066 Elm Ave",
+    "agent_email": "gian.miller.e169117c-eb5d-4c09-b4e5-2385af53571d@example.com"
+  },
+  {
+    "business_name": "Pine Market LLC",
+    "registration_id": "SD0001987",
+    "status": "Active",
+    "filing_date": "2005-10-16",
+    "agent_name": "Ezra Wilson",
+    "agent_address": "9893 Hill Ave",
+    "agent_email": "ezra.wilson.94b5dc6a-cd3a-44d4-a8de-2840e66b73c9@example.com"
+  },
+  {
+    "business_name": "Quantum Mart LLC",
+    "registration_id": "SD0001988",
+    "status": "Active",
+    "filing_date": "2001-09-12",
+    "agent_name": "John Miller",
+    "agent_address": "2054 Hill Ave",
+    "agent_email": "john.miller.4923441d-8626-4937-b75f-2b80689c438f@example.com"
+  },
+  {
+    "business_name": "Rapid Pharmacy LLC",
+    "registration_id": "SD0001992",
+    "status": "Active",
+    "filing_date": "2011-07-27",
+    "agent_name": "Maria Smith",
+    "agent_address": "6588 Elm Ave",
+    "agent_email": "maria.smith.6ec83e02-de07-496c-9f83-b1474c769a10@example.com"
+  },
+  {
+    "business_name": "River Consulting LLC",
+    "registration_id": "SD0001994",
+    "status": "Dissolved",
+    "filing_date": "2020-05-26",
+    "agent_name": "Maria Miller",
+    "agent_address": "9417 Hill Ave",
+    "agent_email": "maria.miller.e405761c-ca1d-49aa-b68b-54ab3402544a@example.com"
   }
 ]
