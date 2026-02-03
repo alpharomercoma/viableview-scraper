@@ -11,12 +11,12 @@ This script scrapes business data from the target website. It handles:
 - Output to JSON format
 
 Usage:
-    python scraper.py [--query QUERY] [--output OUTPUT] [--headed] [--full-crawl]
+    python scraper.py [--query QUERY] [--output OUTPUT] [--headless] [--full-crawl]
 
 Arguments:
     --query      Search query (default: searches for all businesses with "llc")
     --output     Output file path (default: output.json)
-    --headed     Run browser in headed mode (visible) for debugging
+    --headless   Run browser in headless mode (hidden). Default is headed (visible).
     --full-crawl Scrape ALL businesses by searching multiple entity types
 """
 
@@ -82,14 +82,14 @@ class BusinessScraper:
     all business records matching a search query.
     """
 
-    def __init__(self, headed: bool = False):
+    def __init__(self, headless: bool = False):
         """
         Initialize the scraper.
 
         Args:
-            headed: If True, runs browser in visible mode for captcha solving
+            headless: If True, runs browser in headless mode (hidden)
         """
-        self.headed = headed
+        self.headless = headless
         self.session_token: Optional[str] = None
         self.playwright = None
         self.browser: Optional[Browser] = None
@@ -110,7 +110,7 @@ class BusinessScraper:
         logger.info("Starting browser...")
         self.playwright = sync_playwright().start()
         self.browser = self.playwright.chromium.launch(
-            headless=not self.headed,
+            headless=self.headless,
             args=['--disable-blink-features=AutomationControlled']
         )
         self.context = self.browser.new_context(
@@ -163,21 +163,31 @@ class BusinessScraper:
 
         logger.info("Attempting to solve reCAPTCHA automatically using audio challenge...")
 
-        try:
-            # Use playwright-recaptcha to solve the captcha
-            with recaptchav2.SyncSolver(self.page) as solver:
-                token = solver.solve_recaptcha(wait=True, attempts=5)
-                logger.info("reCAPTCHA solved successfully via audio recognition!")
-                return token
-        except RecaptchaRateLimitError:
-            logger.error("reCAPTCHA rate limit exceeded. Please wait before trying again.")
-            raise ScraperError("reCAPTCHA rate limit exceeded")
-        except RecaptchaSolveError as e:
-            logger.error(f"Failed to solve reCAPTCHA: {e}")
-            raise ScraperError(f"reCAPTCHA solving failed: {e}")
-        except Exception as e:
-            logger.error(f"Unexpected error solving captcha: {e}")
-            raise ScraperError(f"Captcha solving error: {e}")
+        max_retries = 3
+        for attempt in range(max_retries):
+            try:
+                # Use playwright-recaptcha to solve the captcha
+                with recaptchav2.SyncSolver(self.page) as solver:
+                    token = solver.solve_recaptcha(wait=True, attempts=3)
+                    logger.info("reCAPTCHA solved successfully via audio recognition!")
+                    return token
+            except RecaptchaRateLimitError:
+                logger.error("reCAPTCHA rate limit exceeded.")
+                if attempt < max_retries - 1:
+                    logger.info("Waiting 10 seconds before retry...")
+                    time.sleep(10)
+                    self.page.reload(wait_until="networkidle")
+                    continue
+                raise ScraperError("reCAPTCHA rate limit exceeded")
+            except (RecaptchaSolveError, Exception) as e:
+                logger.warning(f"Attempt {attempt + 1}/{max_retries} failed: {e}")
+                if attempt < max_retries - 1:
+                    logger.info("Reloading page and retrying...")
+                    self.page.reload(wait_until="networkidle")
+                    time.sleep(2)
+                else:
+                    logger.error(f"Failed to solve reCAPTCHA after {max_retries} attempts")
+                    raise ScraperError(f"Captcha solving error: {e}")
 
     def get_session(self, captcha_token: str, query: str) -> str:
         """
@@ -455,9 +465,9 @@ def main():
         help="Output file path (default: output.json)"
     )
     parser.add_argument(
-        '--headed',
+        '--headless',
         action='store_true',
-        help="Run browser in headed mode (visible) for debugging"
+        help="Run browser in headless mode (hidden)"
     )
     parser.add_argument(
         '--full-crawl',
@@ -473,16 +483,30 @@ def main():
     if args.full_crawl:
         logger.info("Mode: FULL CRAWL (all entity types)")
         logger.info(f"Entity types: {', '.join(FULL_CRAWL_QUERIES)}")
+        args.full_crawl = True
     else:
         logger.info(f"Query: {args.query}")
     logger.info(f"Output: {args.output}")
-    logger.info(f"Browser: {'Headed' if args.headed else 'Headless'}")
+    logger.info(f"Browser: {'Headless' if args.headless else 'Headed'}")
     logger.info("=" * 60)
 
+    # Check for ffmpeg
     try:
-        with BusinessScraper(headed=args.headed) as scraper:
-            # Step 1: Solve captcha (automatic via audio recognition)
-            captcha_token = scraper.solve_captcha()
+        import subprocess
+        subprocess.run(['ffmpeg', '-version'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        logger.warning("WARNING: ffmpeg not found! Audio captcha solving will fail.")
+        if args.headless:
+            logger.error("Cannot solve captcha in headless mode without ffmpeg. Please install ffmpeg or run without --headless to solve manually.")
+
+    try:
+        with BusinessScraper(headless=args.headless) as scraper:
+            # Step 1: Initial Captcha Solve
+            try:
+                captcha_token = scraper.solve_captcha()
+            except ScraperError as e:
+                logger.error(f"Critical error: Could not solve initial captcha. {e}")
+                return 1
 
             if args.full_crawl:
                 # Full crawl mode: search multiple entity types
@@ -492,31 +516,46 @@ def main():
                 for i, query in enumerate(FULL_CRAWL_QUERIES, 1):
                     logger.info(f"[{i}/{len(FULL_CRAWL_QUERIES)}] Searching for '{query}'...")
 
-                    try:
-                        # Get session for this query
-                        scraper.get_session(captcha_token, query)
-
-                        # Scrape all pages for this query
-                        businesses = scraper.scrape_all(query)
-
-                        # Deduplicate by registration_id
-                        for biz in businesses:
-                            reg_id = biz.get('registration_id', '')
-                            if reg_id and reg_id not in seen_ids:
-                                seen_ids.add(reg_id)
-                                all_businesses.append(biz)
-                            elif not reg_id:
-                                # If no reg_id, use business_name as fallback key
-                                name = biz.get('business_name', '')
-                                if name not in seen_ids:
-                                    seen_ids.add(name)
+                    query_retries = 2
+                    while query_retries > 0:
+                        try:
+                            # Ensure we have a session
+                            if not scraper.session_token:
+                                scraper.get_session(captcha_token, query)
+                            
+                            # Scrape
+                            businesses = scraper.scrape_all(query)
+                            
+                            # Deduplicate and add
+                            for biz in businesses:
+                                reg_id = biz.get('registration_id', '')
+                                if reg_id and reg_id not in seen_ids:
+                                    seen_ids.add(reg_id)
                                     all_businesses.append(biz)
+                                elif not reg_id:
+                                    name = biz.get('business_name', '')
+                                    if name not in seen_ids:
+                                        seen_ids.add(name)
+                                        all_businesses.append(biz)
+                            
+                            logger.info(f"  Found {len(businesses)} businesses, {len(all_businesses)} unique total")
+                            break # Success, move to next query
 
-                        logger.info(f"  Found {len(businesses)} businesses, {len(all_businesses)} unique total")
-
-                    except ScraperError as e:
-                        logger.warning(f"Error searching '{query}': {e}")
-                        continue
+                        except ScraperError as e:
+                            logger.warning(f"Error searching '{query}': {e}. Retrying...")
+                            query_retries -= 1
+                            if query_retries > 0:
+                                logger.info("Refreshing session...")
+                                try:
+                                    captcha_token = scraper.solve_captcha() # Re-solve captcha
+                                    scraper.session_token = None # Clear old session
+                                    scraper.get_session(captcha_token, query) # Get new session
+                                except Exception as inner_e:
+                                    logger.error(f"Failed to refresh session: {inner_e}")
+                                    # If we can't refresh, we likely can't continue this query
+                                    break
+                            else:
+                                logger.error(f"Giving up on '{query}' after retries.")
 
                     # Small delay between different queries
                     if i < len(FULL_CRAWL_QUERIES):

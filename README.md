@@ -24,7 +24,7 @@ A Python-based web scraper that extracts business data from the State Registry w
 
 1. Clone this repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/alpharomercoma/viableview-scraper.git
    cd viableview-scraper
    ```
 
@@ -89,7 +89,7 @@ python scraper.py [OPTIONS]
 |--------|-------|---------|-------------|
 | `--query` | `-q` | `llc` | Search query to find businesses |
 | `--output` | `-o` | `output.json` | Output file path |
-| `--headed` | | False | Run browser in visible mode (for debugging or manual captcha fallback) |
+| `--headless` | | False | Run browser in headless/hidden mode (Default is VISIBLE) |
 | `--full-crawl` | | False | **Scrape ALL businesses** by searching multiple entity types |
 
 ### Examples
@@ -104,9 +104,9 @@ python scraper.py --full-crawl --output all_businesses.json
 python scraper.py --query "tech" --output tech_companies.json
 ```
 
-**Debug mode with visible browser:**
+**Run in background (headless):**
 ```bash
-python scraper.py --full-crawl --headed
+python scraper.py --full-crawl --headless
 ```
 
 ## Output Format
@@ -196,15 +196,15 @@ Log format:
 
 ## Limitations
 
-1. **reCAPTCHA**: Audio solving requires FFmpeg to be installed; falls back to manual solving in headed mode if audio fails
-2. **Rate limiting**: The script includes delays, but aggressive usage may be blocked
+1.  **reCAPTCHA**: Audio solving requires FFmpeg to be installed; falls back to manual solving if audio fails.
+2.  **Rate limiting**: The script includes delays and retry logic for rate limits.
 3. **Website changes**: The scraper depends on the current website structure
 4. **Session expiry**: Long-running scrapes may need re-authentication
 
 ## Troubleshooting
 
 ### "Cannot solve captcha automatically"
-Ensure FFmpeg is installed and in your PATH. If audio solving fails, run with `--headed` flag for manual fallback.
+Ensure FFmpeg is installed and in your PATH. The browser runs in headed mode by default to allow manual intervention if needed.
 
 ### "Session expired" errors
 The session token may have expired. Restart the scraper to get a new session.
