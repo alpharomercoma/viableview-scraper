@@ -4,17 +4,20 @@ A Python-based web scraper that extracts business data from the State Registry w
 
 ## Features
 
-- **reCAPTCHA handling**: Supports both manual captcha solving (headed mode) and attempts automatic solving
-- **Pagination support**: Automatically iterates through all result pages
-- **Comprehensive data extraction**: Extracts business name, registration ID, status, filing date, and agent details
-- **Error handling**: Robust error handling with retry logic for network issues
+- **Automatic reCAPTCHA Solving**: Uses the `playwright-recaptcha` library to automatically solve reCAPTCHA v2 via audio challenges - no API key required!
+- **Full-Crawl Mode**: Scrapes ALL businesses by searching multiple entity types (LLC, Inc, Corp, Company, etc.) in a single run
+- **Pagination Support**: Automatically iterates through all result pages
+- **Comprehensive Data Extraction**: Extracts business name, registration ID, status, filing date, and agent details
+- **Deduplication**: Automatically removes duplicate businesses when using full-crawl mode
+- **Error Handling**: Robust error handling with logging for debugging
 - **Logging**: Detailed logging to both console and log file (`scraper.log`)
-- **Rate limiting**: Polite delays between requests to avoid overloading the server
+- **Rate Limiting**: Polite delays between requests to avoid overloading the server
 
 ## Requirements
 
 - Python 3.8+
 - Playwright
+- FFmpeg (for audio captcha solving)
 - Internet connection
 
 ## Installation
@@ -25,37 +28,56 @@ A Python-based web scraper that extracts business data from the State Registry w
    cd viableview-scraper
    ```
 
-2. Create a virtual environment (recommended):
+2. Install FFmpeg (required for audio captcha solving):
+   ```bash
+   # Ubuntu/Debian
+   sudo apt-get install ffmpeg
+
+   # macOS
+   brew install ffmpeg
+
+   # Windows
+   winget install ffmpeg
+   ```
+
+3. Create a virtual environment (recommended):
    ```bash
    python3 -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 
-3. Install dependencies:
+4. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
 
-4. Install Playwright browsers:
+5. Install Playwright browsers:
    ```bash
    python -m playwright install chromium
    ```
 
 ## Usage
 
-### Basic Usage
+### Full Crawl (Recommended)
 
-Run the scraper with default settings:
+Scrape ALL businesses from the registry in a single run:
 
 ```bash
-python scraper.py --headed
+python scraper.py --full-crawl
 ```
 
 This will:
-1. Open a browser window
-2. Wait for you to solve the reCAPTCHA
-3. Scrape all businesses matching the default query ("llc")
-4. Save results to `output.json`
+1. Automatically solve the reCAPTCHA using audio recognition
+2. Search for multiple entity types (LLC, Inc, Corp, Company, etc.)
+3. Deduplicate results and save all unique businesses to `output.json`
+
+### Basic Usage
+
+Scrape businesses matching a specific query:
+
+```bash
+python scraper.py --query "llc"
+```
 
 ### Command Line Options
 
@@ -67,18 +89,24 @@ python scraper.py [OPTIONS]
 |--------|-------|---------|-------------|
 | `--query` | `-q` | `llc` | Search query to find businesses |
 | `--output` | `-o` | `output.json` | Output file path |
-| `--headed` | | False | Run browser in visible mode for captcha solving |
+| `--headed` | | False | Run browser in visible mode (for debugging or manual captcha fallback) |
+| `--full-crawl` | | False | **Scrape ALL businesses** by searching multiple entity types |
 
 ### Examples
 
-Search for businesses containing "tech":
+**Full crawl with custom output file:**
 ```bash
-python scraper.py --query "tech" --headed
+python scraper.py --full-crawl --output all_businesses.json
 ```
 
-Save output to a custom file:
+**Search for specific businesses:**
 ```bash
-python scraper.py --output my_results.json --headed
+python scraper.py --query "tech" --output tech_companies.json
+```
+
+**Debug mode with visible browser:**
+```bash
+python scraper.py --full-crawl --headed
 ```
 
 ## Output Format
@@ -116,16 +144,18 @@ The scraper outputs JSON with the following structure:
 | Library | Purpose |
 |---------|---------|
 | **Playwright** | Browser automation for handling dynamic content and reCAPTCHA |
+| **playwright-recaptcha** | Automatic reCAPTCHA v2 solving using audio challenges |
+| **pydub** | Audio processing for captcha audio files |
+| **SpeechRecognition** | Transcribes audio using Google's free Speech-to-Text API |
 | **argparse** | Command-line argument parsing (standard library) |
 | **logging** | Structured logging to file and console (standard library) |
 | **json** | JSON serialization for output (standard library) |
 
-### Why Playwright?
+### Why These Libraries?
 
-1. **JavaScript rendering**: The target website is a Next.js application with client-side rendering
-2. **reCAPTCHA support**: Playwright can interact with reCAPTCHA widgets
-3. **Modern web support**: Handles modern JavaScript frameworks effectively
-4. **Session management**: Maintains browser context for authenticated requests
+1. **Playwright**: The target website is a Next.js application with client-side rendering and reCAPTCHA protection
+2. **playwright-recaptcha**: Provides automatic audio captcha solving without requiring paid API keys
+3. **SpeechRecognition**: Uses Google's free speech recognition API - no API key needed!
 
 ## Architecture
 
@@ -134,12 +164,13 @@ The scraper follows a modular design:
 ```
 scraper.py
 ├── BusinessScraper (main class)
-│   ├── solve_captcha()      - Handle reCAPTCHA verification
-│   ├── get_session()        - Obtain session token
-│   ├── search()             - Execute API searches
+│   ├── solve_captcha()        - Automatic reCAPTCHA solving via audio recognition
+│   ├── get_session()          - Obtain session token
+│   ├── search()               - Execute API searches
 │   ├── get_business_details() - Fetch detailed business info
-│   └── scrape_all()         - Main scraping loop
-└── main()                   - CLI entry point
+│   ├── scrape_all()           - Scrape all pages for a query
+│   └── full_crawl()           - Full database crawl (multi-query)
+└── main()                     - CLI entry point
 ```
 
 ## Error Handling
@@ -165,15 +196,15 @@ Log format:
 
 ## Limitations
 
-1. **reCAPTCHA**: Requires manual solving in headed mode; automatic solving may not always work
+1. **reCAPTCHA**: Audio solving requires FFmpeg to be installed; falls back to manual solving in headed mode if audio fails
 2. **Rate limiting**: The script includes delays, but aggressive usage may be blocked
 3. **Website changes**: The scraper depends on the current website structure
 4. **Session expiry**: Long-running scrapes may need re-authentication
 
 ## Troubleshooting
 
-### "Cannot solve captcha in headless mode"
-Run the scraper with the `--headed` flag to solve the captcha manually.
+### "Cannot solve captcha automatically"
+Ensure FFmpeg is installed and in your PATH. If audio solving fails, run with `--headed` flag for manual fallback.
 
 ### "Session expired" errors
 The session token may have expired. Restart the scraper to get a new session.

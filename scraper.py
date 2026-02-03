@@ -3,19 +3,21 @@
 Business Registry Web Scraper
 
 This script scrapes business data from the target website. It handles:
-- reCAPTCHA verification (requires one-time manual interaction)
+- reCAPTCHA verification (automatic audio solving via playwright-recaptcha)
 - Pagination through all result pages
 - Extraction of business details including agent information
+- Full-crawl mode for scraping ALL businesses
 - Error handling and logging
 - Output to JSON format
 
 Usage:
-    python scraper.py [--query QUERY] [--output OUTPUT] [--headed]
+    python scraper.py [--query QUERY] [--output OUTPUT] [--headed] [--full-crawl]
 
 Arguments:
-    --query   Search query (default: searches for all businesses with "llc")
-    --output  Output file path (default: output.json)
-    --headed  Run browser in headed mode (visible) for captcha solving
+    --query      Search query (default: searches for all businesses with "llc")
+    --output     Output file path (default: output.json)
+    --headed     Run browser in headed mode (visible) for debugging
+    --full-crawl Scrape ALL businesses by searching multiple entity types
 """
 
 import argparse
@@ -26,9 +28,11 @@ import sys
 import time
 from datetime import datetime
 from pathlib import Path
-from typing import Optional
+from typing import Optional, List, Set
 
 from playwright.sync_api import sync_playwright, Page, Browser, BrowserContext
+from playwright_recaptcha import recaptchav2
+from playwright_recaptcha.errors import RecaptchaRateLimitError, RecaptchaSolveError
 
 # Configure logging
 LOG_FILE = "scraper.log"
@@ -49,6 +53,20 @@ RESULTS_PAGE = f"{BASE_URL}/search/results"
 API_SEARCH = f"{BASE_URL}/api/search"
 DEFAULT_QUERY = "llc"  # Default search term
 REQUEST_DELAY = 1.0  # Delay between requests in seconds
+
+# Full-crawl entity types - common business entity suffixes
+FULL_CRAWL_QUERIES = [
+    "llc",
+    "inc",
+    "corp",
+    "company",
+    "limited",
+    "enterprises",
+    "holdings",
+    "group",
+    "services",
+    "solutions",
+]
 
 
 class ScraperError(Exception):
@@ -120,7 +138,13 @@ class BusinessScraper:
 
     def solve_captcha(self) -> str:
         """
-        Navigate to search page and wait for user to solve captcha.
+        Navigate to search page and automatically solve reCAPTCHA using audio challenge.
+
+        Uses playwright-recaptcha library to:
+        1. Click the reCAPTCHA checkbox
+        2. If challenged, switch to audio challenge
+        3. Download audio, transcribe using Google Speech Recognition
+        4. Submit the answer
 
         Returns:
             The reCAPTCHA response token
@@ -137,52 +161,23 @@ class BusinessScraper:
         if not captcha_wrap:
             logger.warning("No captcha wrapper found on page")
 
-        if self.headed:
-            logger.info("=" * 50)
-            logger.info("CAPTCHA VERIFICATION REQUIRED")
-            logger.info("Please solve the reCAPTCHA in the browser window")
-            logger.info("The script will continue automatically after verification")
-            logger.info("=" * 50)
+        logger.info("Attempting to solve reCAPTCHA automatically using audio challenge...")
 
-            # Wait for the user to solve the captcha
-            # The recaptcha-response textarea will have a value when solved
-            max_wait = 300  # 5 minutes max
-            start_time = time.time()
-
-            while time.time() - start_time < max_wait:
-                token = self.page.evaluate(
-                    "() => document.querySelector('#g-recaptcha-response')?.value || ''"
-                )
-                if token:
-                    logger.info("Captcha solved successfully!")
-                    return token
-                time.sleep(1)
-
-            raise ScraperError("Timeout waiting for captcha to be solved")
-        else:
-            # In headless mode, we try to click the checkbox
-            # This may not work if Google requires image verification
-            logger.info("Attempting to solve captcha automatically (may require headed mode)...")
-
-            try:
-                recaptcha_frame = self.page.frame_locator('iframe[title="reCAPTCHA"]')
-                checkbox = recaptcha_frame.locator('.recaptcha-checkbox')
-                checkbox.click()
-                self.page.wait_for_timeout(5000)
-
-                token = self.page.evaluate(
-                    "() => document.querySelector('#g-recaptcha-response')?.value || ''"
-                )
-                if token:
-                    logger.info("Captcha solved automatically!")
-                    return token
-            except Exception as e:
-                logger.warning(f"Automatic captcha solving failed: {e}")
-
-            raise ScraperError(
-                "Cannot solve captcha in headless mode. "
-                "Please run with --headed flag to solve captcha manually."
-            )
+        try:
+            # Use playwright-recaptcha to solve the captcha
+            with recaptchav2.SyncSolver(self.page) as solver:
+                token = solver.solve_recaptcha(wait=True, attempts=5)
+                logger.info("reCAPTCHA solved successfully via audio recognition!")
+                return token
+        except RecaptchaRateLimitError:
+            logger.error("reCAPTCHA rate limit exceeded. Please wait before trying again.")
+            raise ScraperError("reCAPTCHA rate limit exceeded")
+        except RecaptchaSolveError as e:
+            logger.error(f"Failed to solve reCAPTCHA: {e}")
+            raise ScraperError(f"reCAPTCHA solving failed: {e}")
+        except Exception as e:
+            logger.error(f"Unexpected error solving captcha: {e}")
+            raise ScraperError(f"Captcha solving error: {e}")
 
     def get_session(self, captcha_token: str, query: str) -> str:
         """
@@ -462,31 +457,78 @@ def main():
     parser.add_argument(
         '--headed',
         action='store_true',
-        help="Run browser in headed mode (visible) for captcha solving"
+        help="Run browser in headed mode (visible) for debugging"
+    )
+    parser.add_argument(
+        '--full-crawl',
+        action='store_true',
+        dest='full_crawl',
+        help="Scrape ALL businesses by searching multiple entity types (LLC, Inc, Corp, etc.)"
     )
 
     args = parser.parse_args()
 
     logger.info("=" * 60)
     logger.info("Business Registry Scraper Starting")
-    logger.info(f"Query: {args.query}")
+    if args.full_crawl:
+        logger.info("Mode: FULL CRAWL (all entity types)")
+        logger.info(f"Entity types: {', '.join(FULL_CRAWL_QUERIES)}")
+    else:
+        logger.info(f"Query: {args.query}")
     logger.info(f"Output: {args.output}")
-    logger.info(f"Mode: {'Headed' if args.headed else 'Headless'}")
+    logger.info(f"Browser: {'Headed' if args.headed else 'Headless'}")
     logger.info("=" * 60)
 
     try:
         with BusinessScraper(headed=args.headed) as scraper:
-            # Step 1: Solve captcha
+            # Step 1: Solve captcha (automatic via audio recognition)
             captcha_token = scraper.solve_captcha()
 
-            # Step 2: Get session token
-            scraper.get_session(captcha_token, args.query)
+            if args.full_crawl:
+                # Full crawl mode: search multiple entity types
+                all_businesses = []
+                seen_ids: Set[str] = set()
 
-            # Step 3: Scrape all pages
-            businesses = scraper.scrape_all(args.query)
+                for i, query in enumerate(FULL_CRAWL_QUERIES, 1):
+                    logger.info(f"[{i}/{len(FULL_CRAWL_QUERIES)}] Searching for '{query}'...")
 
-            # Step 4: Save output
-            save_output(businesses, args.output)
+                    try:
+                        # Get session for this query
+                        scraper.get_session(captcha_token, query)
+
+                        # Scrape all pages for this query
+                        businesses = scraper.scrape_all(query)
+
+                        # Deduplicate by registration_id
+                        for biz in businesses:
+                            reg_id = biz.get('registration_id', '')
+                            if reg_id and reg_id not in seen_ids:
+                                seen_ids.add(reg_id)
+                                all_businesses.append(biz)
+                            elif not reg_id:
+                                # If no reg_id, use business_name as fallback key
+                                name = biz.get('business_name', '')
+                                if name not in seen_ids:
+                                    seen_ids.add(name)
+                                    all_businesses.append(biz)
+
+                        logger.info(f"  Found {len(businesses)} businesses, {len(all_businesses)} unique total")
+
+                    except ScraperError as e:
+                        logger.warning(f"Error searching '{query}': {e}")
+                        continue
+
+                    # Small delay between different queries
+                    if i < len(FULL_CRAWL_QUERIES):
+                        time.sleep(REQUEST_DELAY)
+
+                logger.info(f"Full crawl complete: {len(all_businesses)} unique businesses found")
+                save_output(all_businesses, args.output)
+            else:
+                # Single query mode
+                scraper.get_session(captcha_token, args.query)
+                businesses = scraper.scrape_all(args.query)
+                save_output(businesses, args.output)
 
         logger.info("Scraping completed successfully!")
         return 0
